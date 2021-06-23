@@ -4403,6 +4403,11 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Approved_Update_Account_Request</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Update_Account_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Change_Request__c-CN Sinodis New Contact Change Request Layout</layout>
@@ -4558,6 +4563,10 @@
     <layoutAssignments>
         <layout>Product2-Product Layout</layout>
     </layoutAssignments>
+    <loginIpRanges>
+        <endAddress>255.255.255.255</endAddress>
+        <startAddress>0.0.0.0</startAddress>
+    </loginIpRanges>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
