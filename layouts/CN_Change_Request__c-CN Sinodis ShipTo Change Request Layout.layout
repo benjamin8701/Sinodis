@@ -196,6 +196,9 @@
         <fields>Comments</fields>
         <relatedList>RelatedProcessHistoryList</relatedList>
     </relatedLists>
+    <relatedLists>
+        <relatedList>RelatedFileList</relatedList>
+    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>

@@ -1156,12 +1156,12 @@
         <name>CN_Billing_Email__c</name>
     </fields>
     <fields>
-        <help><!-- Please enter the number in the format of 1XXXXXXXXXX or XXX-XXXXXXXX or XXXX-XXXXXXXX-XXX (X is number). --></help>
+        <help>请输入号码格式为1XXXXXXXXXX或XXX-XXXXXXXX（X为数字）</help>
         <label><!-- Billing Mobile Phone --></label>
         <name>CN_Billing_Mobile_Phone__c</name>
     </fields>
     <fields>
-        <help><!-- Please enter the number in the format of 1XXXXXXXXXX or XXX-XXXXXXXX or XXXX-XXXXXXXX-XXX (X is number). --></help>
+        <help>请输入号码格式为1XXXXXXXXXX或XXX-XXXXXXXX（X为数字）</help>
         <label><!-- Billing Phone Number --></label>
         <name>CN_Billing_Phone_Number__c</name>
     </fields>
@@ -1653,12 +1653,12 @@
         <name>CN_New_Billing_Email__c</name>
     </fields>
     <fields>
-        <help><!-- Please enter the number in the format of 1XXXXXXXXXX or XXX-XXXXXXXX or XXXX-XXXXXXXX-XXX (X is number). --></help>
+        <help>请输入号码格式为1XXXXXXXXXX或XXX-XXXXXXXX（X为数字）</help>
         <label><!-- New Billing Mobile Phone --></label>
         <name>CN_New_Billing_Mobile_Phone__c</name>
     </fields>
     <fields>
-        <help><!-- Please enter the number in the format of 1XXXXXXXXXX or XXX-XXXXXXXX or XXXX-XXXXXXXX-XXX (X is number). --></help>
+        <help>请输入号码格式为1XXXXXXXXXX或XXX-XXXXXXXX（X为数字）</help>
         <label><!-- New Billing Phone Number --></label>
         <name>CN_New_Billing_Phone_Number__c</name>
     </fields>
@@ -1840,7 +1840,7 @@
         <name>CN_New_Purchasing_Mobile_Phone__c</name>
     </fields>
     <fields>
-        <help><!-- Please enter the number in the format of 1XXXXXXXXXX or XXX-XXXXXXXX or XXXX-XXXXXXXX-XXX (X is number). --></help>
+        <help>请输入号码格式为1XXXXXXXXXX或XXX-XXXXXXXX（X为数字）</help>
         <label><!-- New Purchasing Phone Number --></label>
         <name>CN_New_Purchasing_Phone_Number__c</name>
     </fields>
@@ -2007,12 +2007,12 @@
         <name>CN_Purchasing_Email__c</name>
     </fields>
     <fields>
-        <help><!-- Please enter the number in the format of 1XXXXXXXXXX or XXX-XXXXXXXX or XXXX-XXXXXXXX-XXX (X is number). --></help>
+        <help>请输入号码格式为1XXXXXXXXXX或XXX-XXXXXXXX（X为数字）</help>
         <label><!-- Purchasing Mobile Phone --></label>
         <name>CN_Purchasing_Mobile_Phone__c</name>
     </fields>
     <fields>
-        <help><!-- Please enter the number in the format of 1XXXXXXXXXX or XXX-XXXXXXXX or XXXX-XXXXXXXX-XXX (X is number). --></help>
+        <help>请输入号码格式为1XXXXXXXXXX或XXX-XXXXXXXX（X为数字）</help>
         <label><!-- Purchasing Phone Number --></label>
         <name>CN_Purchasing_Phone_Number__c</name>
     </fields>
