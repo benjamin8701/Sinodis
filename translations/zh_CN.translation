@@ -17,6 +17,18 @@
         <name>CN_Account_API_US_PW_Error</name>
     </customLabels>
     <customLabels>
+        <label>执行</label>
+        <name>CN_Account_Button_Assign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Button_Clear --></label>
+        <name>CN_Account_Button_Clear</name>
+    </customLabels>
+    <customLabels>
+        <label>检索</label>
+        <name>CN_Account_Button_Search</name>
+    </customLabels>
+    <customLabels>
         <label>发送客户到SAP?</label>
         <name>CN_Account_CFRM_Msg</name>
     </customLabels>
@@ -47,6 +59,42 @@
     <customLabels>
         <label>新建变更申请</label>
         <name>CN_Account_LC_New_Change_Request</name>
+    </customLabels>
+    <customLabels>
+        <label>当前员工编号</label>
+        <name>CN_Account_Mass_Change_Current</name>
+    </customLabels>
+    <customLabels>
+        <label>变更类型</label>
+        <name>CN_Account_Mass_Change_Type</name>
+    </customLabels>
+    <customLabels>
+        <label>变更员工编号</label>
+        <name>CN_Account_Mass_Change_User</name>
+    </customLabels>
+    <customLabels>
+        <label>客户代码（使用“,”&lt;半角逗号&gt;进行分隔）</label>
+        <name>CN_Account_Mass_Customer_Code</name>
+    </customLabels>
+    <customLabels>
+        <label>请检查当前员工编号</label>
+        <name>CN_Account_Mass_ErrMsg_Check_CurrentUser</name>
+    </customLabels>
+    <customLabels>
+        <label>请检查变更员工编号</label>
+        <name>CN_Account_Mass_ErrMsg_Check_UpdateUser</name>
+    </customLabels>
+    <customLabels>
+        <label>请取消或者完成正在进行的变更申请</label>
+        <name>CN_Account_Mass_ErrMsg_Notice</name>
+    </customLabels>
+    <customLabels>
+        <label>结果</label>
+        <name>CN_Account_Mass_Label_Results</name>
+    </customLabels>
+    <customLabels>
+        <label>操作全部成功！</label>
+        <name>CN_Account_Mass_Notice_Success</name>
     </customLabels>
     <customLabels>
         <label>申请新建联系人</label>
@@ -225,6 +273,10 @@
         <name>CN_Group_Synced_Prevent_Delete</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Mass_Change_Account_Results --></label>
+        <name>CN_Mass_Change_Account_Results</name>
+    </customLabels>
+    <customLabels>
         <label>在客户层次中没有找到用户的业务部门。</label>
         <name>CN_Not_Found_BusinessUnit</name>
     </customLabels>
@@ -308,4 +360,8 @@
         <label>申请变更送达方</label>
         <name>CN_ShipTo_Change_Request</name>
     </customLabels>
+    <customTabs>
+        <label>批量变更客户</label>
+        <name>CN_Mass_Change_Account_Owner_Tab</name>
+    </customTabs>
 </Translations>

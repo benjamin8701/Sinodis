@@ -3602,6 +3602,44 @@
         <name>New_CN_Upload_Contract__c</name>
     </fields>
     <layouts>
+        <layout>CN Mass Change Account Finance AR Layout</layout>
+        <sections>
+            <label><!-- Account Information --></label>
+            <section>Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Change Request Information --></label>
+            <section>Change Request Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Sync to SAP --></label>
+            <section>Sync to SAP</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CN Mass Change Account Owner Layout</layout>
+        <sections>
+            <label><!-- Account Information --></label>
+            <section>Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Change Request Information --></label>
+            <section>Change Request Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Sync to SAP --></label>
+            <section>Sync to SAP</section>
+        </sections>
+    </layouts>
+    <layouts>
         <layout>CN Sinodis Account Change Request For Finance Layout</layout>
         <sections>
             <label><!-- Account Information --></label>
@@ -3802,6 +3840,14 @@
     <recordTypes>
         <label><!-- Approved Update Ship To Request --></label>
         <name>CN_Approved_Update_Ship_To_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Change Account Owner --></label>
+        <name>CN_MASS_Change_Account_Owner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Change Account Finance AR --></label>
+        <name>CN_Mass_Change_Account_Finance_AR</name>
     </recordTypes>
     <recordTypes>
         <label><!-- New Contact Request --></label>

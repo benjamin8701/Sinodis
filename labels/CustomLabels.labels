@@ -22,6 +22,27 @@
         <value>Wrong API User Name and Password.</value>
     </labels>
     <labels>
+        <fullName>CN_Account_Button_Assign</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Button_Assign</shortDescription>
+        <value>Process</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Button_Clear</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Button_Clear</shortDescription>
+        <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Button_Search</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Button_Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
         <fullName>CN_Account_CFRM_Msg</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -76,6 +97,69 @@
         <protected>false</protected>
         <shortDescription>CN_Account_LC_New_Change_Request</shortDescription>
         <value>New Change Request</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_Change_Current</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_Change_Current</shortDescription>
+        <value>Current User Personnel Number</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_Change_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_Change_Type</shortDescription>
+        <value>Change Type</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_Change_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_Change_User</shortDescription>
+        <value>Change User Personnel Number</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_Customer_Code</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_Customer_Code</shortDescription>
+        <value>Account Customer Code (Use &apos;,&apos; as the delimiter)</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_ErrMsg_Check_CurrentUser</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_ErrMsg_Check_CurrentUser</shortDescription>
+        <value>Please check current user personal number</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_ErrMsg_Check_UpdateUser</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_ErrMsg_Check_UpdateUser</shortDescription>
+        <value>Please check update user personal number</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_ErrMsg_Notice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_ErrMsg_Notice</shortDescription>
+        <value>Please cancel change request or sync</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_Label_Results</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_Label_Results</shortDescription>
+        <value>Results</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_Notice_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_Notice_Success</shortDescription>
+        <value>Update Successful!</value>
     </labels>
     <labels>
         <fullName>CN_Account_New_Contact_Request</fullName>
@@ -384,6 +468,13 @@
         <protected>false</protected>
         <shortDescription>CN_Group_Synced_Prevent_Delete</shortDescription>
         <value>You cannot delete the Group that was processed to sync to SAP.</value>
+    </labels>
+    <labels>
+        <fullName>CN_Mass_Change_Account_Results</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Mass_Change_Account_Results</shortDescription>
+        <value>Results</value>
     </labels>
     <labels>
         <fullName>CN_Not_Found_BusinessUnit</fullName>
