@@ -21,8 +21,16 @@
         <name>CN_Account_Button_Assign</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Account_Button_Cancel --></label>
+        <name>CN_Account_Button_Cancel</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Account_Button_Clear --></label>
         <name>CN_Account_Button_Clear</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Button_Process --></label>
+        <name>CN_Account_Button_Process</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Account_Button_Search --></label>
@@ -77,6 +85,10 @@
         <name>CN_Account_Mass_Customer_Code</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Account_Mass_ErrMsg_Check_AccountCode --></label>
+        <name>CN_Account_Mass_ErrMsg_Check_AccountCode</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Account_Mass_ErrMsg_Check_CurrentUser --></label>
         <name>CN_Account_Mass_ErrMsg_Check_CurrentUser</name>
     </customLabels>
@@ -87,6 +99,14 @@
     <customLabels>
         <label><!-- CN_Account_Mass_ErrMsg_Notice --></label>
         <name>CN_Account_Mass_ErrMsg_Notice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_ErrMsg_Notice2 --></label>
+        <name>CN_Account_Mass_ErrMsg_Notice2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_Label_Notice --></label>
+        <name>CN_Account_Mass_Label_Notice</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Account_Mass_Label_Results --></label>

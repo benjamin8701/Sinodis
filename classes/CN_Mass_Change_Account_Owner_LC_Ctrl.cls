@@ -32,9 +32,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
         List<CN_Change_Request__c> changeRequestListNew = new List<CN_Change_Request__c>();
         List<CN_Mass_Change_Log__c> LogList = new List<CN_Mass_Change_Log__c>();
         List<String> customerCodeList = new List<String>();
-        //List<User> changeuserid = new List<User>(); 
         List<User> userid = new List<User>(); 
-        //List<CN_Internal_Employee__c> changeFinanceid = new list<CN_Internal_Employee__c>();
         List<CN_Internal_Employee__c> Financeid = new list<CN_Internal_Employee__c>();
         Map<String,RecordType> RecordTypeMap = new Map<String,RecordType>(); 
         Map<String, String> resultMaps = new Map<String, String>();
@@ -42,7 +40,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
         Map<String,User> userMap = new Map<String,User>();
         Map<String,CN_Internal_Employee__c> financeMap = new Map<String,CN_Internal_Employee__c>();
         
-        if(UserNumber !=null && changetype != null){
+        if((UserNumber !=null || CustomerCode != null) && changetype != null){
             Set<String> selectedFieldsSet = new Set<String> {
                 'Id','Name','OwnerId','Owner.CN_User_Personnel_Number__c','Owner.name','CN_Sinodis_Finance_AR__c','CN_Sinodis_Finance_AR__r.Name','recordtype.name',
                 'CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c','CN_Account_Status__c','CN_Sync_Status__c','Type','CN_Customer_Code__c'
@@ -51,26 +49,37 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
             String soqlStrCr = 'Select CN_Account_Name__c, CN_Change_Request_Status__c, CN_Sync_Status__c from CN_Change_Request__c where ( CN_Change_Request_Status__c !=\'Approved\' or ( CN_Change_Request_Status__c = \'Approved\' and CN_Sync_Status__c not in(\'No Need To Sync\', \'Success\') ) ) and CN_Account_Name__c in';
             String soqlStrRecordType = 'Select id, name from RecordType where name in (\'Change Account Owner\',\'Change Account Finance AR\')';
 
-            if( changetype == 'Change Owner' && (CustomerCode == null || CustomerCode == '')) {
+            if( changetype == 'Change Owner' && (CustomerCode == null || CustomerCode == '') && (UserNumber != null || UserNumber != '')) {
                 soqlStr = soqlStr + ' WHERE ' + ' Owner.CN_User_Personnel_Number__c = \''+UserNumber+'\'' ;
-            }else if( changetype == 'Change Finance AR' && (CustomerCode == null || CustomerCode == '')) {
+            }else if( changetype == 'Change Finance AR' && (CustomerCode == null || CustomerCode == '') && (UserNumber != null|| UserNumber!= '')) {
                 soqlStr = soqlStr + ' WHERE ' + ' CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c  = \''+UserNumber+'\'' ;
-            }else if( changetype == 'Change Owner' && CustomerCode != null && CustomerCode != ''){
+            }else if( changetype == 'Change Owner' && (CustomerCode != null || CustomerCode != '') && (UserNumber != null && UserNumber != '')){
                 CustomerCode = CustomerCode.replaceAll(' ','');
                 CustomerCode = CustomerCode.replaceAll('，',',');
                 CustomerCode = CustomerCode.toUpperCase();
                 customerCodeList = CustomerCode.split(',');
                 soqlStr = soqlStr + ' WHERE ' + ' Owner.CN_User_Personnel_Number__c = \''+UserNumber+'\' ' + ' and CN_Customer_Code__c in: customerCodeList' ;
-            }else if( changetype == 'Change Finance AR' && CustomerCode != null && CustomerCode != '') {
+            }else if( changetype == 'Change Finance AR' && (CustomerCode != null || CustomerCode != '') && (UserNumber != null && UserNumber != '')) {
                 CustomerCode = CustomerCode.replaceAll(' ','');
                 CustomerCode = CustomerCode.replaceAll('，',',');
                 CustomerCode = CustomerCode.toUpperCase();
                 customerCodeList = CustomerCode.split(',');
                 soqlStr = soqlStr + ' WHERE ' + ' CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c  = \''+UserNumber+'\' ' + ' and CN_Customer_Code__c in: customerCodeList' ;
+            }else if( changetype == 'Change Owner' && (CustomerCode != null || CustomerCode != '') && (UserNumber == null || UserNumber == '')){
+                CustomerCode = CustomerCode.replaceAll(' ','');
+                CustomerCode = CustomerCode.replaceAll('，',',');
+                CustomerCode = CustomerCode.toUpperCase();
+                customerCodeList = CustomerCode.split(',');
+                soqlStr = soqlStr + ' WHERE ' + ' CN_Customer_Code__c in: customerCodeList' ;
+            }else if( changetype == 'Change Finance AR' && (CustomerCode != null || CustomerCode != '') && (UserNumber == null || UserNumber == '')) {
+                CustomerCode = CustomerCode.replaceAll(' ','');
+                CustomerCode = CustomerCode.replaceAll('，',',');
+                CustomerCode = CustomerCode.toUpperCase();
+                customerCodeList = CustomerCode.split(',');
+                soqlStr = soqlStr + ' WHERE ' + ' CN_Customer_Code__c in: customerCodeList' ;
             }
-            system.debug('soqlStr+'+CustomerCode);
+
             List<Account> accountList = Database.query(soqlStr);
-           
             List<RecordType> RecordTypeList = Database.query(soqlStrRecordType);
             if(RecordTypeList.size()>0){
                 for(RecordType rt : RecordTypeList){
@@ -83,14 +92,12 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                 for(User ui:userid){
                     userMap.put(ui.CN_User_Personnel_Number__c,ui);
                 }
-                //changeuserid = Database.query('select id,CN_User_Personnel_Number__c,name from User where CN_User_Personnel_Number__c = \''+changeUserNumber+'\'');
             }
             if( changeUserNumber != '' && changetype == 'Change Finance AR'){ 
                 Financeid = Database.query('select id,CN_Personnel_Number__c,name from CN_Internal_Employee__c where CN_Personnel_Number__c in (\''+UserNumber+'\' , \''+changeUserNumber+'\')');
                 for(CN_Internal_Employee__c ce : Financeid){
                     financeMap.put(ce.CN_Personnel_Number__c,ce);
                 }
-                //changeFinanceid = Database.query('select id,CN_Personnel_Number__c,name from CN_Internal_Employee__c where CN_Personnel_Number__c = \''+changeUserNumber+'\'');
             }
 
             
@@ -101,22 +108,20 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                 resultMaps.put('Comment', '');
                 resultMaps.put('Show', 'Error');
                 accountWrapperListError.add(new AccountWrapper(resultMaps));
-            }else if((accountList.size() <= 0 || accountList == null) && CustomerCode == null){
+            }else if((accountList.size() <= 0 || accountList == null) && (CustomerCode == null || CustomerCode == '')){
                 //返回未找到相应的Account，请确认输入的员工号正确
                 resultMaps = new Map<String, String>();
                 if(changetype == 'Change Owner'){
                 	resultMaps.put('Owner', userMap.get(UserNumber)?.name);
-                    //resultMaps.put('changeuser',userMap.get(changeUserNumber).name);
                 }else if(changetype == 'Change Finance AR'){
                     resultMaps.put('Owner', financeMap.get(UserNumber)?.name);
-                    //resultMaps.put('changeuser',financeMap.get(changeUserNumber).name);
                 }
                 resultMaps.put('ErrorComment', System.label.CN_Account_Mass_ErrMsg_Check_CurrentUser);
                 resultMaps.put('Comment', '');
                 resultMaps.put('Show', 'Error');
                 accountWrapperListError.add(new AccountWrapper(resultMaps));
             }else if((accountList.size() <= 0 || accountList == null) && CustomerCode != null){
-                //返回未找到相应的Account，请确认输入的员工号正确
+                //返回未找到相应的Account，请确认输入的Customer Code正确
                 resultMaps = new Map<String, String>();
                 if(changetype == 'Change Owner'){
                 	resultMaps.put('Owner', userMap.get(UserNumber)?.name);
@@ -125,11 +130,11 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                     resultMaps.put('Owner', financeMap.get(UserNumber)?.name);
                     resultMaps.put('changeuser',financeMap.get(changeUserNumber)?.name);
                 }
-                resultMaps.put('ErrorComment', 'Please check Account Customer Code');
+                resultMaps.put('ErrorComment', System.label.CN_Account_Mass_ErrMsg_Check_AccountCode);
                 resultMaps.put('Comment', '');
                 resultMaps.put('Show', 'Error');
                 accountWrapperListError.add(new AccountWrapper(resultMaps));
-            }else if((userMap.get(changeUserNumber)==null && financeMap.get(changeUserNumber)==null) || UserNumber == changeUserNumber){
+            }else if(isProcess == true && (userMap.get(changeUserNumber)==null && financeMap.get(changeUserNumber)==null) || (UserNumber == changeUserNumber && UserNumber != null)  ){
                 //返回未找到相应的change User，请确认输入的员工号正确
                 resultMaps = new Map<String, String>();
                 if(changetype == 'Change Owner'){
@@ -149,15 +154,25 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                     resultMaps.put('Name', accRow.Name);
                     resultMaps.put('CN_Customer_Code__c',accRow.CN_Customer_Code__c);
                     resultMaps.put('Type', accRow.RecordType.name);
-                    resultMaps.put('OwnerId', accRow.Owner.CN_User_Personnel_Number__c);
-                    resultMaps.put('CN_Sinodis_Finance_AR__c', accRow.CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c);
+                    resultMaps.put('OwnerId', accRow.Owner.Name);
+                    resultMaps.put('CN_Sinodis_Finance_AR__c', accRow.CN_Sinodis_Finance_AR__r.Name);
                     resultMaps.put('CN_Account_Status__c', accRow.CN_Account_Status__c);
                     resultMaps.put('CN_Sync_Status__c', accRow.CN_Sync_Status__c);
-                    if(changetype == 'Change Owner'){
+                    if(changetype == 'Change Owner' && userMap.get(changeUserNumber) == null && UserNumber != null){
+                        resultMaps.put('Owner', accRow.Owner.Name);
+                    	
+                    }else if(changetype == 'Change Owner'&&userMap.get(changeUserNumber) != null && UserNumber != null){
                         resultMaps.put('Owner', accRow.Owner.Name);
                     	resultMaps.put('changeuser',userMap.get(changeUserNumber).name);
-                    }else if(changetype == 'Change Finance AR'){
+                    }else if(changetype == 'Change Finance AR' && financeMap.get(changeUserNumber) == null && UserNumber != null){
                         resultMaps.put('Owner', accRow.CN_Sinodis_Finance_AR__r.Name);
+                        
+                    }else if(changetype == 'Change Finance AR' && financeMap.get(changeUserNumber) != null && UserNumber != null){
+                        resultMaps.put('Owner', accRow.CN_Sinodis_Finance_AR__r.Name);
+                        resultMaps.put('changeuser',financeMap.get(changeUserNumber).name);
+                    }else if(changetype == 'Change Owner'&&userMap.get(changeUserNumber) != null && UserNumber == null){
+                    	resultMaps.put('changeuser',userMap.get(changeUserNumber).name);
+                    }else if(changetype == 'Change Finance AR' && financeMap.get(changeUserNumber) != null && UserNumber == null){
                         resultMaps.put('changeuser',financeMap.get(changeUserNumber).name);
                     }
                     resultMaps.put('Comment', '');
@@ -175,16 +190,16 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                         resultMaps.put('Name', accRow.Name);
                         resultMaps.put('CN_Customer_Code__c',accRow.CN_Customer_Code__c);
                         resultMaps.put('Type', accRow.RecordType.name);
-                        resultMaps.put('OwnerId', accRow.Owner.CN_User_Personnel_Number__c);
-                        resultMaps.put('CN_Sinodis_Finance_AR__c', accRow.CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c);
+                        resultMaps.put('OwnerId', accRow.Owner.Name);
+                        resultMaps.put('CN_Sinodis_Finance_AR__c', accRow.CN_Sinodis_Finance_AR__r.Name);
                         resultMaps.put('CN_Account_Status__c', accRow.CN_Account_Status__c);
                         resultMaps.put('CN_Sync_Status__c', accRow.CN_Sync_Status__c);
-                        resultMaps.put('Comment', 'Please sync Account');
+                		resultMaps.put('Show', 'Result');
+                        resultMaps.put('Comment', system.label.CN_Account_Mass_ErrMsg_Notice2);
                         accountWrapperListError.add(new AccountWrapper(resultMaps));
                     }else if((accRow.RecordType.name=='Approved Direct' && accRow.CN_Account_Status__c != 'Approved') || ( accRow.RecordType.name!='Approved Direct')){
                         //可以直接update的数据
                         if(changetype == 'Change Owner' && userMap.get(changeUserNumber)!=null){
-                            system.debug('accRow++'+accRow.id);
                             Account accUp = new Account();
                             accUp.id = accRow.Id;
                             accUp.Ownerid = userMap.get(changeUserNumber).id;
@@ -192,7 +207,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                             CN_Mass_Change_Log__c chLog = new CN_Mass_Change_Log__c();
                             chLog.CN_AccountId__c = accRow.id;
                             chLog.CN_Change_Type__c = 'Change Owner';
-                            chLog.CN_Before_User_Number__c = UserNumber;
+                            chLog.CN_Before_User_Number__c = accountList[0].Owner.CN_User_Personnel_Number__c;
                             chLog.CN_After_User_Number__c = changeUserNumber;
                             logList.add(chLog);
                         }else if(changetype == 'Change Finance AR' && financeMap.get(changeUserNumber)!=null){
@@ -203,7 +218,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                             CN_Mass_Change_Log__c chLog = new CN_Mass_Change_Log__c();
                             chLog.CN_AccountId__c = accRow.Id;
                             chLog.CN_Change_Type__c = 'Change Finance AR';
-                            chLog.CN_Before_User_Number__c = UserNumber;
+                            chLog.CN_Before_User_Number__c = accountList[0].CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c;
                             chLog.CN_After_User_Number__c = changeUserNumber;
                             logList.add(chLog);
                         }
@@ -222,7 +237,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                             CN_Mass_Change_Log__c chLog = new CN_Mass_Change_Log__c();
                             chLog.CN_AccountId__c = accRow.Id;
                             chLog.CN_Change_Type__c = 'Change Owner';
-                            chLog.CN_Before_User_Number__c = UserNumber;
+                            chLog.CN_Before_User_Number__c = accountList[0].Owner.CN_User_Personnel_Number__c;
                             chLog.CN_After_User_Number__c = changeUserNumber;
                             logList.add(chLog);
                         }else if(changetype == 'Change Finance AR'){
@@ -237,7 +252,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                             CN_Mass_Change_Log__c chLog = new CN_Mass_Change_Log__c();
                             chLog.CN_AccountId__c = accRow.Id;
                             chLog.CN_Change_Type__c = 'Change Finance AR';
-                            chLog.CN_Before_User_Number__c = UserNumber;
+                            chLog.CN_Before_User_Number__c = accountList[0].CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c;
                             chLog.CN_After_User_Number__c = changeUserNumber;
                             logList.add(chLog);
                         }
@@ -254,15 +269,15 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                         resultMaps.put('Name', accountMap.get(crRow.CN_Account_Name__c).Name);
                         resultMaps.put('CN_Customer_Code__c',accountMap.get(crRow.CN_Account_Name__c).CN_Customer_Code__c);
                         resultMaps.put('Type', accountMap.get(crRow.CN_Account_Name__c).RecordType.name);
-                        resultMaps.put('OwnerId', accountMap.get(crRow.CN_Account_Name__c).Owner.CN_User_Personnel_Number__c);
-                        resultMaps.put('CN_Sinodis_Finance_AR__c', accountMap.get(crRow.CN_Account_Name__c).CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c);
+                        resultMaps.put('OwnerId', accountMap.get(crRow.CN_Account_Name__c).Owner.Name);
+                        resultMaps.put('CN_Sinodis_Finance_AR__c', accountMap.get(crRow.CN_Account_Name__c).CN_Sinodis_Finance_AR__r.Name);
                         resultMaps.put('CN_Account_Status__c', accountMap.get(crRow.CN_Account_Name__c).CN_Account_Status__c);
                         resultMaps.put('CN_Sync_Status__c', accountMap.get(crRow.CN_Account_Name__c).CN_Sync_Status__c);
                         if(changetype == 'Change Owner'){
-                            resultMaps.put('Owner', userMap.get(UserNumber).name);
+                            resultMaps.put('Owner',  accountList[0].Owner.name);
                             resultMaps.put('changeuser',userMap.get(changeUserNumber).name);
                         }else if(changetype == 'Change Finance AR'){
-                            resultMaps.put('Owner', financeMap.get(UserNumber).name);
+                            resultMaps.put('Owner', accountList[0].CN_Sinodis_Finance_AR__r.name);
                             resultMaps.put('changeuser',financeMap.get(changeUserNumber).name);
                         }
                         resultMaps.put('Comment', System.label.CN_Account_Mass_ErrMsg_Notice);

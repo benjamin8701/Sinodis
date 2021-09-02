@@ -1,5 +1,5 @@
 <aura:component controller="CN_Mass_Change_Account_Owner_LC_Ctrl" implements="force:appHostable,flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId,flexipage:availableForAllPageTypes,force:appHostable" access="global" >
-
+    
 <aura:attribute name="mapInput" type="Map" default="{}"/>
 <aura:attribute name="queryParam"  type="Map" default="{}" />
 <aura:handler name="init" value="this" action="{!c.doInit}"/>
@@ -8,7 +8,9 @@
 <aura:attribute name="titleMap" type="Map" />
 <aura:attribute name="showLoading" type="Boolean" default="false" />
 <aura:attribute name="showResult" type="Boolean" default="false" />
+<aura:attribute name="showSuccess" type="Boolean" default="false" />
 <aura:attribute name="isTooltip" type="Boolean" default="false"/>
+    
 
 <aura:if isTrue="{!v.showLoading}">
 <lightning:spinner variant="brand" size="large" />
@@ -49,7 +51,7 @@
             <!-- Button -->
             <div class="slds-col slds-size_1-of-3 slds-m-top_large">
                 <lightning:button variant="brand" label="{!v.titleMap.buttonSearch}" title="{!v.titleMap.buttonSearch}" onclick="{!c.jsSearch}"/>
-                <lightning:button variant="brand" label="{!v.titleMap.buttonAssign}" title="{!v.titleMap.buttonAssign}" onclick="{!c.jsProcess}"/>
+                <lightning:button variant="brand" label="{!v.titleMap.buttonAssign}" title="{!v.titleMap.buttonAssign}" onclick="{!c.jsPreProcess}"/>
             </div>
         </div>
         <div class="slds-grid slds-wrap slds-gutters">
@@ -78,7 +80,7 @@
                 <aura:if isTrue="{!v.isTooltip}">
                     <lightning:helptext content="Please kindly enter Account Customer Code, Use ',' as the delimiter"/>
                 </aura:if>-->
-                <lightning:input label="{!v.titleMap.titleCustomerCode}" value="{!v.queryParam.CustomerCode}" maxlength="255"/>
+                <lightning:textarea  label="{!v.titleMap.titleCustomerCode}" value="{!v.queryParam.CustomerCode}" maxlength="255"/>
             </div>
         </div>
     </lightning:accordion>
@@ -182,5 +184,28 @@
     </aura:if>
     </aura:if>
 
+</div>  
+<aura:if isTrue="{!v.showSuccess}">
+    <div id="gsp_modal_account_binding" >
+<section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_medium"
+        aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1">
+<div class="slds-modal__container">
+<header class="slds-modal__header slds-modal__header_empty">
+<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">	
+    <lightning:icon onclick="{!c.jsCloseAlert}" iconName="utility:close" alternativeText="close" title="close" />
+<span class="slds-assistive-text">Close</span>
+</button>
+</header>
+<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+<p>{!v.titleMap.titleNotice}</p>
 </div>
+<footer class="slds-modal__footer">
+    <lightning:button variant="brand" label="{!v.titleMap.buttonCancel}" title="{!v.titleMap.buttonCancel}" onclick="{!c.jsCloseAlert}"/>
+    <lightning:button variant="brand" label="{!v.titleMap.buttonProcess}" title="{!v.titleMap.buttonProcess}" onclick="{!c.jsProcess}"/>
+</footer>
+</div>
+</section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+</div>
+</aura:if>
 </aura:component>

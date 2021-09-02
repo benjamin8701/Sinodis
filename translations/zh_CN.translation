@@ -21,8 +21,16 @@
         <name>CN_Account_Button_Assign</name>
     </customLabels>
     <customLabels>
+        <label>取消</label>
+        <name>CN_Account_Button_Cancel</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Account_Button_Clear --></label>
         <name>CN_Account_Button_Clear</name>
+    </customLabels>
+    <customLabels>
+        <label>确认</label>
+        <name>CN_Account_Button_Process</name>
     </customLabels>
     <customLabels>
         <label>检索</label>
@@ -77,6 +85,10 @@
         <name>CN_Account_Mass_Customer_Code</name>
     </customLabels>
     <customLabels>
+        <label>请检查客户代码</label>
+        <name>CN_Account_Mass_ErrMsg_Check_AccountCode</name>
+    </customLabels>
+    <customLabels>
         <label>请检查当前员工编号</label>
         <name>CN_Account_Mass_ErrMsg_Check_CurrentUser</name>
     </customLabels>
@@ -87,6 +99,14 @@
     <customLabels>
         <label>请取消或者完成正在进行的变更申请</label>
         <name>CN_Account_Mass_ErrMsg_Notice</name>
+    </customLabels>
+    <customLabels>
+        <label>请先完成同步</label>
+        <name>CN_Account_Mass_ErrMsg_Notice2</name>
+    </customLabels>
+    <customLabels>
+        <label>请确认执行批量变更客户申请！</label>
+        <name>CN_Account_Mass_Label_Notice</name>
     </customLabels>
     <customLabels>
         <label>结果</label>

@@ -29,11 +29,25 @@
         <value>Process</value>
     </labels>
     <labels>
+        <fullName>CN_Account_Button_Cancel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Button_Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
         <fullName>CN_Account_Button_Clear</fullName>
         <language>en_US</language>
         <protected>false</protected>
         <shortDescription>CN_Account_Button_Clear</shortDescription>
         <value>Clear</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Button_Process</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Button_Process</shortDescription>
+        <value>Confirm</value>
     </labels>
     <labels>
         <fullName>CN_Account_Button_Search</fullName>
@@ -127,6 +141,13 @@
         <value>Account Customer Code (Use &apos;,&apos; as the delimiter)</value>
     </labels>
     <labels>
+        <fullName>CN_Account_Mass_ErrMsg_Check_AccountCode</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_ErrMsg_Check_AccountCode</shortDescription>
+        <value>Please check Account Customer Code</value>
+    </labels>
+    <labels>
         <fullName>CN_Account_Mass_ErrMsg_Check_CurrentUser</fullName>
         <language>en_US</language>
         <protected>false</protected>
@@ -146,6 +167,20 @@
         <protected>false</protected>
         <shortDescription>CN_Account_Mass_ErrMsg_Notice</shortDescription>
         <value>Please cancel change request or sync</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_ErrMsg_Notice2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_ErrMsg_Notice2</shortDescription>
+        <value>Please sync Account</value>
+    </labels>
+    <labels>
+        <fullName>CN_Account_Mass_Label_Notice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_Label_Notice</shortDescription>
+        <value>Please kindly confirm your mass change request!</value>
     </labels>
     <labels>
         <fullName>CN_Account_Mass_Label_Results</fullName>
