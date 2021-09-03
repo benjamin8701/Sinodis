@@ -21,6 +21,7 @@
     <tabs>CN_Sales_Team__c</tabs>
     <tabs>CN_Group__c</tabs>
     <tabs>CN_Brand__c</tabs>
+    <tabs>CN_Mass_Change_Account_Owner_Tab</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Savencia_Sanodis_UtilityBar</utilityBar>
 </CustomApplication>

@@ -17,6 +17,26 @@
         <name>CN_Account_API_US_PW_Error</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Account_Button_Assign --></label>
+        <name>CN_Account_Button_Assign</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Button_Cancel --></label>
+        <name>CN_Account_Button_Cancel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Button_Clear --></label>
+        <name>CN_Account_Button_Clear</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Button_Process --></label>
+        <name>CN_Account_Button_Process</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Button_Search --></label>
+        <name>CN_Account_Button_Search</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Account_CFRM_Msg --></label>
         <name>CN_Account_CFRM_Msg</name>
     </customLabels>
@@ -47,6 +67,54 @@
     <customLabels>
         <label><!-- CN_Account_LC_New_Change_Request --></label>
         <name>CN_Account_LC_New_Change_Request</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_Change_Current --></label>
+        <name>CN_Account_Mass_Change_Current</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_Change_Type --></label>
+        <name>CN_Account_Mass_Change_Type</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_Change_User --></label>
+        <name>CN_Account_Mass_Change_User</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_Customer_Code --></label>
+        <name>CN_Account_Mass_Customer_Code</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_ErrMsg_Check_AccountCode --></label>
+        <name>CN_Account_Mass_ErrMsg_Check_AccountCode</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_ErrMsg_Check_CurrentUser --></label>
+        <name>CN_Account_Mass_ErrMsg_Check_CurrentUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_ErrMsg_Check_UpdateUser --></label>
+        <name>CN_Account_Mass_ErrMsg_Check_UpdateUser</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_ErrMsg_Notice --></label>
+        <name>CN_Account_Mass_ErrMsg_Notice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_ErrMsg_Notice2 --></label>
+        <name>CN_Account_Mass_ErrMsg_Notice2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_Label_Notice --></label>
+        <name>CN_Account_Mass_Label_Notice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_Label_Results --></label>
+        <name>CN_Account_Mass_Label_Results</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Account_Mass_Notice_Success --></label>
+        <name>CN_Account_Mass_Notice_Success</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Account_New_Contact_Request --></label>
@@ -225,6 +293,10 @@
         <name>CN_Group_Synced_Prevent_Delete</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Mass_Change_Account_Results --></label>
+        <name>CN_Mass_Change_Account_Results</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Not_Found_BusinessUnit --></label>
         <name>CN_Not_Found_BusinessUnit</name>
     </customLabels>
@@ -308,4 +380,8 @@
         <label><!-- CN_ShipTo_Change_Request --></label>
         <name>CN_ShipTo_Change_Request</name>
     </customLabels>
+    <customTabs>
+        <label><!-- Mass Change Account --></label>
+        <name>CN_Mass_Change_Account_Owner_Tab</name>
+    </customTabs>
 </Translations>

@@ -294,6 +294,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CN_Mass_Change_Account_Owner_LC_Ctrl</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CN_OrderTreeUpsert_WS</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -3323,6 +3327,31 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>CN_Mass_Change_Log__c.CN_AccountId__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Mass_Change_Log__c.CN_After_User_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Mass_Change_Log__c.CN_Before_User_Number__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Mass_Change_Log__c.CN_ChangeUser__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Mass_Change_Log__c.CN_Change_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>CN_Order_Reason__c.CN_Order_Reason_External_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4357,6 +4386,14 @@
         <layout>CN_Change_Request_Fields_Mapping__mdt-CN_Change_Request_Fields_Mapping Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CN_Change_Request__c-CN Mass Change Account Finance AR Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Mass_Change_Account_Finance_AR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Change_Request__c-CN Mass Change Account Owner Layout</layout>
+        <recordType>CN_Change_Request__c.CN_MASS_Change_Account_Owner</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -4627,6 +4664,15 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+        <object>CN_Mass_Change_Log__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
         <object>CN_Order_Reason__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -4792,6 +4838,16 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>CN_Change_Request__c.CN_MASS_Change_Account_Owner</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>CN_Change_Request__c.CN_Mass_Change_Account_Finance_AR</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>CN_Change_Request__c.CN_New_Contact_Request</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -4926,6 +4982,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>CN_Internal_Employee__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>CN_Mass_Change_Account_Owner_Tab</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>

@@ -6103,7 +6103,7 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             <filterItems>
                 <field>$Profile.Name</field>
                 <operation>equals</operation>
-                <value>CN CFO, CN Finance AR, CN Finance MDM</value>
+                <value>CN CFO, CN Finance AR, CN Finance MDM, CN Sales MDM</value>
             </filterItems>
             <isOptional>false</isOptional>
         </lookupFilter>
@@ -33739,7 +33739,9 @@ Invoicing Address and Phone.</errorMessage>
         <errorConditionFormula>AND(
 $Setup.Trigger_Switcher_Setting__c.EnableValidationRule__c,
 NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
-IF(CN_Is_Generate_From_Action__c = false, TRUE, FALSE)
+IF(CN_Is_Generate_From_Action__c = false, TRUE, FALSE),
+NOT(IF(RecordType.DeveloperName = &quot;CN_MASS_Change_Account_Owner&quot;, TRUE, FALSE)),
+NOT(IF(RecordType.DeveloperName = &quot;CN_Mass_Change_Account_Finance_AR&quot;, TRUE, FALSE))
 )</errorConditionFormula>
         <errorMessage>Please close this page and create change request from quick action. 请关闭此页面，从客户/联系人/运送人页面点击按钮创建变更申请。</errorMessage>
     </validationRules>
@@ -33871,7 +33873,9 @@ OR(
   $Setup.Trigger_Switcher_Setting__c.EnableValidationRule__c,
   NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
   ISPICKVAL(CN_Change_Request_Status__c, &quot;Approved&quot;),
-  NOT(ISCHANGED( CN_Sync_Status__c ))
+  NOT(ISCHANGED( CN_Sync_Status__c )),
+  NOT(IF(RecordType.DeveloperName = &quot;CN_MASS_Change_Account_Owner&quot;, TRUE, FALSE)),
+  NOT(IF(RecordType.DeveloperName = &quot;CN_Mass_Change_Account_Finance_AR&quot;, TRUE, FALSE))
 )</errorConditionFormula>
         <errorMessage>Pls don&apos;t update when the change request has been approved.</errorMessage>
     </validationRules>

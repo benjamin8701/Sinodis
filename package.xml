@@ -73,6 +73,7 @@
         <members>CN_Group_Prevent_Delete_Handler_Test</members>
         <members>CN_Group_Send_To_SAP_LC_Ctrl</members>
         <members>CN_Group_Send_To_SAP_LC_Ctrl_Test</members>
+        <members>CN_Mass_Change_Account_Owner_LC_Ctrl</members>
         <members>CN_OrderTreeUpsert_WS</members>
         <members>CN_OrderTreeUpsert_WS_Test</members>
         <members>CN_ST_Send_To_SAP_LC_Ctrl</members>
@@ -183,6 +184,8 @@
         <members>CN_Brand__c-Brand Layout</members>
         <members>CN_Business_Unit__c-Business Unit Layout</members>
         <members>CN_Change_Request_Fields_Mapping__mdt-CN_Change_Request_Fields_Mapping Layout</members>
+        <members>CN_Change_Request__c-CN Mass Change Account Finance AR Layout</members>
+        <members>CN_Change_Request__c-CN Mass Change Account Owner Layout</members>
         <members>CN_Change_Request__c-CN Sinodis Account Change Request For Finance Layout</members>
         <members>CN_Change_Request__c-CN Sinodis Account Change Request Layout</members>
         <members>CN_Change_Request__c-CN Sinodis New Contact Change Request Layout</members>
