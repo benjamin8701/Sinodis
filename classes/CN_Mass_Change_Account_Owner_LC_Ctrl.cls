@@ -52,7 +52,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
             if( changetype == 'Change Owner' && (CustomerCode == null || CustomerCode == '') && (UserNumber != null || UserNumber != '')) {
                 soqlStr = soqlStr + ' WHERE ' + ' Owner.CN_User_Personnel_Number__c = \''+UserNumber+'\'' ;
             }else if( changetype == 'Change Finance AR' && (CustomerCode == null || CustomerCode == '') && (UserNumber != null|| UserNumber!= '')) {
-                soqlStr = soqlStr + ' WHERE ' + ' CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c  = \''+UserNumber+'\'' ;
+                soqlStr = soqlStr + ' WHERE ' + ' CN_Sinodis_Finance_AR__r.CN_Personnel_Number__c  = \''+UserNumber+'\'' + ' and CN_Customer_Code__c != null';
             }else if( changetype == 'Change Owner' && (CustomerCode != null || CustomerCode != '') && (UserNumber != null && UserNumber != '')){
                 CustomerCode = CustomerCode.replaceAll(' ','');
                 CustomerCode = CustomerCode.replaceAll('，',',');
@@ -196,6 +196,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                         resultMaps.put('CN_Sync_Status__c', accRow.CN_Sync_Status__c);
                 		resultMaps.put('Show', 'Result');
                         resultMaps.put('Comment', system.label.CN_Account_Mass_ErrMsg_Notice2);
+                        resultMaps.put('Comment3', system.label.CN_Account_Mass_ErrMsg_Notice3);
                         accountWrapperListError.add(new AccountWrapper(resultMaps));
                     }else if((accRow.RecordType.name=='Approved Direct' && accRow.CN_Account_Status__c != 'Approved') || ( accRow.RecordType.name!='Approved Direct')){
                         //可以直接update的数据
@@ -281,6 +282,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                             resultMaps.put('changeuser',financeMap.get(changeUserNumber).name);
                         }
                         resultMaps.put('Comment', System.label.CN_Account_Mass_ErrMsg_Notice);
+                        resultMaps.put('Comment3', system.label.CN_Account_Mass_ErrMsg_Notice3);
                         resultMaps.put('Show', 'Result');
                         accountWrapperListError.add(new AccountWrapper(resultMaps));
                     }

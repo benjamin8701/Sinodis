@@ -99,6 +99,13 @@
         <value>At least one billing contact and one purchase contact for each account.请保证至少一个账单联系人与购买联系人。</value>
     </labels>
     <labels>
+		<fullName>CN_Account_Mass_ErrMsg_Notice3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Account_Mass_ErrMsg_Notice3</shortDescription>
+        <value>Exception occurs, Please check the details!</value>
+    </labels>
+    <labels>
         <fullName>CN_Account_Has_ShipToParty</fullName>
         <language>en_US</language>
         <protected>false</protected>
