@@ -3614,44 +3614,6 @@
         <name>New_CN_Upload_Contract__c</name>
     </fields>
     <layouts>
-        <layout>CN Mass Change Account Finance AR Layout</layout>
-        <sections>
-            <label>客户信息</label>
-            <section>Account Information</section>
-        </sections>
-        <sections>
-            <label>变更申请信息</label>
-            <section>Change Request Information</section>
-        </sections>
-        <sections>
-            <label>自定义链接</label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label>SAP同步信息</label>
-            <section>Sync to SAP</section>
-        </sections>
-    </layouts>
-    <layouts>
-        <layout>CN Mass Change Account Owner Layout</layout>
-        <sections>
-            <label>客户信息</label>
-            <section>Account Information</section>
-        </sections>
-        <sections>
-            <label>变更申请信息</label>
-            <section>Change Request Information</section>
-        </sections>
-        <sections>
-            <label>自定义链接</label>
-            <section>Custom Links</section>
-        </sections>
-        <sections>
-            <label>SAP同步信息</label>
-            <section>Sync to SAP</section>
-        </sections>
-    </layouts>
-    <layouts>
         <layout>CN Sinodis Account Change Request For Finance Layout</layout>
         <sections>
             <label>客户信息</label>
