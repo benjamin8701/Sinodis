@@ -18662,6 +18662,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>D007</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>D010</fullName>
                 <default>false</default>
             </values>
@@ -20119,6 +20123,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>D005</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D007</fullName>
                 <default>false</default>
             </values>
             <values>
