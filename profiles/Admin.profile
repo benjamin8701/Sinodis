@@ -8571,25 +8571,60 @@
         <recordType>CN_Business_Unit__c.CN_Business_Unit</recordType>
     </layoutAssignments>
     <layoutAssignments>
-    <layoutAssignments>
-        <recordType>CN_Change_Request__c.CN_New_Ship_To_Request</recordType>
+        <layout>CN_Campaign_Product__c-Campaign Product Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Sinodis ShipTo Change Request Layout</layout>
-        <recordType>CN_Change_Request__c.CN_Approved_Update_Ship_To_Request</recordType>
+        <layout>CN_Change_Request_Fields_Mapping__mdt-CN_Change_Request_Fields_Mapping Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Sinodis ShipTo Change Request Layout</layout>
-        <recordType>CN_Change_Request__c.CN_Update_Ship_To_Request</recordType>
+        <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Sinodis Update Contact Change Request Layout</layout>
-        <recordType>CN_Change_Request__c.CN_Approved_Update_Contact_Request</recordType>
+        <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Approved_Update_Account_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Sinodis Update Contact Change Request Layout</layout>
-        <recordType>CN_Change_Request__c.CN_Update_Contact_Request</recordType>
+        <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_MASS_Change_Account_Owner</recordType>
     </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Mass_Change_Account_Finance_AR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Chef_Request__c-CN 1on1 Chef Request</layout>
+        <recordType>CN_Chef_Request__c.CN_1on1_Service_Chef_Request_New</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Chef_Request__c-CN MKT_CCE Demo Request</layout>
+        <recordType>CN_Chef_Request__c.CN_Marketing_CCE_Chef_Demo_Request</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Chef_Request__c-CN Marketing development Request</layout>
+        <recordType>CN_Chef_Request__c.CN_Marketing_Development_Request</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Chef_Request__c-CN Self-Chef Demo Request</layout>
+        <recordType>CN_Chef_Request__c.CN_Chef_Self_Work_Request</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Chef_Request__c-Chef Request Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Chef_UT__c-CN Chef UT Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Chef_UT__c-CN Chef UT Layout</layout>
+        <recordType>CN_Chef_UT__c.CN_Chef_UT</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Chefs_Assigned__c-CN Chefs Assigned Layout</layout>
+        <recordType>CN_Chefs_Assigned__c.CN_Chef_Assigned</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Chefs_Assigned__c-Chefs Assigned Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CN_Chef_Request__c-CN 1on1 Chef Request</layout>
         <recordType>CN_Chef_Request__c.CN_1on1_Service_Chef_Request</recordType>
     </layoutAssignments>

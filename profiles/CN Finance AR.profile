@@ -8609,6 +8609,14 @@
         <recordType>CN_Change_Request__c.CN_Mass_Change_Account_Finance_AR</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_MASS_Change_Account_Owner</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Mass_Change_Account_Finance_AR</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CN_Change_Request__c-CN Sinodis New Contact Change Request Layout</layout>
         <recordType>CN_Change_Request__c.CN_Approved_New_Contact_Request</recordType>
     </layoutAssignments>
