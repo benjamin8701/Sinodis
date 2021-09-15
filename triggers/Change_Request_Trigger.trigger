@@ -59,6 +59,10 @@ trigger Change_Request_Trigger on CN_Change_Request__c (before insert, before up
                 //hotfix realse7 ----by shuqi end
                 triggersObj.bind(Triggers.Evt.AfterUpdate, new CN_CR_Write_Back_To_Account_Handler());
             }
+	    if(Constants.CN_CR_CHECK_FIELDS_HANDLER_TRIGGER_ON) {
+                triggersObj.bind(Triggers.Evt.beforeInsert, new CN_CR_Contact_Type_Check_Handler());
+                triggersObj.bind(Triggers.Evt.BeforeUpdate, new CN_CR_Contact_Type_Check_Handler());
+            }
         }
         triggersObj.execute(); 
     }
