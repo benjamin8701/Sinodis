@@ -10365,10 +10365,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>D007</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>D010</fullName>
                 <default>false</default>
             </values>
@@ -10401,10 +10397,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>M031</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>M110</fullName>
                 <default>false</default>
             </values>
@@ -10422,10 +10414,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>M145</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>M23</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -29149,10 +29137,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>D007</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>D010</fullName>
                 <default>false</default>
             </values>
@@ -29185,10 +29169,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>M031</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>M110</fullName>
                 <default>false</default>
             </values>
@@ -29206,10 +29186,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>M145</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>M23</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -31839,10 +31815,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>D007</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>D010</fullName>
                 <default>false</default>
             </values>
@@ -31875,10 +31847,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>M031</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>M110</fullName>
                 <default>false</default>
             </values>
@@ -31896,10 +31864,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>M145</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>M23</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -34529,10 +34493,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>D007</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>D010</fullName>
                 <default>false</default>
             </values>
@@ -34565,10 +34525,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>M031</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>M110</fullName>
                 <default>false</default>
             </values>
@@ -34586,10 +34542,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>M145</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>M23</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -37219,10 +37171,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>D007</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>D010</fullName>
                 <default>false</default>
             </values>
@@ -37255,10 +37203,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>M031</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>M110</fullName>
                 <default>false</default>
             </values>
@@ -37276,10 +37220,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>M145</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>M23</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -39909,10 +39849,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>D007</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>D010</fullName>
                 <default>false</default>
             </values>
@@ -39945,10 +39881,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>M031</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>M110</fullName>
                 <default>false</default>
             </values>
@@ -39966,10 +39898,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>M145</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>M23</fullName>
                 <default>false</default>
             </values>
             <values>
