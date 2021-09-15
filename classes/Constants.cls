@@ -9,20 +9,20 @@ public without sharing class Constants {
     public static Boolean CN_ACCOUNT_POPULATE_APPROVER_HANDLER_TRIGGER_ON = true;
     public static Boolean CN_ACCOUNT_PREVENT_DELETE_HANDLER_TRIGGER_ON = true;
     public static Boolean CN_ACCOUNT_APPROVE_AGING_HANDLER_TRIGGER_ON = true;
-	public static Boolean CN_ACCOUNT_GENERATE_DOCUMENTS_HANDLER_TRIGGER_ON = true;
-	public static Boolean CN_ACCOUNT_ADDRESS_CHANGE_HANDLER_TRIGGER_ON = true;
-	//CR05 � Tm report by Shuqi - start
-	public static Boolean CN_ACCOUNT_TM_REPORT_HANDLER_TRIGGER_ON = true;
-	//CR05 � Tm report by Shuqi - end   
-	
-	public static final String CN_Account_RT_API_NAME_NEW_DIRECT = 'CN_New_Direct';
-	public static final String CN_Account_RT_API_NAME_EDIT_DIRECT = 'CN_Edit_Direct';
-	public static final String CN_Account_RT_API_NAME_NEW_INDIRECT = 'CN_New_Indirect';
-	public static final String CN_Account_RT_API_NAME_EDIT_INDIRECT = 'CN_Edit_Indirect';
-	public static final String CN_Account_RT_API_NAME_APPROVE_DIRECT = 'CN_Approved_Direct';
-	public static final String CN_Account_RT_API_NAME_NEW_Prospect = 'CN_New_Prospect';
-	public static final String CN_Account_RT_API_NAME_EDIT_Prospect = 'CN_Edit_Prospect';	 
-    public static final String CN_ACCOUNT_ACCOUNT_STATUS_SUBMITTED_FOR_APPROVAL = 'Submitted for Approval';
+    public static Boolean CN_ACCOUNT_GENERATE_DOCUMENTS_HANDLER_TRIGGER_ON = true;
+    public static Boolean CN_ACCOUNT_ADDRESS_CHANGE_HANDLER_TRIGGER_ON = true;
+    //CR05 � Tm report by Shuqi - start
+    public static Boolean CN_ACCOUNT_TM_REPORT_HANDLER_TRIGGER_ON = true;
+    //CR05 � Tm report by Shuqi - end   
+    
+    public static final String CN_Account_RT_API_NAME_NEW_DIRECT = 'CN_New_Direct';
+    public static final String CN_Account_RT_API_NAME_EDIT_DIRECT = 'CN_Edit_Direct';
+    public static final String CN_Account_RT_API_NAME_NEW_INDIRECT = 'CN_New_Indirect';
+    public static final String CN_Account_RT_API_NAME_EDIT_INDIRECT = 'CN_Edit_Indirect';
+    public static final String CN_Account_RT_API_NAME_APPROVE_DIRECT = 'CN_Approved_Direct';
+    public static final String CN_Account_RT_API_NAME_NEW_Prospect = 'CN_New_Prospect';
+    public static final String CN_Account_RT_API_NAME_EDIT_Prospect = 'CN_Edit_Prospect';     
+  public static final String CN_ACCOUNT_ACCOUNT_STATUS_SUBMITTED_FOR_APPROVAL = 'Submitted for Approval';
     public static final String CN_ACCOUNT_ACCOUNT_STATUS_READY_FOR_APPROVAL = 'Ready for Approval';
     public static final String CN_ACCOUNT_ACCOUNT_STATUS_APPROVED = 'Approved';
     
@@ -68,13 +68,13 @@ public without sharing class Constants {
     public static Boolean CN_CONTACT_POPULATE_FIELD_HANDLER_TRIGGER_ON = true;
     public static Boolean CN_CONTACT_PREVENT_DELETE_HANDLER_TRIGGER_ON = true;
     public static Boolean CN_CONTACT_UPDATE_FINAREMAIL_HANDLER_TRIGGER_ON = true;
-	// Added By Jessica Wang 2021-07-22 Start
+    // Added By Jessica Wang 2021-07-22 Start
 	public static Boolean CN_CONTACT_WRITE_BACK_TO_LEAD_HANDLER_TRIGGER_ON = true;
 	// Added By Jessica Wang 2021-07-22 End
 	public static Boolean CN_CONTACT_TYPE_CHECK_HANDLER_TRIGGER_ON = true;
-	public static final String CN_CONTACT_RT_API_NAME = 'CN_Contact';
-	public static final String CN_CONTACT_TYPE_FINANCE_VALUE_NAME = '01';
-	public static final String CN_CONTACT_TYPE_PURCHASE_VALUE_NAME = '02';
+    public static final String CN_CONTACT_RT_API_NAME = 'CN_Contact';
+    public static final String CN_CONTACT_TYPE_FINANCE_VALUE_NAME = '01';
+    public static final String CN_CONTACT_TYPE_PURCHASE_VALUE_NAME = '02';
 
     public static final String CN_CONTACT_ACCOUNT_SYNC_STATUS_SUCCESS = 'Success';
     //Ship To Party trigger switch
@@ -209,8 +209,8 @@ public without sharing class Constants {
     
     public static final String CN_BRAND_RT_API_NAME = 'CN_Brand';
 
-	public static final String CN_BRAND_SYNC_STATUS_FAIL = 'Fail';
-	public static final String CN_BRAND_SYNC_STATUS_SUCCESS = 'Success';
+    public static final String CN_BRAND_SYNC_STATUS_FAIL = 'Fail';
+    public static final String CN_BRAND_SYNC_STATUS_SUCCESS = 'Success';
 
 	// Added By Jessica Wang 2021-07-21 Release2 Start
 	//Lead
@@ -305,7 +305,7 @@ public without sharing class Constants {
 	public static final String CN_SR_SHARING_ROWCAUSE_EDIT = 'Edit';
 	public static final String CN_SR_SHARING_ACCESSLEVEL_MANUAL = 'Manual';
 
-	// Sample Product
+    // Sample Product
 	public static final String CN_SP_RT_API_NAME = 'CN_Sample_Product';
 	public static Boolean SAMPLE_PRODUCT_TRIGGER_ON = true;
 	public static Boolean CN_SAMPLE_PRODUCT_TRIGGER_ON = true;
@@ -395,7 +395,7 @@ public without sharing class Constants {
 	public static final String CN_CA_STATUS_REJECTED = 'Rejected';
 	public static final String CN_CA_STATUS_RESOLVED = 'Resolved';
 	public static final String CN_CA_STATUS_ASSIGNED = 'Assigned';
-	public static final String CN_CA_STATUS_ACCEPTED = 'Accepted';
+    public static final String CN_CA_STATUS_ACCEPTED = 'Accepted';
 	public static final String CN_CA_STATUS_CLOSED = 'Closed';
 
 	//Profile
