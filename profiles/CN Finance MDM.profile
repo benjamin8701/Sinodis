@@ -3757,25 +3757,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <field>CN_Mass_Change_Log__c.CN_AccountId__c</field>
-=======
         <field>CN_City__c.CN_Province_Name_EN__c</field>
->>>>>>> origin/feature/Release2-MergeConflict
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
         <field>CN_City__c.CN_Province__c</field>
-<<<<<<< HEAD
-=======
-        <readable>true</readable>
->>>>>>> origin/feature/Release2-MergeConflict
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CN_City__c.CN_Sales_Office__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4576,8 +4563,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>CN_Document__c.CN_Finance_MDM_Email__c</field>
-<<<<<<< HEAD
-=======
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7268,7 +7253,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.CN_Working_Language__c</field>
->>>>>>> origin/feature/Release2-MergeConflict
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -10708,9 +10692,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-<<<<<<< HEAD
-        <field>Quote.CN_Approver_2__c</field>
-=======
         <field>Contact.Description</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -11447,64 +11428,40 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Quote.CN_Approver_1__c</field>
->>>>>>> origin/feature/Release2-MergeConflict
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-<<<<<<< HEAD
-        <field>Quote.CN_Approver_3__c</field>
-=======
         <field>Quote.CN_Approver_2__c</field>
->>>>>>> origin/feature/Release2-MergeConflict
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-<<<<<<< HEAD
-        <field>Quote.CN_Approver_4__c</field>
-=======
         <field>Quote.CN_Approver_3__c</field>
->>>>>>> origin/feature/Release2-MergeConflict
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-<<<<<<< HEAD
-        <field>Quote.CN_Approver_5__c</field>
-=======
         <field>Quote.CN_Approver_4__c</field>
->>>>>>> origin/feature/Release2-MergeConflict
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-<<<<<<< HEAD
-        <field>Quote.CN_Approver_6__c</field>
-=======
         <field>Quote.CN_Approver_5__c</field>
->>>>>>> origin/feature/Release2-MergeConflict
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-<<<<<<< HEAD
-        <field>Quote.CN_Approver_7__c</field>
-=======
         <field>Quote.CN_Approver_6__c</field>
->>>>>>> origin/feature/Release2-MergeConflict
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-<<<<<<< HEAD
-=======
         <field>Quote.CN_Approver_7__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
->>>>>>> origin/feature/Release2-MergeConflict
         <field>Quote.CN_Approver_8__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -11881,16 +11838,20 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>QuoteLineItem.Subtotal</field>
+<<<<<<< HEAD
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
 >>>>>>> origin/feature/Release2-MergeConflict
         <editable>false</editable>
         <field>QuoteLineItem.TotalPrice</field>
+=======
+>>>>>>> origin/feature/Release2
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>Task.ActivityDate</field>
         <readable>false</readable>
 <<<<<<< HEAD
@@ -11932,10 +11893,39 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.CN_Follow_Up_Event_ID__c</field>
+=======
+        <field>QuoteLineItem.TotalPrice</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Task.ActivityDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.CN_By_when__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.CN_Chef_Request_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.CN_Chef_Request__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.CN_Count__c</field>
+>>>>>>> origin/feature/Release2
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+<<<<<<< HEAD
         <field>Task.CN_Follow_up_Priority__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -11946,6 +11936,51 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Task.CN_Next_Step__c</field>
+=======
+        <field>Task.CN_End_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.CN_Follow_Up_Event_ID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.CN_Follow_up_Priority__c</field>
+>>>>>>> origin/feature/Release2
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+<<<<<<< HEAD
+        <field>Task.CN_Objective__c</field>
+=======
+        <field>Task.CN_Meeting_MInutes__c</field>
+>>>>>>> origin/feature/Release2
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+<<<<<<< HEAD
+        <field>Task.CN_Plan_to_Visit_Who__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.CN_Sample_Request__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.CN_Status_Check__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Task.CN_Status_Diagnose__c</field>
+=======
         <field>Task.CN_Next_Step__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -11967,61 +12002,103 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Task.CN_Status_Check__c</field>
+>>>>>>> origin/feature/Release2
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Task.CN_Status_Diagnose__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
+<<<<<<< HEAD
         <field>Task.CN_Time_Before_Event__c</field>
+=======
+        <field>Task.CN_Status_Diagnose__c</field>
+>>>>>>> origin/feature/Release2
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>Task.CN_Visit_Status__c</field>
+=======
+        <field>Task.CN_Time_Before_Event__c</field>
+>>>>>>> origin/feature/Release2
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>Task.Description</field>
+=======
+        <field>Task.CN_Visit_Status__c</field>
+>>>>>>> origin/feature/Release2
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>Task.Type</field>
+=======
+        <field>Task.Description</field>
+>>>>>>> origin/feature/Release2
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>Task.WhatId</field>
+=======
+        <field>Task.Type</field>
+>>>>>>> origin/feature/Release2
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>Task.WhoId</field>
+=======
+        <field>Task.WhatId</field>
+>>>>>>> origin/feature/Release2
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>User.CN_Is_Finance__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>User.CN_Is_Integration_User__c</field>
+=======
+        <field>Task.WhoId</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>User.CN_Is_Finance__c</field>
+>>>>>>> origin/feature/Release2
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>User.CN_Is_Me__c</field>
+=======
+        <field>User.CN_Is_Integration_User__c</field>
+>>>>>>> origin/feature/Release2
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+<<<<<<< HEAD
         <field>User.CN_Is_My_Team_Member__c</field>
+=======
+        <field>User.CN_Is_Me__c</field>
+>>>>>>> origin/feature/Release2
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>User.CN_Is_Sales__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -12478,6 +12555,7 @@
     <layoutAssignments>
         <layout>Quote-CN Sinodis Quote Layout</layout>
         <recordType>Quote.CN_Quote</recordType>
+<<<<<<< HEAD
     </layoutAssignments>
     <layoutAssignments>
         <layout>QuoteLineItem-CN Sinodis Quote Line Item Layout</layout>
@@ -12486,6 +12564,16 @@
         <layout>Task-CN Sinodis Task Layout</layout>
         <recordType>Task.CN_Task</recordType>
     </layoutAssignments>
+=======
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>QuoteLineItem-CN Sinodis Quote Line Item Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Task-CN Sinodis Task Layout</layout>
+        <recordType>Task.CN_Task</recordType>
+    </layoutAssignments>
+<<<<<<< HEAD
 =======
     </layoutAssignments>
     <layoutAssignments>
@@ -12502,6 +12590,9 @@
         <layout>Task-CN Sinodis Task Layout</layout>
         <recordType>Task.CN_Task</recordType>
     </layoutAssignments>
+>>>>>>> origin/feature/Release2-MergeConflict
+=======
+>>>>>>> origin/feature/Release2
 >>>>>>> origin/feature/Release2-MergeConflict
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>

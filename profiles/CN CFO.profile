@@ -8322,17 +8322,18 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>QuoteLineItem.CN_Sales_Price_with_Tax__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>QuoteLineItem.CN_Selling_Unit__c</field>
+<<<<<<< HEAD
+        <field>QuoteLineItem.CN_SKU_Description_EN__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>QuoteLineItem.CN_Sales_Price_with_Tax__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+        <editable>false</editable>
         <field>QuoteLineItem.CN_Shelf_Life__c</field>
+>>>>>>> origin/feature/Release2
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8407,51 +8408,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Task.CN_End_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.CN_Follow_Up_Event_ID__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Follow_up_Priority__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Meeting_MInutes__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Next_Step__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Objective__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Plan_to_Visit_Who__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.CN_Sample_Request__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Status_Check__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Task.CN_Status_Diagnose__c</field>
         <readable>false</readable>
     </fieldPermissions>

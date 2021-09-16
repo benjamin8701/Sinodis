@@ -202,18 +202,12 @@
         <platformActionListItems>
             <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>0</sortOrder>
+            <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-<<<<<<< HEAD
             <actionName>CN_New_Visit</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>2</sortOrder>
-=======
-<<<<<<< HEAD
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
->>>>>>> origin/feature/Release2-MergeConflict
         </platformActionListItems>
         <platformActionListItems>
             <actionName>CN_New_Task</actionName>
@@ -224,10 +218,6 @@
             <actionName>CN_New_Event</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>3</sortOrder>
-<<<<<<< HEAD
-=======
->>>>>>> c0fb7d8 (Release2)
->>>>>>> origin/feature/Release2-MergeConflict
         </platformActionListItems>
     </platformActionList>
         <relatedContentItems>
