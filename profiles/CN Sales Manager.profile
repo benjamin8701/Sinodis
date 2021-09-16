@@ -8786,8 +8786,52 @@
         <layout>CN_Province__c-Province Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Province__c-Province Layout</layout>
-        <recordType>CN_Province__c.CN_Province</recordType>
+        <layout>CN_Order_Reason__c-Order Reason Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Order_Reason__c-Order Reason Layout</layout>
+        <recordType>CN_Order_Reason__c.CN_Order_Reason</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Payment_History__c-Payment History Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Payment_Report__c-Payment Report Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Payment_Report__c-Payment Report Layout</layout>
+        <recordType>CN_Payment_Report__c.CN_Payment_Report</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Payment_Term_Check__mdt-Payment Term Check Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Promotion_Line_Item__c-Promotion Line Item Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Promotion_Line_Item__c-Promotion Line Item Layout</layout>
+        <recordType>CN_Promotion_Line_Item__c.CN_Promotion_Line_Item</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Promotion_Member__c-CN Sinodis Promotion Member Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Promotion_Member__c-CN Sinodis Promotion Member Layout</layout>
+        <recordType>CN_Promotion_Member__c.CN_Promotion_Member</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Promotion__c-CN Sinodis Promotion Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Promotion__c-CN Sinodis Promotion Layout</layout>
+        <recordType>CN_Promotion__c.CN_Promotion</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Return__c-CN Sinodis Return Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Return__c-CN Sinodis Return Layout</layout>
+        <recordType>CN_Return__c.CN_Return</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Quote_To_Promotion__c-CN Quote To Promotion Layout</layout>
@@ -8992,6 +9036,15 @@
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>false</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>CN_Campaign_Product__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>

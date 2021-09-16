@@ -205,9 +205,9 @@
             <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-<<<<<<< HEAD
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
+            <actionName>CN_New_Visit</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>CN_New_Task</actionName>
@@ -218,7 +218,6 @@
             <actionName>CN_New_Event</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>3</sortOrder>
->>>>>>> c0fb7d8 (Release2)
         </platformActionListItems>
     </platformActionList>
         <relatedContentItems>
