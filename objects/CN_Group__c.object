@@ -373,10 +373,10 @@
         <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <excludedStandardButtons>IsotopeSubscription</excludedStandardButtons>
+        <excludedStandardButtons>Import</excludedStandardButtons>
         <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
         <excludedStandardButtons>PrintableListView</excludedStandardButtons>
-        <excludedStandardButtons>Import</excludedStandardButtons>
+        <excludedStandardButtons>IsotopeSubscription</excludedStandardButtons>
         <lookupDialogsAdditionalFields>CN_Group_Code__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CN_Sales_Team__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CN_Sales_Team_Code_Name__c</lookupDialogsAdditionalFields>

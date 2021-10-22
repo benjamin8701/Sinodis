@@ -3814,6 +3814,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days_Except_Off__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8904,16 +8909,7 @@
         <layout>CN_Change_Request_Fields_Mapping__mdt-CN_Change_Request_Fields_Mapping Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Mass Change Account Finance AR Layout</layout>
-        <recordType>CN_Change_Request__c.CN_Mass_Change_Account_Finance_AR</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Mass Change Account Owner Layout</layout>
-        <recordType>CN_Change_Request__c.CN_MASS_Change_Account_Owner</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
-        <recordType>CN_Change_Request__c.CN_Update_Account_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
@@ -9779,7 +9775,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Account.CN_New_Prospect</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -9860,7 +9855,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Chef_Request__c.CN_1on1_Service_Chef_Request_New</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -9901,7 +9895,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Contract__c.CN_Contract</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -9957,13 +9950,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Promotion_Member__c.CN_Promotion_Member</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Promotion__c.CN_Promotion</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10024,7 +10015,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Sample_Product__c.CN_Sample_Product</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10035,7 +10025,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Sample_Request__c.CN_Whole_Pack</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10071,7 +10060,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Event.CN_Event</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10102,13 +10090,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Quote.CN_Quote</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Task.CN_Task</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>

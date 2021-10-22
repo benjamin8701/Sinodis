@@ -3702,7 +3702,7 @@
     <fields>
         <label>新城市</label>
         <name>New_CN_ShipTo_City_CN__c</name>
-        <relationshipLabel>变更申请</relationshipLabel>
+        <relationshipLabel><!-- Change Requests (New City(CN)) --></relationshipLabel>
     </fields>
     <fields>
         <label>新送达方联系人姓名</label>

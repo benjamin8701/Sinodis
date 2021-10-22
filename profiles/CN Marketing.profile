@@ -3814,6 +3814,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days_Except_Off__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9771,7 +9776,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Chef_Request__c.CN_Marketing_CCE_Chef_Demo_Request</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -9802,7 +9806,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Contract__c.CN_Contract</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -9858,13 +9861,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Promotion_Member__c.CN_Promotion_Member</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Promotion__c.CN_Promotion</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -9950,7 +9951,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Campaign.CN_Campaign</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -9976,7 +9976,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Event.CN_Visit</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10002,13 +10001,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Quote.CN_Quote</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Task.CN_Task</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10248,6 +10245,14 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SendCustomNotifications</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendExternalEmailAvailable</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ShowCompanyNameAsUserBadge</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

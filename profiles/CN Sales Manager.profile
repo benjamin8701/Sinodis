@@ -3814,6 +3814,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days_Except_Off__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8819,7 +8824,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>User.CN_Is_My_Team_Member__c</field>
+        <field>User.CN_Is_Integration_User__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8902,14 +8907,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Change_Request_Fields_Mapping__mdt-CN_Change_Request_Fields_Mapping Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Mass Change Account Finance AR Layout</layout>
-        <recordType>CN_Change_Request__c.CN_Mass_Change_Account_Finance_AR</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Mass Change Account Owner Layout</layout>
-        <recordType>CN_Change_Request__c.CN_MASS_Change_Account_Owner</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
@@ -9120,52 +9117,8 @@
         <layout>CN_Province__c-Province Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Order_Reason__c-Order Reason Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Order_Reason__c-Order Reason Layout</layout>
-        <recordType>CN_Order_Reason__c.CN_Order_Reason</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Payment_History__c-Payment History Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Payment_Report__c-Payment Report Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Payment_Report__c-Payment Report Layout</layout>
-        <recordType>CN_Payment_Report__c.CN_Payment_Report</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Payment_Term_Check__mdt-Payment Term Check Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Promotion_Line_Item__c-Promotion Line Item Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Promotion_Line_Item__c-Promotion Line Item Layout</layout>
-        <recordType>CN_Promotion_Line_Item__c.CN_Promotion_Line_Item</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Promotion_Member__c-CN Sinodis Promotion Member Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Promotion_Member__c-CN Sinodis Promotion Member Layout</layout>
-        <recordType>CN_Promotion_Member__c.CN_Promotion_Member</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Promotion__c-CN Sinodis Promotion Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Promotion__c-CN Sinodis Promotion Layout</layout>
-        <recordType>CN_Promotion__c.CN_Promotion</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Return__c-CN Sinodis Return Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Return__c-CN Sinodis Return Layout</layout>
-        <recordType>CN_Return__c.CN_Return</recordType>
+        <layout>CN_Province__c-Province Layout</layout>
+        <recordType>CN_Province__c.CN_Province</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Quote_To_Promotion__c-CN Quote To Promotion Layout</layout>
@@ -9369,13 +9322,7 @@
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>false</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>false</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
+        <object>CN_Brand__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -9384,7 +9331,7 @@
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
-        <object>CN_Campaign_Product__c</object>
+        <object>CN_Business_Unit__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -9828,7 +9775,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Account.CN_New_Prospect</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -9909,7 +9855,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Chef_Request__c.CN_1on1_Service_Chef_Request_New</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -9950,7 +9895,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Contract__c.CN_Contract</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10006,13 +9950,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Promotion_Member__c.CN_Promotion_Member</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Promotion__c.CN_Promotion</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10073,7 +10015,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Sample_Product__c.CN_Sample_Product</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10084,7 +10025,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>CN_Sample_Request__c.CN_Whole_Pack</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10120,7 +10060,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Event.CN_Event</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -10151,13 +10090,11 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Quote.CN_Quote</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Task.CN_Task</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>

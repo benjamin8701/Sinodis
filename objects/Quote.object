@@ -723,6 +723,17 @@
     <listViews>
         <fullName>mine</fullName>
         <columns>QUOTE.NAME</columns>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>QUOTE.ISSYNCING</columns>
+        <columns>QUOTE.EXPIRATIONDATE</columns>
+        <columns>QUOTE.SUBTOTAL</columns>
+        <columns>QUOTE.TOTALPRICE</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Quotes</label>
+    </listViews>
+    <listViews>
+        <fullName>mine</fullName>
+        <columns>QUOTE.NAME</columns>
         <columns>CN_Quote_Number__c</columns>
         <columns>CN_Sales_Person_Name__c</columns>
         <columns>OPPORTUNITY.NAME</columns>

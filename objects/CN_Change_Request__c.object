@@ -2407,6 +2407,12 @@
                     <label>BAPA</label>
                 </value>
                 <value>
+                    <fullName>Casual Dining - Asian exclude Chinese</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Casual Dining - Asian exclude Chinese</label>
+                </value>
+                <value>
                     <fullName>Catering</fullName>
                     <default>false</default>
                     <isActive>false</isActive>
@@ -2435,6 +2441,12 @@
                     <default>false</default>
                     <isActive>false</isActive>
                     <label>EC</label>
+                </value>
+                <value>
+                    <fullName>Fine Dining - Asian exclude Chinese</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Fine Dining - Asian exclude Chinese</label>
                 </value>
                 <value>
                     <fullName>Hotel</fullName>
@@ -7528,6 +7540,12 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                     <label>BAPA</label>
                 </value>
                 <value>
+                    <fullName>Casual Dining - Asian exclude Chinese</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Casual Dining - Asian exclude Chinese</label>
+                </value>
+                <value>
                     <fullName>Catering</fullName>
                     <default>false</default>
                     <isActive>false</isActive>
@@ -7550,6 +7568,12 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                     <default>false</default>
                     <isActive>false</isActive>
                     <label>EC</label>
+                </value>
+                <value>
+                    <fullName>Fine Dining - Asian exclude Chinese</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Fine Dining - Asian exclude Chinese</label>
                 </value>
                 <value>
                     <fullName>Hotel</fullName>
@@ -21074,10 +21098,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>D005</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>D007</fullName>
                 <default>false</default>
             </values>
             <values>

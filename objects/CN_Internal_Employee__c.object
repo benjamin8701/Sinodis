@@ -214,6 +214,7 @@
         <columns>CN_Role__c</columns>
         <columns>CN_Personnel_Number__c</columns>
         <columns>CN_User_Email__c</columns>
+        <columns>CREATED_DATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -225,12 +226,22 @@
     <profileSearchLayouts>
         <fields>NAME</fields>
         <fields>CN_Personnel_Number__c</fields>
+        <profileName>CN Sales Lead</profileName>
+    </profileSearchLayouts>
+    <profileSearchLayouts>
+        <fields>NAME</fields>
+        <fields>CN_Personnel_Number__c</fields>
+        <profileName>CN Sales Manager</profileName>
+    </profileSearchLayouts>
+    <profileSearchLayouts>
+        <fields>NAME</fields>
+        <fields>CN_Personnel_Number__c</fields>
         <profileName>CN Sales MDM</profileName>
     </profileSearchLayouts>
     <profileSearchLayouts>
         <fields>NAME</fields>
         <fields>CN_Personnel_Number__c</fields>
-        <profileName>CN CFO</profileName>
+        <profileName>CN Finance AR</profileName>
     </profileSearchLayouts>
     <profileSearchLayouts>
         <fields>NAME</fields>
@@ -245,22 +256,12 @@
     <profileSearchLayouts>
         <fields>NAME</fields>
         <fields>CN_Personnel_Number__c</fields>
+        <profileName>CN CFO</profileName>
+    </profileSearchLayouts>
+    <profileSearchLayouts>
+        <fields>NAME</fields>
+        <fields>CN_Personnel_Number__c</fields>
         <profileName>CN Sales</profileName>
-    </profileSearchLayouts>
-    <profileSearchLayouts>
-        <fields>NAME</fields>
-        <fields>CN_Personnel_Number__c</fields>
-        <profileName>CN Finance AR</profileName>
-    </profileSearchLayouts>
-    <profileSearchLayouts>
-        <fields>NAME</fields>
-        <fields>CN_Personnel_Number__c</fields>
-        <profileName>CN Sales Manager</profileName>
-    </profileSearchLayouts>
-    <profileSearchLayouts>
-        <fields>NAME</fields>
-        <fields>CN_Personnel_Number__c</fields>
-        <profileName>CN Sales Lead</profileName>
     </profileSearchLayouts>
     <recordTypes>
         <fullName>CN_Internal_Employee</fullName>

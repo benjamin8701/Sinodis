@@ -367,10 +367,10 @@
         <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
         <excludedStandardButtons>Accept</excludedStandardButtons>
         <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
-        <excludedStandardButtons>IsotopeSubscription</excludedStandardButtons>
+        <excludedStandardButtons>Import</excludedStandardButtons>
         <excludedStandardButtons>MassChangeOwner</excludedStandardButtons>
         <excludedStandardButtons>PrintableListView</excludedStandardButtons>
-        <excludedStandardButtons>Import</excludedStandardButtons>
+        <excludedStandardButtons>IsotopeSubscription</excludedStandardButtons>
         <lookupDialogsAdditionalFields>CN_Brand_Code__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CN_Group__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CN_Group_Code_Name__c</lookupDialogsAdditionalFields>

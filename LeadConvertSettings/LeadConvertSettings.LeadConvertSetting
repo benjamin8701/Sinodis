@@ -4,14 +4,6 @@
     <objectMapping>
         <inputObject>Lead</inputObject>
         <mappingFields>
-            <inputField>CN_City__c</inputField>
-            <outputField>CN_City_CN__c</outputField>
-        </mappingFields>
-        <mappingFields>
-            <inputField>CN_Converted_From_Lead_Id__c</inputField>
-            <outputField>CN_Converted_From__c</outputField>
-        </mappingFields>
-        <mappingFields>
             <inputField>CN_Country__c</inputField>
             <outputField>CN_Country_CN__c</outputField>
         </mappingFields>
@@ -30,6 +22,14 @@
         <mappingFields>
             <inputField>CN_Zip_Postal_Code__c</inputField>
             <outputField>CN_Post_Code__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>CN_City__c</inputField>
+            <outputField>CN_City_CN__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>CN_Converted_From_Lead_Id__c</inputField>
+            <outputField>CN_Converted_From__c</outputField>
         </mappingFields>
         <outputObject>Account</outputObject>
     </objectMapping>

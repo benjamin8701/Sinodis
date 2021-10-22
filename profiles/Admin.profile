@@ -3814,6 +3814,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days_Except_Off__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8919,37 +8924,40 @@
         <recordType>CN_Change_Request__c.CN_Approved_Update_Account_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Chef_Request__c-CN 1on1 Chef Request</layout>
-        <recordType>CN_Chef_Request__c.CN_1on1_Service_Chef_Request_New</recordType>
+        <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Update_Account_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Chef_Request__c-CN MKT_CCE Demo Request</layout>
-        <recordType>CN_Chef_Request__c.CN_Marketing_CCE_Chef_Demo_Request</recordType>
+        <layout>CN_Change_Request__c-CN Sinodis New Contact Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Approved_New_Contact_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Chef_Request__c-CN Marketing development Request</layout>
-        <recordType>CN_Chef_Request__c.CN_Marketing_Development_Request</recordType>
+        <layout>CN_Change_Request__c-CN Sinodis New Contact Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_New_Contact_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Chef_Request__c-CN Self-Chef Demo Request</layout>
-        <recordType>CN_Chef_Request__c.CN_Chef_Self_Work_Request</recordType>
+        <layout>CN_Change_Request__c-CN Sinodis New ShipTo Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Approved_New_Ship_To_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Chef_Request__c-Chef Request Layout</layout>
+        <layout>CN_Change_Request__c-CN Sinodis New ShipTo Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_New_Ship_To_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Chef_UT__c-CN Chef UT Layout</layout>
+        <layout>CN_Change_Request__c-CN Sinodis ShipTo Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Approved_Update_Ship_To_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Chef_UT__c-CN Chef UT Layout</layout>
-        <recordType>CN_Chef_UT__c.CN_Chef_UT</recordType>
+        <layout>CN_Change_Request__c-CN Sinodis ShipTo Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Update_Ship_To_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Chefs_Assigned__c-CN Chefs Assigned Layout</layout>
-        <recordType>CN_Chefs_Assigned__c.CN_Chef_Assigned</recordType>
+        <layout>CN_Change_Request__c-CN Sinodis Update Contact Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Approved_Update_Contact_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>CN_Chefs_Assigned__c-Chefs Assigned Layout</layout>
+        <layout>CN_Change_Request__c-CN Sinodis Update Contact Change Request Layout</layout>
+        <recordType>CN_Change_Request__c.CN_Update_Contact_Request</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Chef_Request__c-CN 1on1 Chef Request</layout>
@@ -10109,7 +10117,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Quote.CN_Quote</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>

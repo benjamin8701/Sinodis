@@ -273,6 +273,20 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>CN_Chef_Working_Days_Except_Off__c</fullName>
+        <externalId>false</externalId>
+        <formula>If(  ISPICKVAL(CN_Chef_Request__r.CN_Event_Type__c , &apos;OFF&apos;)  , 0 , CN_Chef_Work_End_Date__c - CN_Chef_Work_Start_Date__c + 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Chef Working Days(Except OFF)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CN_Chef_Working_Days__c</fullName>
         <externalId>false</externalId>
         <formula>CN_Chef_Work_End_Date__c -  CN_Chef_Work_Start_Date__c + 1</formula>

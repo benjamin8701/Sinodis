@@ -50,7 +50,6 @@
         var opportunity = component.get("v.opportunity");
         var campId = component.get("v.recordId");
         console.log("campId====: " + JSON.stringify(campId));
-        console.log("campId====: " + JSON.stringify(opportunity));
         var action = component.get("c.generateOpp");
         action.setParams({
             oppObj : opportunity,
@@ -58,8 +57,6 @@
         });
         action.setCallback(this,function(response){
             var state = response.getState();
-            console.log(2);
-            console.log(state);
             if(state === "SUCCESS"){
                 var successMeg = $A.get("{!$Label.c.CN_Generate_Opportunity_Success}");
                 alert(successMeg);
@@ -73,7 +70,6 @@
                 }
             }
         });       
-        console.log(1);
         $A.enqueueAction(action);
     }
 })

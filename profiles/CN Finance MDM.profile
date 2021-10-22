@@ -3814,6 +3814,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days_Except_Off__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -3910,6 +3915,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>CN_City__c.CN_Province__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_City__c.CN_Sales_Office__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7569,132 +7579,117 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Document__c.CN_Is_File_Upload__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Document__c.CN_Parent_Url__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Document__c.CN_Uploaded_Status_Business_License__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Document__c.CN_Uploaded_Status_Contract__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Document__c.CN_Uploaded_Status_Fapiao__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Document__c.CN_Uploaded_Status_Hygiene_Certificate__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_City_API__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_Group_Code__c</field>
+        <field>Contact.Department</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Group__c.CN_Is_Activated__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_Is_Active__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_Sales_Team_Code_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_Sales_Team_Code__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_Sales_Team_Name__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_Sales_Team__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_Sync_Error_Message__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_Sync_Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Group__c.CN_Sync_Time__c</field>
+        <field>Contact.Description</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Internal_Employee__c.CN_Personnel_Number__c</field>
+        <field>Contact.DoNotCall</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Internal_Employee__c.CN_Role__c</field>
+        <field>Contact.Email</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Internal_Employee__c.CN_User_Email__c</field>
+        <field>Contact.Fax</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Internal_Employee__c.CN_User_Name__c</field>
+        <field>Contact.HasOptedOutOfEmail</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Mass_Change_Log__c.CN_AccountId__c</field>
+        <field>Contact.HasOptedOutOfFax</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Mass_Change_Log__c.CN_After_User_Number__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>CN_Mass_Change_Log__c.CN_Before_User_Number__c</field>
+        <field>Contact.HomePhone</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CN_Mass_Change_Log__c.CN_ChangeUser__c</field>
+        <field>Contact.Jigsaw</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Mass_Change_Log__c.CN_Change_Type__c</field>
+        <field>Contact.LeadSource</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.MailingAddress</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.MobilePhone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.OtherAddress</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.OtherPhone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Phone</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.ReportsToId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Title</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.CN_By_when__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.CN_Chef_Request_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.CN_Chef_Request__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.CN_Count__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Event.CN_End_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.CN_Follow_Up_Event_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7724,7 +7719,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>CN_Payment_History__c.CN_Due_Date__c</field>
+        <field>Event.CN_Sample_Request__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7753,14 +7748,14 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>true</editable>
-        <field>CN_Payment_History__c.CN_Net_Due_Date__c</field>
-        <readable>true</readable>
+        <editable>false</editable>
+        <field>Event.IsAllDayEvent</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CN_Payment_History__c.CN_Sales_Persion__c</field>
-        <readable>true</readable>
+        <field>Event.Location</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -7779,197 +7774,202 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_AR_Update_Date__c</field>
+        <field>Lead.Address</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.AnnualRevenue</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_Campaign__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_City__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Advance_Received_From_Customer_Credit__c</field>
+        <field>Lead.CN_Converted_Contact_Id_From_CR__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.CN_Converted_From_Lead_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_Country__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_Customer_Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Advc_Received_From_Custm_Credit_Dsply__c</field>
+        <field>Lead.CN_Is_Converted_Display__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_Is_From_Web_To_Lead__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_Province__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_Reason_Lead_Dead__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_Street__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_Volume_Size_of_Lead__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Lead.CN_Wechat_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Brand_SAP__c</field>
+        <field>Lead.CN_Zip_Postal_Code__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Description</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.DoNotCall</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Email</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Fax</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.HasOptedOutOfEmail</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.HasOptedOutOfFax</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Industry</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Jigsaw</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.LastTransferDate</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.LeadSource</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.MobilePhone</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.NumberOfEmployees</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Phone</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Rating</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Title</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Lead.Website</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.AccountId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Amount</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.Budget_Confirmed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.CN_Actual_Close_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Opportunity.CN_Campaign__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Brand__c</field>
+        <field>Opportunity.CN_Created_By_Others__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Business_Unit_SAP__c</field>
+        <editable>true</editable>
+        <field>Opportunity.CN_Expected_Purchase_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Business_Unit__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Channel_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Comments__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Credit_Limit_Display__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Credit_Limit_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Current_Balance_Display__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Current_Balance_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Current_Month_Display__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Current_Month_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Current_Payment_Display__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Current_Payment_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Customer_Channel__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Customer_Code_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Customer_Code__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Date_Type_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Deliver_Block_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Deposit_Given_To_Customer_Display__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Deposit_Given_To_Customer_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Deposit_Received_From_Customer_Dsply__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Deposit_Received_From_Customer_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Details_of_Arrears__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Finance_AR_Name_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Finance_AR__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Group_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Group__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Is_Activated__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Last_1_Month_Display__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Last_1_Month_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Last_2_Month_Display__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Last_2_Month_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Last_3_Month_Display__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Last_3_Month_SAP__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>CN_Payment_Report__c.CN_Last_4_Month_Display__c</field>
+        <editable>true</editable>
+        <field>Opportunity.CN_Generate_From_Lead_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8670,7 +8670,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>QuoteLineItem.CN_Tax_Formula__c</field>
-<<<<<<< HEAD
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8709,73 +8708,14 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-=======
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>QuoteLineItem.CN_Tax__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>QuoteLineItem.Description</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>QuoteLineItem.Discount</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>QuoteLineItem.ListPrice</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>QuoteLineItem.ProductCode</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>QuoteLineItem.ServiceDate</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>QuoteLineItem.Subtotal</field>
-<<<<<<< HEAD
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
->>>>>>> origin/feature/Release2-MergeConflict
         <editable>false</editable>
         <field>QuoteLineItem.TotalPrice</field>
-=======
->>>>>>> origin/feature/Release2
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-<<<<<<< HEAD
-        <editable>false</editable>
-<<<<<<< HEAD
-        <field>Task.ActivityDate</field>
-        <readable>false</readable>
-<<<<<<< HEAD
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_By_when__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-=======
-=======
         <editable>true</editable>
         <field>Task.ActivityDate</field>
         <readable>true</readable>
->>>>>>> feature/Release2
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -8783,7 +8723,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
->>>>>>> origin/feature/Release2-MergeConflict
         <editable>true</editable>
         <field>Task.CN_Chef_Request_Id__c</field>
         <readable>true</readable>
@@ -8806,43 +8745,10 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.CN_Follow_Up_Event_ID__c</field>
-=======
-        <field>QuoteLineItem.TotalPrice</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.ActivityDate</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_By_when__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.CN_Chef_Request_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Task.CN_Chef_Request__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Count__c</field>
->>>>>>> origin/feature/Release2
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-<<<<<<< HEAD
-        <editable>false</editable>
-<<<<<<< HEAD
-=======
-        <editable>true</editable>
->>>>>>> feature/Release2
         <field>Task.CN_Follow_up_Priority__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8854,35 +8760,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.CN_Next_Step__c</field>
-<<<<<<< HEAD
-=======
-        <field>Task.CN_End_Date__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.CN_Follow_Up_Event_ID__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Follow_up_Priority__c</field>
->>>>>>> origin/feature/Release2
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-<<<<<<< HEAD
-        <field>Task.CN_Objective__c</field>
-=======
-        <field>Task.CN_Meeting_MInutes__c</field>
->>>>>>> origin/feature/Release2
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-<<<<<<< HEAD
-=======
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -8892,7 +8769,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
->>>>>>> feature/Release2
         <field>Task.CN_Plan_to_Visit_Who__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8909,86 +8785,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.CN_Status_Diagnose__c</field>
-<<<<<<< HEAD
-=======
-        <field>Task.CN_Next_Step__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Objective__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Plan_to_Visit_Who__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Task.CN_Sample_Request__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Task.CN_Status_Check__c</field>
->>>>>>> origin/feature/Release2
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-<<<<<<< HEAD
-        <field>Task.CN_Time_Before_Event__c</field>
-=======
-        <field>Task.CN_Status_Diagnose__c</field>
->>>>>>> origin/feature/Release2
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-<<<<<<< HEAD
-        <field>Task.CN_Visit_Status__c</field>
-=======
-        <field>Task.CN_Time_Before_Event__c</field>
->>>>>>> origin/feature/Release2
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-<<<<<<< HEAD
-        <field>Task.Description</field>
-=======
-        <field>Task.CN_Visit_Status__c</field>
->>>>>>> origin/feature/Release2
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-<<<<<<< HEAD
-        <field>Task.Type</field>
-=======
-        <field>Task.Description</field>
->>>>>>> origin/feature/Release2
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-<<<<<<< HEAD
-        <field>Task.WhatId</field>
-=======
-        <field>Task.Type</field>
->>>>>>> origin/feature/Release2
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-<<<<<<< HEAD
-        <field>Task.WhoId</field>
-=======
-        <field>Task.WhatId</field>
->>>>>>> origin/feature/Release2
-        <readable>false</readable>
-=======
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9020,48 +8816,25 @@
         <editable>true</editable>
         <field>Task.WhoId</field>
         <readable>true</readable>
->>>>>>> feature/Release2
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-<<<<<<< HEAD
         <field>User.CN_Is_Finance__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
         <field>User.CN_Is_Integration_User__c</field>
-=======
-        <field>Task.WhoId</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>User.CN_Is_Finance__c</field>
->>>>>>> origin/feature/Release2
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-<<<<<<< HEAD
         <field>User.CN_Is_Me__c</field>
-=======
-        <field>User.CN_Is_Integration_User__c</field>
->>>>>>> origin/feature/Release2
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-<<<<<<< HEAD
         <field>User.CN_Is_My_Team_Member__c</field>
-=======
-        <field>User.CN_Is_Me__c</field>
->>>>>>> origin/feature/Release2
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>User.CN_Is_Sales__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -9140,13 +8913,6 @@
         <recordType>CN_Change_Request__c.CN_Mass_Change_Account_Finance_AR</recordType>
     </layoutAssignments>
     <layoutAssignments>
-<<<<<<< HEAD
-        <layout>CN_Change_Request__c-CN Mass Change Account Owner Layout</layout>
-        <recordType>CN_Change_Request__c.CN_MASS_Change_Account_Owner</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-=======
->>>>>>> feature/Release2
         <layout>CN_Change_Request__c-CN Sinodis Account Change Request For Finance Layout</layout>
         <recordType>CN_Change_Request__c.CN_Approved_Update_Account_Request</recordType>
     </layoutAssignments>
@@ -9519,34 +9285,6 @@
     <layoutAssignments>
         <layout>Product2-CN Product Layout</layout>
         <recordType>Product2.CN_Product</recordType>
-<<<<<<< HEAD
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Quote-CN Sinodis Quote Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Quote-CN Sinodis Quote Layout</layout>
-        <recordType>Quote.CN_Quote</recordType>
-<<<<<<< HEAD
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>QuoteLineItem-CN Sinodis Quote Line Item Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Task-CN Sinodis Task Layout</layout>
-        <recordType>Task.CN_Task</recordType>
-    </layoutAssignments>
-=======
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>QuoteLineItem-CN Sinodis Quote Line Item Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Task-CN Sinodis Task Layout</layout>
-        <recordType>Task.CN_Task</recordType>
-    </layoutAssignments>
-<<<<<<< HEAD
-=======
     </layoutAssignments>
     <layoutAssignments>
         <layout>Quote-CN Sinodis Quote Layout</layout>
@@ -9562,16 +9300,9 @@
         <layout>Task-CN Sinodis Task Layout</layout>
         <recordType>Task.CN_Task</recordType>
     </layoutAssignments>
-<<<<<<< HEAD
->>>>>>> origin/feature/Release2-MergeConflict
-=======
->>>>>>> origin/feature/Release2
->>>>>>> origin/feature/Release2-MergeConflict
-=======
     <layoutAssignments>
         <layout>User-User Layout</layout>
     </layoutAssignments>
->>>>>>> feature/Release2
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
         <startAddress>0.0.0.0</startAddress>
@@ -9591,11 +9322,8 @@
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
-<<<<<<< HEAD
         <object>CN_Brand__c</object>
         <viewAllRecords>false</viewAllRecords>
-=======
->>>>>>> origin/feature/Release2-MergeConflict
     </objectPermissions>
     <objectPermissions>
         <allowCreate>false</allowCreate>
@@ -9603,10 +9331,7 @@
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
-<<<<<<< HEAD
         <object>CN_Business_Unit__c</object>
-=======
->>>>>>> origin/feature/Release2-MergeConflict
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -10230,7 +9955,6 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
-        <personAccountDefault>true</personAccountDefault>
         <recordType>Quote.CN_Quote</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>

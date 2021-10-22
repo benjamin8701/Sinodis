@@ -3814,6 +3814,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days_Except_Off__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Chefs_Assigned__c.CN_Chef_Working_Days__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -8902,14 +8907,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Change_Request_Fields_Mapping__mdt-CN_Change_Request_Fields_Mapping Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Mass Change Account Finance AR Layout</layout>
-        <recordType>CN_Change_Request__c.CN_Mass_Change_Account_Finance_AR</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>CN_Change_Request__c-CN Mass Change Account Owner Layout</layout>
-        <recordType>CN_Change_Request__c.CN_MASS_Change_Account_Owner</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Change_Request__c-CN Sinodis Account Change Request Layout</layout>

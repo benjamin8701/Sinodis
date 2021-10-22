@@ -292,4 +292,8 @@
         <errorMessage>预审状态不可编辑。</errorMessage>
         <name>CN_SR_Prevent_Edit_For_Ready</name>
     </validationRules>
+    <webLinks>
+        <label><!-- CN_Sample_Feedback_Overdue --></label>
+        <name>CN_Sample_Feedback_Overdue</name>
+    </webLinks>
 </CustomObjectTranslation>

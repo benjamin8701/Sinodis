@@ -1913,6 +1913,13 @@
     </searchLayouts>
     <sharingModel>Private</sharingModel>
     <validationRules>
+        <fullName>CN_Campaign_Audiences_Number_IsBlank</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND($Setup.Trigger_Switcher_Setting__c.EnableValidationRule__c, OR(RecordType.DeveloperName = &apos;CN_Campaign&apos;, RecordType.DeveloperName = &apos;CN_Parent_Campaign&apos;),  ISPICKVAL(Status, &quot;Completed&quot;),  ISBLANK(CN_Number_of_Audiences__c))</errorConditionFormula>
+        <errorDisplayField>CN_Number_of_Audiences__c</errorDisplayField>
+        <errorMessage>Number of audiences is a must field to input for livestreaming campaign when campaign completes.</errorMessage>
+    </validationRules>
+    <validationRules>
         <fullName>CN_Campaign_Check_Customer_Category</fullName>
         <active>true</active>
         <errorConditionFormula>AND(
