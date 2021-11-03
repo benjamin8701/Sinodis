@@ -314,12 +314,20 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CN_Chef_Assigned_Reset_WorkDate_Handler</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CN_Chef_Req_Assign_Approver_Handler_Test</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CN_Chef_Request_Assign_Approver_Handler</apexClass>
         <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CN_Chef_Request_Auto_Confirm_Handler</apexClass>
+        <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>CN_Chef_Request_Chef_Assign_Handler</apexClass>
@@ -3547,6 +3555,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Chef_Request__c.CN_Confirm_From_Apex_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>CN_Chef_Request__c.CN_Confirmed__c</field>
         <readable>true</readable>
@@ -3659,6 +3672,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>CN_Chef_Request__c.CN_Guest_Chef__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Chef_Request__c.CN_Is_Auto_Approve__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3782,6 +3800,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Chefs_Assigned__c.CN_Chef_Manager_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>CN_Chefs_Assigned__c.CN_Chef_Name__c</field>
         <readable>true</readable>
@@ -3829,6 +3852,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>CN_Chefs_Assigned__c.CN_Chef__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Chefs_Assigned__c.CN_Confirmed__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3887,6 +3915,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Chefs_Assigned__c.CN_Upsert_From_Apex_DateTime__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>CN_Chefs_Assigned__c.Duration__c</field>
         <readable>true</readable>
@@ -3934,6 +3967,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>CN_Comment__c.CN_Is_Finance__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Contract__c.CN_Account_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Contract__c.CN_Account_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4020,6 +4063,11 @@
         <editable>false</editable>
         <field>CN_Contract__c.CN_Guarantor__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Contract__c.CN_If_Need_Populate_Account_Name__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -4944,6 +4992,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>CN_Payment_History__c.CN_Net_Due_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Payment_History__c.CN_Remark__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6238,6 +6291,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Sales_Performance__c.CN_Target_Sales_Channel__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Sales_Performance__c.CN_Target_Sales_Office__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6437,6 +6495,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Sample_Product__c.CN_Real_Quantity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>CN_Sample_Product__c.CN_SKU_Chinese_Description__c</field>
         <readable>true</readable>
@@ -6482,6 +6545,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Sample_Product__c.CN_Sample_Unit__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>CN_Sample_Product__c.CN_Status_of_Delivery__c</field>
         <readable>true</readable>
@@ -6525,6 +6593,11 @@
         <editable>false</editable>
         <field>CN_Sample_Request__c.CN_CS_Team_Email__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Sample_Request__c.CN_Condition_Type__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -6583,6 +6656,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Sample_Request__c.CN_Remark__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Sample_Request__c.CN_SP_Records_Count_All_Formula__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -6603,7 +6681,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Sample_Request__c.CN_Sales_Office__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Sample_Request__c.CN_Sales_Person__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Sample_Request__c.CN_Sales_Team__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -7682,6 +7770,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.CN_Chefs_Assigned__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Event.CN_Count__c</field>
         <readable>true</readable>
@@ -8734,6 +8827,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Task.CN_Chef_Request__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.CN_Chefs_Assigned__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
