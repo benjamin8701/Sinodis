@@ -314,6 +314,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CN_Case_Share_Handler</apexClass>
+        <enabled>True</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CN_Chef_Assigned_Reset_WorkDate_Handler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -1246,6 +1250,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Account.CN_Is_My_Account__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Account.CN_Is_Sales_Owner__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1972,6 +1981,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>CN_Change_Request__c.CN_Account_Account_Source__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Change_Request__c.CN_Account_Bank_Account_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3107,6 +3121,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>CN_Change_Request__c.New_CN_Account_Account_Source__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Change_Request__c.New_CN_Account_Bank_Account_Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -4946,6 +4965,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>CN_Payment_History__c.CN_Account_Code__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Payment_History__c.CN_Account_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>CN_Payment_History__c.CN_Amount__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4972,6 +5001,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>CN_Payment_History__c.CN_Finance_AR__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_Payment_History__c.CN_If_Need_Populate_Account_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -6505,6 +6539,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>CN_Sample_Product__c.CN_Remark__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>CN_Sample_Product__c.CN_SKU_Chinese_Description__c</field>
         <readable>true</readable>
@@ -7292,6 +7331,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Case.CN_If_Creator_Equals_Account_Sales__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.CN_If_Need_Share_To_Creator__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -10090,7 +10134,7 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Dashboard</tab>
-        <visibility>DefaultOn</visibility>
+        <visibility>Hidden</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>standard-Event</tab>
@@ -10139,10 +10183,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>CreateCustomizeDashboards</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>CreateCustomizeFilters</name>
     </userPermissions>
     <userPermissions>
@@ -10151,15 +10191,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>CreateDashboardFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>CreateReportFolders</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>EditMyDashboards</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
