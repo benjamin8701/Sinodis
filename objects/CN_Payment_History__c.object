@@ -442,6 +442,11 @@ CN_Account_Name__c != CN_Customer_Name__r.Name
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
+                    <fullName>2020</fullName>
+                    <default>false</default>
+                    <label>2020</label>
+                </value>
+                <value>
                     <fullName>2021</fullName>
                     <default>false</default>
                     <label>2021</label>
