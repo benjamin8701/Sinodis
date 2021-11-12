@@ -9687,6 +9687,9 @@
         <recordType>Opportunity.CN_Opportunity</recordType>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>OpportunityLineItem-Opportunity Product Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Pricebook2-CN Price Book Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
