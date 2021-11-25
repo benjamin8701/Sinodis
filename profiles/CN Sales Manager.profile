@@ -4093,6 +4093,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Contract__c.CN_Comment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Contract__c.CN_Conditional_Rebate_Note1__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9479,6 +9484,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>User.CN_Sales_Office__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>User.CN_Sales_Team_For_Report__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

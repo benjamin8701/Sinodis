@@ -4093,6 +4093,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_Contract__c.CN_Comment__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Contract__c.CN_Conditional_Rebate_Note1__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -9483,6 +9488,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>User.CN_Sales_Team_For_Report__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>User.CN_Sales_Team__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -10441,7 +10451,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Campaign.CN_Parent_Campaign</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
