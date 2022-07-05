@@ -9207,6 +9207,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Quote.CN_FinalPDF_Expiration_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Quote.CN_Finance_Acceptance_Item_Count__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -9266,6 +9271,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Quote.CN_PDF_Expiration_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Quote.CN_Please_Confirm__c</field>
         <readable>true</readable>
@@ -9298,6 +9308,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Quote.CN_Sales_Person_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Quote.CN_Sales_Person_SalesTeam_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
