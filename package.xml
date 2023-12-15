@@ -131,34 +131,21 @@
         <members>CN_Complaint_Resolved_LC_Ctrl</members>
         <members>CN_Contact_Change_Request_LC_Ctrl</members>
         <members>CN_Contact_Convert_From_Lead_Handler</members>
-<<<<<<< Updated upstream
-        <members>CN_Contact_Prevent_Delete_Handler</members>
-        <members>CN_Contact_Prevent_Delete_Handler_Test</members>
-        <members>CN_Contact_Prevent_Delete_Handler_Test</members>
-        <members>CN_Contact_Registered_Insert_Rest</members>
-=======
         <members>CN_Contact_Convert_From_Lead_Test</members>
         <members>CN_Contact_Prevent_Delete_Handler</members>
         <members>CN_Contact_Prevent_Delete_Handler_Test</members>
         <members>CN_Contact_Registered_Insert_Rest</members>
         <members>CN_Contact_Registered_Insert_Rest_Test</members>
->>>>>>> Stashed changes
         <members>CN_Contact_Send_Mg_Batch</members>
         <members>CN_Contact_Send_Mg_Mark_Handler</members>
         <members>CN_Contact_Send_Mg_Mark_Handler_Test</members>
         <members>CN_Contact_Send_Mg_SCH</members>
-<<<<<<< Updated upstream
-=======
         <members>CN_Contact_Send_Mg_SCH_Test</members>
->>>>>>> Stashed changes
         <members>CN_Contact_Type_Check_Handler</members>
         <members>CN_Contact_Type_Check_Handler_Test</members>
         <members>CN_Contact_Update_FinAREmail_Handler</members>
         <members>CN_Contact_Upsert_To_Mg_Callout</members>
-<<<<<<< Updated upstream
-=======
         <members>CN_Contact_Upsert_To_Mg_Test</members>
->>>>>>> Stashed changes
         <members>CN_Contact_Write_Back_To_Lead_Handler</members>
         <members>CN_Contact_Write_To_Lead_Handler_Test</members>
         <members>CN_Contract_Populate_Fields_Handler</members>
@@ -181,16 +168,10 @@
         <members>CN_Group_Send_To_SAP_LC_Ctrl</members>
         <members>CN_Group_Send_To_SAP_LC_Ctrl_Test</members>
         <members>CN_HelperClass_WS</members>
-<<<<<<< Updated upstream
         <members>CN_HelperClass_WS</members>
         <members>CN_LeadUpsert_Rest</members>
         <members>CN_Lead_MKT_Assigned_Handler</members>
         <members>CN_Lead_MKT_Assigned_Handler_Test</members>
-=======
-        <members>CN_LeadUpsert_Rest</members>
-        <members>CN_LeadUpsert_Rest_Test</members>
-        <members>CN_Lead_MKT_Assigned_Handler</members>
->>>>>>> Stashed changes
         <members>CN_Lead_MKT_Assigned_Handler_Test</members>
         <members>CN_Lead_New_ConRequest_LC_Ctrl_Test</members>
         <members>CN_Lead_New_Contact_Request_LC_Ctrl</members>
@@ -336,6 +317,7 @@
         <members>CN_Sample_Request__c.CN_SR_Approve_Process</members>
         <members>Quote.CN_Quote_Approval</members>
         <members>Quote.CN_Quote_Approval_V4</members>
+        <members>Quote.CN_Quote_Approval_V5</members>
         <members>Quote.CN_Quote_Auto_Approval</members>
         <name>ApprovalProcess</name>
     </types>
@@ -544,6 +526,7 @@
         <members>CN_Email_Folder/CN_Sample_Request_Approved_Process_CS</members>
         <members>CN_Email_Folder/CN_Sample_Request_Rejected</members>
         <members>CN_Email_Folder/CN_Sample_Request_Submit</members>
+        <members>CN_Email_Folder/CN_Chef_Customer_Visit_Created</members>
         <name>EmailTemplate</name>
     </types>
     <types>
@@ -564,6 +547,7 @@
     </types>
     <types>
         <members>CN_CCE_Sales_MDM</members>
+        <members>CN_Customer_Visit_Recipient_Group</members>
         <name>Group</name>
     </types>
     <types>
@@ -740,6 +724,7 @@
         <members>CN_Promotion_Manager</members>
         <members>CN_SalesMDM_Account_Approval</members>
         <members>CN_lightning_Email_Permission</members>
+        <members>CN_Guest_Chef_Demo_Visit_Permission_Set</members>
         <name>PermissionSet</name>
     </types>
     <types>
@@ -846,6 +831,14 @@
         <members>Quote.CN_Quote_Split_Items</members>
         <members>Quote.CN_Send_To_SAP</members>
         <name>QuickAction</name>
+    </types>
+
+    <types>
+        <members>CN_B2B_Sales_Manager</members>
+        <members>CN_International_QSR_Business_Sales_Director</members>
+        <members>CN_QSR_Chef_Consultant</members>
+        <members>CN_VACANCY_QSR_B2B_Channel_Director</members>
+        <name>Role</name>
     </types>
     <types>
         <members>*</members>
