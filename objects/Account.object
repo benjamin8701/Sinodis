@@ -1903,6 +1903,11 @@ IF(
                     <label>P060-SINODIS Dalian-西诺迪斯（大连）</label>
                 </value>
                 <value>
+                    <fullName>P070</fullName>
+                    <default>false</default>
+                    <label>P070-SINODIS Tianjin-西诺迪斯（天津）</label>
+                </value>
+                <value>
                     <fullName>P010</fullName>
                     <default>false</default>
                     <isActive>false</isActive>
@@ -3905,6 +3910,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                     <label>026-GuangZhou</label>
                 </value>
                 <value>
+                    <fullName>B06</fullName>
+                    <default>false</default>
+                    <label>B06-Shanghai Area</label>
+                </value>
+                <value>
                     <fullName>B01</fullName>
                     <default>false</default>
                     <isActive>false</isActive>
@@ -3933,12 +3943,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                     <default>false</default>
                     <isActive>false</isActive>
                     <label>B05-West Area</label>
-                </value>
-                <value>
-                    <fullName>B06</fullName>
-                    <default>false</default>
-                    <isActive>false</isActive>
-                    <label>B06-Shanghai Area</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -4088,7 +4092,7 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         <fullName>CN_Sales_Team_UI__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
-        <inlineHelpText>Please search for KA/DS/WS.</inlineHelpText>
+        <inlineHelpText>Please search for KA/DS/WS/QSR/B2B.</inlineHelpText>
         <label>Sales Team</label>
         <lookupFilter>
             <active>true</active>
@@ -4626,6 +4630,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                     <fullName>Retail OEM</fullName>
                     <default>false</default>
                     <label>Retail OEM</label>
+                </value>
+                <value>
+                    <fullName>B2B OEM</fullName>
+                    <default>false</default>
+                    <label>B2B OEM</label>
                 </value>
                 <value>
                     <fullName>Coffee/Tea OEM</fullName>
@@ -6256,6 +6265,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>P060</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>P070</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Department_of_Contact_Person__c</picklist>
@@ -7087,6 +7100,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>026</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>B06</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Group__c</picklist>
@@ -7336,6 +7353,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Airline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B2B OEM</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -8374,6 +8395,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>P060</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>P070</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Department_of_Contact_Person__c</picklist>
@@ -9205,6 +9230,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>026</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>B06</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Group__c</picklist>
@@ -9454,6 +9483,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Airline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B2B OEM</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -10492,6 +10525,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>P060</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>P070</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Department_of_Contact_Person__c</picklist>
@@ -11323,6 +11360,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>026</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>B06</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Group__c</picklist>
@@ -11572,6 +11613,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Airline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B2B OEM</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -12606,6 +12651,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>P060</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>P070</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Department_of_Contact_Person__c</picklist>
@@ -13437,6 +13486,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>026</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>B06</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Group__c</picklist>
@@ -13686,6 +13739,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Airline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B2B OEM</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -14712,6 +14769,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>P060</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>P070</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Department_of_Contact_Person__c</picklist>
@@ -15543,6 +15604,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>026</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>B06</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Group__c</picklist>
@@ -15792,6 +15857,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Airline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B2B OEM</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -16830,6 +16899,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>P060</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>P070</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Department_of_Contact_Person__c</picklist>
@@ -17661,6 +17734,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>026</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>B06</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Group__c</picklist>
@@ -17910,6 +17987,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Airline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B2B OEM</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -18943,6 +19024,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>P060</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>P070</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Department_of_Contact_Person__c</picklist>
@@ -19774,6 +19859,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <fullName>026</fullName>
                 <default>false</default>
             </values>
+            <values>
+                <fullName>B06</fullName>
+                <default>false</default>
+            </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Group__c</picklist>
@@ -20023,6 +20112,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Airline</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B2B OEM</fullName>
                 <default>false</default>
             </values>
             <values>
