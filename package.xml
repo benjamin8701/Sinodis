@@ -131,18 +131,34 @@
         <members>CN_Complaint_Resolved_LC_Ctrl</members>
         <members>CN_Contact_Change_Request_LC_Ctrl</members>
         <members>CN_Contact_Convert_From_Lead_Handler</members>
+<<<<<<< Updated upstream
         <members>CN_Contact_Prevent_Delete_Handler</members>
         <members>CN_Contact_Prevent_Delete_Handler_Test</members>
         <members>CN_Contact_Prevent_Delete_Handler_Test</members>
         <members>CN_Contact_Registered_Insert_Rest</members>
+=======
+        <members>CN_Contact_Convert_From_Lead_Test</members>
+        <members>CN_Contact_Prevent_Delete_Handler</members>
+        <members>CN_Contact_Prevent_Delete_Handler_Test</members>
+        <members>CN_Contact_Registered_Insert_Rest</members>
+        <members>CN_Contact_Registered_Insert_Rest_Test</members>
+>>>>>>> Stashed changes
         <members>CN_Contact_Send_Mg_Batch</members>
         <members>CN_Contact_Send_Mg_Mark_Handler</members>
         <members>CN_Contact_Send_Mg_Mark_Handler_Test</members>
         <members>CN_Contact_Send_Mg_SCH</members>
+<<<<<<< Updated upstream
+=======
+        <members>CN_Contact_Send_Mg_SCH_Test</members>
+>>>>>>> Stashed changes
         <members>CN_Contact_Type_Check_Handler</members>
         <members>CN_Contact_Type_Check_Handler_Test</members>
         <members>CN_Contact_Update_FinAREmail_Handler</members>
         <members>CN_Contact_Upsert_To_Mg_Callout</members>
+<<<<<<< Updated upstream
+=======
+        <members>CN_Contact_Upsert_To_Mg_Test</members>
+>>>>>>> Stashed changes
         <members>CN_Contact_Write_Back_To_Lead_Handler</members>
         <members>CN_Contact_Write_To_Lead_Handler_Test</members>
         <members>CN_Contract_Populate_Fields_Handler</members>
@@ -165,10 +181,16 @@
         <members>CN_Group_Send_To_SAP_LC_Ctrl</members>
         <members>CN_Group_Send_To_SAP_LC_Ctrl_Test</members>
         <members>CN_HelperClass_WS</members>
+<<<<<<< Updated upstream
         <members>CN_HelperClass_WS</members>
         <members>CN_LeadUpsert_Rest</members>
         <members>CN_Lead_MKT_Assigned_Handler</members>
         <members>CN_Lead_MKT_Assigned_Handler_Test</members>
+=======
+        <members>CN_LeadUpsert_Rest</members>
+        <members>CN_LeadUpsert_Rest_Test</members>
+        <members>CN_Lead_MKT_Assigned_Handler</members>
+>>>>>>> Stashed changes
         <members>CN_Lead_MKT_Assigned_Handler_Test</members>
         <members>CN_Lead_New_ConRequest_LC_Ctrl_Test</members>
         <members>CN_Lead_New_Contact_Request_LC_Ctrl</members>
