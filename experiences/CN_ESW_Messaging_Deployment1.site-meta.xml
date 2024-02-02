@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExperienceBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>CN_ESW_Messaging_Deployment</label>
+    <type>ChatterNetworkPicasso</type>
+    <urlPathPrefix>ESWMessagingDeployment1683257303013</urlPathPrefix>
+</ExperienceBundle>

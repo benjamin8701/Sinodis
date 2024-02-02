@@ -33,7 +33,7 @@
     <fieldUpdates>
         <fullName>CN_SampleProduct_Set_ExternalID</fullName>
         <field>CN_External_ID__c</field>
-        <formula>CN_Sample_Request__r.Id &amp;&apos;-&apos;&amp; CN_Product__r.Id</formula>
+        <formula>CASESAFEID(CN_Sample_Request__r.Id) &amp;&apos;-&apos;&amp; CASESAFEID(CN_Product__r.Id)</formula>
         <name>CN_SampleProduct_Set_ExternalID</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
@@ -97,13 +97,7 @@
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <formula>AND(
-$Setup.Trigger_Switcher_Setting__c.EnableFlow__c , RecordType.DeveloperName = &apos;CN_Sample_Product&apos;,
-OR(
-  ISNEW(),
-  ISCHANGED( CN_Quantity_Needed__c )
-)
-)</formula>
+        <formula>AND( $Setup.Trigger_Switcher_Setting__c.EnableFlow__c , RecordType.DeveloperName = &apos;CN_Sample_Product&apos;, OR(   ISNEW(),   ISCHANGED( CN_Quantity_Needed__c ) ) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

@@ -25,6 +25,10 @@
   <td>{!relatedTo.CN_Condition_Type__c}</td>
   </tr>
   <tr>
+  <td>需样品日期:</td>
+  <td>{!relatedTo.CN_Sample_Needed_Date_Email__c}</td>
+  </tr>
+  <tr>
   <td>送样方式:</td>
   <td>{!relatedTo.CN_Sample_Delivery_Method__c}</td>
   </tr>
@@ -69,6 +73,10 @@
   <tr>
   <td>Condition Type:</td>
   <td>{!relatedTo.CN_Condition_Type__c}</td>
+  </tr>
+  <tr>
+  <td>Sample Needed Date:</td>
+  <td>{!relatedTo.CN_Sample_Needed_Date_Email__c}</td>
   </tr>
   <tr>
   <td>Sample Delivery Method:</td>

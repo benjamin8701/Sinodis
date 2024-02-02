@@ -195,7 +195,7 @@
     </alerts>
     <alerts>
         <fullName>Send_Email_to_ApporveAndOwner_Account_Synced</fullName>
-        <ccEmails>ar.team@savencia.com</ccEmails>
+        <ccEmails>dezheng.du@accenture.com</ccEmails>
         <description>Send Email to Apporve12345 and Owner to reminder Account was Synced</description>
         <protected>false</protected>
         <recipients>
@@ -728,24 +728,26 @@
             <type>Alert</type>
         </actions>
         <active>true</active>
-        <formula>AND( 
-	$Setup.Trigger_Switcher_Setting__c.EnableFlow__c, 
-	BEGINS(RecordType.DeveloperName, &apos;CN&apos;), 
-	OR( $Profile.Name = &apos;System Integration&apos;, $Profile.Name = &apos;System Administrator&apos; ), 
-	OR( NOT(ISBLANK(TEXT(CN_Billing_Block__c))), 
-	NOT(ISBLANK(TEXT(CN_Delivery_Block__c))), 
-	NOT(ISBLANK(TEXT(CN_Order_Block__c))), 
-	CN_Closed__c = TRUE, 
-	CN_Block_Sales_Support__c = TRUE ), 
-	ISPICKVAL(CN_Account_Status__c, &quot;Approved&quot;),
-	OR(
-		ISCHANGED(CN_Order_Block__c),
-		ISCHANGED(CN_Delivery_Block__c),
-		ISCHANGED(CN_Billing_Block__c),
-		ISCHANGED(CN_Closed__c),
-		ISCHANGED(CN_Block_Sales_Support__c)
-	)
-)</formula>
+        <formula>AND(
+  	$Setup.Trigger_Switcher_Setting__c.EnableFlow__c,
+  	BEGINS(RecordType.DeveloperName, &apos;CN&apos;),
+  	OR( $Profile.Name = &apos;System Integration&apos;, $Profile.Name = &apos;System Administrator&apos; ),
+  	OR( 
+            NOT(ISBLANK(TEXT(CN_Billing_Block__c))),
+  	    NOT(ISBLANK(TEXT(CN_Delivery_Block__c))),
+  	    NOT(ISBLANK(TEXT(CN_Order_Block__c))),
+  	    CN_Closed__c = TRUE,
+  	    CN_Block_Sales_Support__c = TRUE 
+        ),
+  	ISPICKVAL(CN_Account_Status__c, &quot;Approved&quot;),
+ 	OR(
+ 		ISCHANGED(CN_Order_Block__c),
+ 		ISCHANGED(CN_Delivery_Block__c),
+ 		ISCHANGED(CN_Billing_Block__c),
+ 		ISCHANGED(CN_Closed__c),
+ 		ISCHANGED(CN_Block_Sales_Support__c)
+ 	)
+ )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -897,26 +899,7 @@
             <type>Alert</type>
         </actions>
         <active>true</active>
-        <formula>AND( 
-	$Setup.Trigger_Switcher_Setting__c.EnableFlow__c, 
-	BEGINS(RecordType.DeveloperName, &apos;CN&apos;), 
-	OR( $Profile.Name = &apos;System Integration&apos;, $Profile.Name = &apos;System Administrator&apos; ), 
-	ISPICKVAL(CN_Account_Status__c, &quot;Approved&quot;), 
-	OR(
-		ISCHANGED(CN_Order_Block__c),
-		ISCHANGED(CN_Delivery_Block__c),
-		ISCHANGED(CN_Billing_Block__c),
-		ISCHANGED(CN_Closed__c),
-		ISCHANGED(CN_Block_Sales_Support__c)
-	),
-	AND( 
-		ISBLANK(TEXT(CN_Order_Block__c)), 
-		ISBLANK(TEXT(CN_Delivery_Block__c)), 
-		ISBLANK(TEXT(CN_Billing_Block__c)), 
-		CN_Closed__c = false, 
-		CN_Block_Sales_Support__c = false 
-	)
-)</formula>
+        <formula>AND(  	$Setup.Trigger_Switcher_Setting__c.EnableFlow__c,  	BEGINS(RecordType.DeveloperName, &apos;CN&apos;),  	OR( $Profile.Name = &apos;System Integration&apos;, $Profile.Name = &apos;System Administrator&apos; ),  	ISPICKVAL(CN_Account_Status__c, &quot;Approved&quot;),  	OR( 		ISCHANGED(CN_Order_Block__c), 		ISCHANGED(CN_Delivery_Block__c), 		ISCHANGED(CN_Billing_Block__c), 		ISCHANGED(CN_Closed__c), 		ISCHANGED(CN_Block_Sales_Support__c) 	), 	AND(  		ISBLANK(TEXT(CN_Order_Block__c)),  		ISBLANK(TEXT(CN_Delivery_Block__c)),  		ISBLANK(TEXT(CN_Billing_Block__c)),  		CN_Closed__c = false,  		CN_Block_Sales_Support__c = false  	) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>

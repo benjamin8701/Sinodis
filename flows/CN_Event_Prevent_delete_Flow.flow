@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>54.0</apiVersion>
-    <interviewLabel>CN Event Prevent delete Flow</interviewLabel>
+    <interviewLabel>CN Event Prevent delete Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>CN Event Prevent delete Flow</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -42,17 +42,10 @@
         <connector>
             <targetReference>CN_Event_Update_Prevent_Delete_Field</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>RecordTypeId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>0121e0000007StPAAU</stringValue>
-            </value>
-        </filters>
+        <filterFormula>AND( {!$Setup.Trigger_Switcher_Setting__c.EnableFlow__c} = True, {!$Record.RecordType.DeveloperName}=&apos;CN_Visit&apos; )</filterFormula>
         <object>Event</object>
         <recordTriggerType>Delete</recordTriggerType>
         <triggerType>RecordBeforeDelete</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
 </Flow>

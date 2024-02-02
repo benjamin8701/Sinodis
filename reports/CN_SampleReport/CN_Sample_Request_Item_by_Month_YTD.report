@@ -32,6 +32,9 @@
     <columns>
         <field>CHILD_NAME</field>
     </columns>
+    <columns>
+        <field>CN_Sample_Product__c.CN_Sample_Request_Type_Formula__c</field>
+    </columns>
     <currency>CNY</currency>
     <filter>
         <criteriaItems>

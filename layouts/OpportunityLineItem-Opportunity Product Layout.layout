@@ -95,8 +95,8 @@
     </layoutSections>
     <multilineLayoutFields>Product2Id</multilineLayoutFields>
     <multilineLayoutFields>Quantity</multilineLayoutFields>
-    <multilineLayoutFields>UnitPrice</multilineLayoutFields>
     <multilineLayoutFields>ListPrice</multilineLayoutFields>
+    <multilineLayoutFields>UnitPrice</multilineLayoutFields>
     <multilineLayoutFields>OpportunityId</multilineLayoutFields>
     <multilineLayoutFields>Description</multilineLayoutFields>
     <showEmailCheckbox>false</showEmailCheckbox>

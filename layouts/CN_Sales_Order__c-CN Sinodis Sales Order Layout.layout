@@ -41,6 +41,10 @@
                 <behavior>Edit</behavior>
                 <field>CN_Up_Code__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>CN_Rejection_Status__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
@@ -248,7 +252,7 @@
         <fields>CN_Net_Value__c</fields>
         <fields>CN_Total_Amount_With_Tax__c</fields>
         <fields>CN_Overall_Status__c</fields>
-        <fields>CN_Confirmed_Value__c</fields>
+        <fields>CN_Item_Reject_Reason__c</fields>
         <relatedList>CN_Sales_Order_Item__c.CN_Order_Number__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -264,7 +268,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1s000000KEBV</masterLabel>
+        <masterLabel>00h1y0000017vlo</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

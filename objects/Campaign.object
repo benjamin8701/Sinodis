@@ -360,6 +360,16 @@
                     <label>IRCA</label>
                 </value>
                 <value>
+                    <fullName>Joyhana</fullName>
+                    <default>false</default>
+                    <label>Joyhana</label>
+                </value>
+                <value>
+                    <fullName>La Rose Noire</fullName>
+                    <default>false</default>
+                    <label>La Rose Noire</label>
+                </value>
+                <value>
                     <fullName>LE RUSTIQUE</fullName>
                     <default>false</default>
                     <label>LE RUSTIQUE</label>
@@ -393,6 +403,11 @@
                     <fullName>OVODAN</fullName>
                     <default>false</default>
                     <label>OVODAN</label>
+                </value>
+                <value>
+                    <fullName>Palmilord</fullName>
+                    <default>false</default>
+                    <label>Palmilord</label>
                 </value>
                 <value>
                     <fullName>PAVONI</fullName>
@@ -779,6 +794,26 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>CN_Need_Send_Childrens_MG_Flag__c</fullName>
+        <externalId>false</externalId>
+        <label>CN_Need_Send_Childrens_MG_Flag</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CN_Need_Send_MG_Flag__c</fullName>
+        <externalId>false</externalId>
+        <label>CN_Need_Send_MG_Flag</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CN_New_Product_Launch__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -1059,6 +1094,17 @@
         </filters>
         <label>My Active Campaigns</label>
     </listViews>
+    <listViews>
+        <fullName>Org_Campaign_Hierarchy</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>Org_Campaign_Hierarchy</label>
+    </listViews>
     <recordTypes>
         <fullName>CN_Campaign</fullName>
         <active>true</active>
@@ -1163,11 +1209,19 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Joyhana</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>LE RUSTIQUE</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>LOSTE TRADI-FRANCE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>La Rose Noire</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1192,6 +1246,10 @@
             </values>
             <values>
                 <fullName>PAVONI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Palmilord</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1601,11 +1659,19 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Joyhana</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>LE RUSTIQUE</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>LOSTE TRADI-FRANCE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>La Rose Noire</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1630,6 +1696,10 @@
             </values>
             <values>
                 <fullName>PAVONI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Palmilord</fullName>
                 <default>false</default>
             </values>
             <values>

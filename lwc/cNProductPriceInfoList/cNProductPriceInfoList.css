@@ -1,0 +1,26 @@
+.lightning-card{
+    width: 100%;
+    border-radius: 5px;
+}
+.slds-card__header{
+    padding: var(--lwc-varSpacingVerticalSmall,0.75rem) var(--lwc-varSpacingHorizontalMedium,1rem) var(--lwc-varSpacingVerticalSmall,0.75rem);
+    margin: 0 0 0;
+}
+.related-list .slds-button_icon-bare{
+    display: none;
+}
+.related-list a span {
+    color: rgba(27, 82, 151, 1.0);
+}
+.related-list .slds-scrollable_x {
+    overflow-y:visible;
+    overflow-x:visible;
+}
+
+div[class="slds-align_absolute-center slds-p-around_medium"]{
+    display:none;
+}
+div[class="slds-is-relative record-form-spinner-holder"]{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}

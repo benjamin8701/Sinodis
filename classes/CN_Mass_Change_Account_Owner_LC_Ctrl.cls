@@ -22,6 +22,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
         String UserNumber = paramMap.get('UserNumber');
         String changetype = paramMap.get('changeTypeList');
         String changeUserNumber = paramMap.get('changeUserNumber');
+        system.debug('shuqi1');
         String CustomerCode = CustCode;
         isProcess = isProcess == null? false: isProcess;
 
@@ -179,6 +180,7 @@ public without sharing class CN_Mass_Change_Account_Owner_LC_Ctrl {
                     resultMaps.put('Comment', '');
                     resultMaps.put('Show', 'Result');
                     accountWrapperList.add(new AccountWrapper(resultMaps));
+                    system.debug('shuqi++'+changeUserNumber);
                 }
             }else if(isProcess == true && accountList.size()>0 && ((changetype == 'Change Owner' && userMap.get(changeUserNumber)!=null) ||(changetype == 'Change Finance AR' && financeMap.get(changeUserNumber)!=null))){
                 //

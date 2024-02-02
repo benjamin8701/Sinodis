@@ -120,12 +120,20 @@
             <translation><!-- IRCA --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Joyhana</masterLabel>
+            <translation><!-- Joyhana --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>LE RUSTIQUE</masterLabel>
             <translation><!-- LE RUSTIQUE --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>LOSTE TRADI-FRANCE</masterLabel>
             <translation><!-- LOSTE TRADI-FRANCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>La Rose Noire</masterLabel>
+            <translation><!-- La Rose Noire --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Lescure</masterLabel>
@@ -150,6 +158,10 @@
         <picklistValues>
             <masterLabel>PAVONI</masterLabel>
             <translation><!-- PAVONI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palmilord</masterLabel>
+            <translation><!-- Palmilord --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Pomone</masterLabel>
@@ -228,12 +240,20 @@
         <label><!-- Channel --></label>
         <name>CN_Channel__c</name>
         <picklistValues>
+            <masterLabel>B2B</masterLabel>
+            <translation><!-- B2B --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>DS</masterLabel>
             <translation><!-- DS --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>KA</masterLabel>
             <translation><!-- KA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QSR</masterLabel>
+            <translation><!-- QSR --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>WS</masterLabel>
@@ -343,6 +363,14 @@
     <fields>
         <label><!-- CN_Is_Within_6_Months --></label>
         <name>CN_Is_Within_6_Months__c</name>
+    </fields>
+    <fields>
+        <label><!-- CN_Need_Send_Childrens_MG_Flag --></label>
+        <name>CN_Need_Send_Childrens_MG_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- CN_Need_Send_MG_Flag --></label>
+        <name>CN_Need_Send_MG_Flag__c</name>
     </fields>
     <fields>
         <label><!-- New Product Launch --></label>

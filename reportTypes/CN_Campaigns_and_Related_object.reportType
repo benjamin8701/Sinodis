@@ -784,6 +784,26 @@
             <field>CN_Is_Send_Delivery_Email__c</field>
             <table>Campaign.Opportunities__r.Sample_RequestS_FeedbackS__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CN_Sale_Team_of_Sales_Person__c</field>
+            <table>Campaign.Opportunities__r.Sample_RequestS_FeedbackS__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CN_Sales_Person_Id__c</field>
+            <table>Campaign.Opportunities__r.Sample_RequestS_FeedbackS__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CN_Account_Id__c</field>
+            <table>Campaign.Opportunities__r.Sample_RequestS_FeedbackS__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CN_Account_Route_to_Market__c</field>
+            <table>Campaign.Opportunities__r.Sample_RequestS_FeedbackS__r</table>
+        </columns>
         <masterLabel>Sample Requests</masterLabel>
     </sections>
     <sections>
@@ -1009,17 +1029,17 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>CN_Unit__c</field>
+            <table>Campaign.Opportunities__r.Sample_RequestS_FeedbackS__r.Sample_Products__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>CN_Customer_Code__c</field>
             <table>Campaign.Opportunities__r.Sample_RequestS_FeedbackS__r.Sample_Products__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <columns>
-                <checkedByDefault>false</checkedByDefault>
-                <field>CN_Current_Status_For_Report__c</field>
-                <table>Campaign.Opportunities__r.Sample_RequestS_FeedbackS__r.Sample_Products__r</table>
-            </columns>
-            <field>CN_Unit__c</field>
+            <field>CN_Current_Status_For_Report__c</field>
             <table>Campaign.Opportunities__r.Sample_RequestS_FeedbackS__r.Sample_Products__r</table>
         </columns>
         <masterLabel>Sample Products</masterLabel>

@@ -301,6 +301,16 @@
                     <default>false</default>
                     <label>5CCE2204 – CCE Sample</label>
                 </value>
+                <value>
+                    <fullName>5CCE2304 – CCE Sample</fullName>
+                    <default>false</default>
+                    <label>5CCE2304 – CCE Sample</label>
+                </value>
+                <value>
+                    <fullName>5CCE2404 – CCE Sample</fullName>
+                    <default>false</default>
+                    <label>5CCE2404 – CCE Sample</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -595,6 +605,7 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
     &apos;K030&apos;,&apos;K030-ShenZhen&apos;,
     &apos;K040&apos;,&apos;K040-GuangZhou&apos;,
     &apos;K050&apos;,&apos;K050-ChengDu&apos;,
+    &apos;B100&apos;,&apos;B100-Tianjin&apos;,
     &apos;&apos;
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
@@ -683,9 +694,21 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
     <fields>
         <fullName>CN_Sample_Feedback_Overdue__c</fullName>
         <externalId>false</externalId>
-        <formula>HYPERLINK(&quot;/lightning/r/Report/00O1e000000JkW6EAK/view?queryScope=userFolders&quot;,&quot;Click Here&quot;)</formula>
+        <formula>HYPERLINK(&quot;/lightning/r/Report/00O1y000000f8GQEAY/view?queryScope=userFolders&quot;,&quot;Click Here&quot;)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Sample Feedback Overdue</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CN_Sample_Needed_Date_Email__c</fullName>
+        <description>Sample Needed Date for emial</description>
+        <externalId>false</externalId>
+        <formula>TEXT(CN_Sample_Needed_Date__c)</formula>
+        <label>Sample Needed Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -816,7 +839,7 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             <operation>equals</operation>
             <value>CN_Sample_Request__c.CN_Office_Repack</value>
         </filters>
-        <label>All Office Repack Sample Requests</label>
+        <label>All Office Test Sample Requests</label>
         <sharedTo>
             <roleAndSubordinates>CN_China</roleAndSubordinates>
         </sharedTo>
@@ -854,11 +877,19 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         <fullName>CN_Office_Repack</fullName>
         <active>true</active>
         <compactLayoutAssignment>CN_Sample_Request</compactLayoutAssignment>
-        <label>Office Repack</label>
+        <label>Office Test Sample</label>
         <picklistValues>
             <picklist>CN_Condition_Type__c</picklist>
             <values>
                 <fullName>5CCE2204 %E2%80%93 CCE Sample</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5CCE2304 %E2%80%93 CCE Sample</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5CCE2404 %E2%80%93 CCE Sample</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -943,6 +974,14 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             <picklist>CN_Condition_Type__c</picklist>
             <values>
                 <fullName>5CCE2204 %E2%80%93 CCE Sample</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5CCE2304 %E2%80%93 CCE Sample</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5CCE2404 %E2%80%93 CCE Sample</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1132,7 +1171,7 @@ NOT(ISCHANGED(CN_SP_Records_Count_Delivery_Status_Done__c)),
       NOT(ISCHANGED(CN_Is_Send_Delivery_Email__c)),
         NOT(ISCHANGED(CN_Sample_Request_Cost__c))
 )</errorConditionFormula>
-        <errorMessage>It&apos;s not allowed to edit.</errorMessage>
+        <errorMessage>It&apos;s not allowed to edit.--1</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>CN_SR_Check_Ready_SKU</fullName>

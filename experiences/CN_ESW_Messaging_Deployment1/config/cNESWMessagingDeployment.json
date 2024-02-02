@@ -1,0 +1,17 @@
+{
+  "authenticationType" : "AUTHENTICATED_WITH_PUBLIC_ACCESS_ENABLED",
+  "forgotPasswordRouteId" : null,
+  "isFilteredComponentsView" : false,
+  "isProgressiveRenderingEnabled" : false,
+  "mainAppPageId" : "40a52f37-3bde-4f35-8b3e-d675755230f3",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : null,
+  "trustedSitesForScript" : [ {
+    "id" : "b4c59841-ead2-4962-abc6-33351aa0ddec",
+    "isActive" : true,
+    "trustedSiteName" : "&#36866;&#29992;&#20110; Web &#20027;&#26426;&#30340;&#28040;&#24687;&#20256;&#36882;",
+    "trustedSiteUrl" : "https://savenciasinodis--cndev10.sandbox.my.salesforce-scrt.com",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}

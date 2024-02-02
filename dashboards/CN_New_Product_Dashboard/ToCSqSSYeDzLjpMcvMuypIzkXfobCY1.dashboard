@@ -137,10 +137,10 @@
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>Metric</componentType>
-                <decimalPrecision>0</decimalPrecision>
+                <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>Sampling Product# -- DS</header>
+                <header>Sampling Product - DS</header>
                 <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
                 <indicatorHighColor>#C23934</indicatorHighColor>
@@ -185,12 +185,11 @@
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartAxisRange>Auto</chartAxisRange>
                 <chartSummary>
-                    <aggregate>Sum</aggregate>
                     <axisBinding>y</axisBinding>
-                    <column>CN_Sample_Request__c.Sample_Products__r$CN_Count__c</column>
+                    <column>RowCount</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
-                <decimalPrecision>0</decimalPrecision>
+                <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
@@ -200,7 +199,7 @@
                 <groupingSortProperties>
                     <groupingSorts>
                         <groupingLevel>g1</groupingLevel>
-                        <sortColumn>s!CN_Sample_Product__c.CN_Count__c</sortColumn>
+                        <sortColumn>RowCount</sortColumn>
                         <sortOrder>d</sortOrder>
                     </groupingSorts>
                 </groupingSortProperties>
@@ -225,10 +224,10 @@
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>Metric</componentType>
-                <decimalPrecision>0</decimalPrecision>
+                <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>Sampling Product# -- WS</header>
+                <header>Sampling Product - WS</header>
                 <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
                 <indicatorHighColor>#C23934</indicatorHighColor>
@@ -275,10 +274,10 @@
                     <column>RowCount</column>
                 </chartSummary>
                 <componentType>Metric</componentType>
-                <decimalPrecision>0</decimalPrecision>
+                <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <groupingSortProperties/>
-                <header>Sampling Product# -- KA</header>
+                <header>Sampling Product - KA</header>
                 <indicatorBreakpoint1>33.0</indicatorBreakpoint1>
                 <indicatorBreakpoint2>67.0</indicatorBreakpoint2>
                 <indicatorHighColor>#C23934</indicatorHighColor>
@@ -327,7 +326,7 @@
                     <column>FORMULA1</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
-                <decimalPrecision>0</decimalPrecision>
+                <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
@@ -363,7 +362,7 @@
                     <column>FORMULA1</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
-                <decimalPrecision>0</decimalPrecision>
+                <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
@@ -399,7 +398,7 @@
                     <column>FORMULA1</column>
                 </chartSummary>
                 <componentType>Bar</componentType>
-                <decimalPrecision>0</decimalPrecision>
+                <decimalPrecision>-1</decimalPrecision>
                 <displayUnits>Auto</displayUnits>
                 <drillEnabled>false</drillEnabled>
                 <drillToDetailEnabled>false</drillToDetailEnabled>
@@ -427,7 +426,7 @@
         <numberOfColumns>12</numberOfColumns>
         <rowHeight>36</rowHeight>
     </dashboardGridLayout>
-    <dashboardType>SpecifiedUser</dashboardType>
+    <dashboardType>LoggedInUser</dashboardType>
     <description>new product</description>
     <isGridLayout>true</isGridLayout>
     <runningUser>system.support@savencia.com</runningUser>

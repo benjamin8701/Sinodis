@@ -329,6 +329,8 @@
         <columns>CN_Max_Discount_Price__c</columns>
         <columns>CN_Standard_List_Price__c</columns>
         <columns>CN_Is_Effected__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -369,6 +371,11 @@
             <field>CN_Is_Effected__c</field>
             <operation>equals</operation>
             <value>0</value>
+        </filters>
+        <filters>
+            <field>CN_Product_Code__c</field>
+            <operation>equals</operation>
+            <value>Test 2023052310090502</value>
         </filters>
         <label>Not Effected Preset PriceBook Entry</label>
     </listViews>

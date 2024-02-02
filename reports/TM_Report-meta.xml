@@ -10,10 +10,5 @@
         <sharedTo>CN_Finance_AR</sharedTo>
         <sharedToType>Role</sharedToType>
     </folderShares>
-    <folderShares>
-        <accessLevel>View</accessLevel>
-        <sharedTo>CN_Finance_MDM</sharedTo>
-        <sharedToType>Role</sharedToType>
-    </folderShares>
     <name>Finance Report</name>
 </ReportFolder>

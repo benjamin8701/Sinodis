@@ -408,7 +408,7 @@
     <rules>
         <fullName>CN_Quote_Approval_Reminder_Step4</fullName>
         <active>true</active>
-        <formula>AND( $Setup.Trigger_Switcher_Setting__c.EnableFlow__c, RecordType.DeveloperName = &quot;CN_Quote&quot;, ISPICKVAL(Status, &quot;Submitted for Approval&quot;), ISPICKVAL( CN_Approve_Step__c , &quot;Step4&quot;), NOT(ISBLANK(CN_Current_Approver__c )) )</formula>
+        <formula>AND($Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,RecordType.DeveloperName = &quot;CN_Quote&quot;, ISPICKVAL(Status, &quot;Submitted for Approval&quot;), ISPICKVAL( CN_Approve_Step__c , &quot;Step4&quot;), NOT(ISBLANK(CN_Current_Approver__c )) )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
         <workflowTimeTriggers>
             <actions>
@@ -509,11 +509,8 @@
             <name>CN_Quote_Fin_Accept_Notice_Sales</name>
             <type>Alert</type>
         </actions>
-        <active>true</active>
-        <formula>AND($Setup.Trigger_Switcher_Setting__c.EnableFlow__c , RecordType.DeveloperName = &apos;CN_Quote&apos;,
- ISPICKVAL( Status , &quot;Approved&quot;) ,
-  CN_Is_Finance_Process_Done__c 
-)</formula>
+        <active>false</active>
+        <formula>AND($Setup.Trigger_Switcher_Setting__c.EnableFlow__c , RecordType.DeveloperName = &apos;CN_Quote&apos;,  ISPICKVAL( Status , &quot;Approved&quot;) ,   CN_Is_Finance_Process_Done__c  )</formula>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <rules>

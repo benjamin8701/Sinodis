@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>竞品</value>
+    </caseValues>
+    <fields>
+        <label>客户</label>
+        <name>CN_Account__c</name>
+        <relationshipLabel>竞品</relationshipLabel>
+    </fields>
+    <fields>
+        <label>城市</label>
+        <name>CN_City__c</name>
+    </fields>
+    <fields>
+        <label>客户类别</label>
+        <name>CN_Customer_Category__c</name>
+        <picklistValues>
+            <masterLabel>BAPA</masterLabel>
+            <translation><!-- BAPA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>客户代码</label>
+        <name>CN_Customer_Code__c</name>
+    </fields>
+    <fields>
+        <label>日期</label>
+        <name>CN_Date__c</name>
+    </fields>
+    <fields>
+        <label>EA（含税）</label>
+        <name>CN_EA__c</name>
+    </fields>
+    <fields>
+        <label>预警价格</label>
+        <name>CN_Price_Alert_At__c</name>
+    </fields>
+    <fields>
+        <label>优先级</label>
+        <name>CN_Priority__c</name>
+    </fields>
+    <fields>
+        <label>产品类别</label>
+        <name>CN_Product_Category__c</name>
+    </fields>
+    <fields>
+        <label>产品名称</label>
+        <name>CN_Product_Name__c</name>
+    </fields>
+    <fields>
+        <label>产品</label>
+        <name>CN_Product__c</name>
+        <relationshipLabel>竞品</relationshipLabel>
+    </fields>
+    <fields>
+        <label>参考价格</label>
+        <name>CN_Reference_Price__c</name>
+    </fields>
+    <fields>
+        <label>区域</label>
+        <name>CN_Region__c</name>
+        <picklistValues>
+            <masterLabel>East</masterLabel>
+            <translation><!-- East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North</masterLabel>
+            <translation><!-- North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South</masterLabel>
+            <translation><!-- South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West</masterLabel>
+            <translation><!-- West --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>SKU编号</label>
+        <name>CN_SKU_Code__c</name>
+    </fields>
+    <fields>
+        <label>SKU名称</label>
+        <name>CN_SKU_Name__c</name>
+    </fields>
+    <fields>
+        <label>规范</label>
+        <name>CN_Specification__c</name>
+    </fields>
+    <fields>
+        <label>子类别 2-品牌</label>
+        <name>CN_Sub_Category_Brand__c</name>
+    </fields>
+    <fields>
+        <label>子类别 1</label>
+        <name>CN_Sub_Category__c</name>
+    </fields>
+    <nameFieldLabel>竞品名称</nameFieldLabel>
+    <recordTypes>
+        <label><!-- CN Competitor --></label>
+        <name>CN_Competitor</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- competitor-sales --></label>
+        <name>competitor_sales</name>
+    </recordTypes>
+</CustomObjectTranslation>

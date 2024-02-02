@@ -242,6 +242,17 @@
         <fields>CN_Customer_Status__c</fields>
         <label>Account Compact Layout</label>
     </compactLayouts>
+    <compactLayouts>
+        <fullName>Indirect_Account_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>CN_End_Customer_Code_Text__c</fields>
+        <fields>CN_Sales_Team_UI__c</fields>
+        <fields>CN_Sales_Person_Name__c</fields>
+        <fields>CN_Sinodis_Finance_AR__c</fields>
+        <fields>CN_Account_Status_For_Display__c</fields>
+        <fields>CN_Customer_Status__c</fields>
+        <label>Indirect Account Compact Layout</label>
+    </compactLayouts>
     <enableEnhancedLookup>true</enableEnhancedLookup>
     <enableFeeds>true</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -417,11 +428,6 @@ IF(
                     <label>Website</label>
                 </value>
                 <value>
-                    <fullName>Social Media Network</fullName>
-                    <default>false</default>
-                    <label>Social Media Network</label>
-                </value>
-                <value>
                     <fullName>Marketing Campaign</fullName>
                     <default>false</default>
                     <label>Marketing Campaign</label>
@@ -465,6 +471,37 @@ IF(
                     <fullName>Others</fullName>
                     <default>false</default>
                     <label>Others</label>
+                </value>
+                <value>
+                    <fullName>E-Commerce</fullName>
+                    <default>false</default>
+                    <label>E-Commerce</label>
+                </value>
+                <value>
+                    <fullName>Social Media</fullName>
+                    <default>false</default>
+                    <label>Social Media</label>
+                </value>
+                <value>
+                    <fullName>Network</fullName>
+                    <default>false</default>
+                    <label>Network</label>
+                </value>
+                <value>
+                    <fullName>Livestreaming</fullName>
+                    <default>false</default>
+                    <label>Livestreaming</label>
+                </value>
+                <value>
+                    <fullName>Road Show</fullName>
+                    <default>false</default>
+                    <label>Road Show</label>
+                </value>
+                <value>
+                    <fullName>Social Media Network</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Social Media Network</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2092,6 +2129,37 @@ IF(
         </valueSet>
     </fields>
     <fields>
+        <fullName>CN_End_Customer_Code_Number__c</fullName>
+        <displayFormat>{000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>End Customer Code Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>CN_End_Customer_Code_Text__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>End Customer Code for searching function</description>
+        <externalId>true</externalId>
+        <label>Indirect Customer Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>CN_End_Customer_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;IN&quot; &amp; CN_City_CN__r.CN_City_EN_Code__c &amp;  CN_End_Customer_Code_Number__c</formula>
+        <label>End Customer Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CN_Finance_AR__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -2193,6 +2261,20 @@ IF(
         <formula>IF( CN_Numbers_of_Ship_to_Party__c &gt; 0 , TRUE, FALSE)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Has Ship To Party</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CN_Inactive__c</fullName>
+        <externalId>false</externalId>
+        <formula>!AND(
+  !CN_Closed__c,
+  ISBLANK(TEXT(CN_Order_Block__c)),
+  ISBLANK(TEXT(CN_Delivery_Block__c)),
+  ISBLANK(TEXT(CN_Billing_Block__c))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Inactive</label>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -2719,6 +2801,17 @@ IF(
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>CN_Lead_MG_Contact_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead MG Contact Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CN_Level__c</fullName>
         <externalId>false</externalId>
         <label>Level</label>
@@ -2797,6 +2890,17 @@ IF(
         </valueSet>
     </fields>
     <fields>
+        <fullName>CN_MG_Account_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>MG Account ID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CN_Map_Link__c</fullName>
         <externalId>false</externalId>
         <formula>if(ISNULL(CN_Gaode_Geolocation__Longitude__s) ||ISNULL(CN_Gaode_Geolocation__Latitude__s),HYPERLINK(&apos;&apos;, &apos;尚未获取到经纬度&apos;,&apos;_self&apos;),HYPERLINK(&apos;/apex/Map?lon=&apos;&amp;TEXT(CN_Gaode_Geolocation__Longitude__s)&amp;&apos;&amp;lat=&apos;&amp;TEXT(CN_Gaode_Geolocation__Latitude__s) , &apos;点击跳转到地图&apos;))</formula>
@@ -2815,6 +2919,19 @@ IF(
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CN_Need_Send_MG_Flag__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Need Send MG Flag</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
         <unique>false</unique>
     </fields>
     <fields>
@@ -4005,6 +4122,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                     <label>K050-ChengDu</label>
                 </value>
                 <value>
+                    <fullName>B100</fullName>
+                    <default>false</default>
+                    <label>B100-Tianjin</label>
+                </value>
+                <value>
                     <fullName>K060</fullName>
                     <default>false</default>
                     <isActive>false</isActive>
@@ -5007,6 +5129,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </valueSettings>
             <valueSettings>
                 <controllingFieldValue>OEM</controllingFieldValue>
+                <valueName>B2B OEM</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OEM</controllingFieldValue>
                 <valueName>Coffee/Tea OEM</valueName>
             </valueSettings>
             <valueSettings>
@@ -5512,8 +5638,9 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         <columns>CN_Sales_Person_Name__c</columns>
         <columns>CN_Customer_Status__c</columns>
         <columns>ACCOUNT.CREATED_DATE</columns>
+        <columns>CN_Bank_Account_Name__c</columns>
         <filterScope>Everything</filterScope>
-        <label>All Accounts</label>
+        <label>全部客户</label>
     </listViews>
     <listViews>
         <fullName>CN_Account_New_Last_Week</fullName>
@@ -5607,11 +5734,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         <columns>CN_Category__c</columns>
         <columns>CN_Subcategory__c</columns>
         <columns>ACCOUNT.CREATED_DATE</columns>
-        <filterScope>Mine</filterScope>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>ACCOUNT.RECORDTYPE</field>
             <operation>equals</operation>
-            <value>Account.CN_Edit_Prospect,Account.CN_New_Prospect</value>
+            <value>Account.CN_Edit_Indirect,Account.CN_New_Indirect</value>
         </filters>
         <label>My Prospects</label>
     </listViews>
@@ -5661,7 +5788,19 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Brand Activity</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>CIIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cold Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Recommend</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5670,6 +5809,14 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Digital Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5690,6 +5837,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Demo</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5755,6 +5906,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
@@ -5763,7 +5918,15 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Livestreaming</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -5779,7 +5942,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>Social Media Network</fullName>
+                <fullName>Road Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7114,6 +7281,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Office__c</picklist>
+            <values>
+                <fullName>B100</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>K010</fullName>
                 <default>false</default>
@@ -7791,7 +7962,19 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Brand Activity</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>CIIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cold Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Recommend</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7800,6 +7983,14 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Digital Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7820,6 +8011,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Demo</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7885,6 +8080,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
@@ -7893,7 +8092,15 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Livestreaming</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -7909,7 +8116,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>Social Media Network</fullName>
+                <fullName>Road Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -9244,6 +9455,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Office__c</picklist>
+            <values>
+                <fullName>B100</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>K010</fullName>
                 <default>false</default>
@@ -9912,7 +10127,7 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
     <recordTypes>
         <fullName>CN_Edit_Indirect</fullName>
         <active>true</active>
-        <compactLayoutAssignment>Account_Compact_Layout</compactLayoutAssignment>
+        <compactLayoutAssignment>Indirect_Account_Compact_Layout</compactLayoutAssignment>
         <label>Edit Indirect</label>
         <picklistValues>
             <picklist>AccountSource</picklist>
@@ -9921,7 +10136,19 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Brand Activity</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>CIIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cold Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Recommend</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -9930,6 +10157,14 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Digital Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -9950,6 +10185,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Demo</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -10023,7 +10262,15 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Livestreaming</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -10039,7 +10286,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>Social Media Network</fullName>
+                <fullName>Road Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -11374,6 +11625,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Office__c</picklist>
+            <values>
+                <fullName>B100</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>K010</fullName>
                 <default>false</default>
@@ -12051,7 +12306,19 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Brand Activity</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>CIIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cold Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Recommend</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -12060,6 +12327,14 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Digital Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -12080,6 +12355,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Demo</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -12145,6 +12424,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
@@ -12153,7 +12436,15 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Livestreaming</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -12169,7 +12460,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>Social Media Network</fullName>
+                <fullName>Road Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -13500,6 +13795,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Office__c</picklist>
+            <values>
+                <fullName>B100</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>K010</fullName>
                 <default>false</default>
@@ -14177,7 +14476,19 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Brand Activity</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>CIIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cold Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Recommend</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -14186,6 +14497,14 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Digital Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -14206,6 +14525,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Demo</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -14271,6 +14594,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
@@ -14279,7 +14606,15 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Livestreaming</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -14295,7 +14630,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>Social Media Network</fullName>
+                <fullName>Road Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -15618,6 +15957,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Office__c</picklist>
+            <values>
+                <fullName>B100</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>K010</fullName>
                 <default>false</default>
@@ -16286,7 +16629,7 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
     <recordTypes>
         <fullName>CN_New_Indirect</fullName>
         <active>true</active>
-        <compactLayoutAssignment>Account_Compact_Layout</compactLayoutAssignment>
+        <compactLayoutAssignment>Indirect_Account_Compact_Layout</compactLayoutAssignment>
         <label>Indirect Accont</label>
         <picklistValues>
             <picklist>AccountSource</picklist>
@@ -16295,7 +16638,19 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Brand Activity</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>CIIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cold Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Recommend</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -16304,6 +16659,14 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Digital Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -16324,6 +16687,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Demo</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -16397,7 +16764,15 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Livestreaming</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -16413,7 +16788,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>Social Media Network</fullName>
+                <fullName>Road Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -17748,6 +18127,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Office__c</picklist>
+            <values>
+                <fullName>B100</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>K010</fullName>
                 <default>false</default>
@@ -18424,7 +18807,19 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Brand Activity</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>CIIE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cold Visit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Recommend</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -18433,6 +18828,14 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Digital Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -18453,6 +18856,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Demo</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -18518,6 +18925,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>E-Commerce</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Expositions</fullName>
                 <default>false</default>
             </values>
@@ -18526,7 +18937,15 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Livestreaming</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Network</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -18542,7 +18961,11 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
-                <fullName>Social Media Network</fullName>
+                <fullName>Road Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -19873,6 +20296,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         </picklistValues>
         <picklistValues>
             <picklist>CN_Sales_Office__c</picklist>
+            <values>
+                <fullName>B100</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>K010</fullName>
                 <default>false</default>
@@ -20803,7 +21230,7 @@ IF(CN_Is_In_Approving__c , ISCHANGED(  CN_Account_Status__c  ) , FALSE)
     </validationRules>
     <validationRules>
         <fullName>CN_Account_Check_Subcategory</fullName>
-        <active>true</active>
+        <active>false</active>
         <errorConditionFormula>AND(
   $Setup.Trigger_Switcher_Setting__c.EnableValidationRule__c,
   NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
@@ -20830,6 +21257,18 @@ ISCHANGED(  OwnerId )
 )</errorConditionFormula>
         <errorDisplayField>OwnerId</errorDisplayField>
         <errorMessage>Not Allowed to Transfer Sold To Party to others.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CN_Check_Bank_Account_Name</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+$Setup.Trigger_Switcher_Setting__c.EnableValidationRule__c,
+IF( ISPICKVAL(CN_Invoice_Type__c, &quot;VAT Invoice&quot;)  &amp;&amp; ISPICKVAL(CN_Invoice_Type__c, &quot;Electronic VAT Invoice&quot;) &amp;&amp;  ISNULL(CN_Bank_Account_Name__c) , true, false) ,
+IF( ISPICKVAL(CN_Invoice_Type__c, &quot;General Invoice&quot;)  &amp;&amp; ISPICKVAL(CN_Invoice_Type__c, &quot;Electronic General Invoice&quot;) &amp;&amp;  NOT(ISNULL(CN_Bank_Account_Name__c)), true, false) 
+)</errorConditionFormula>
+        <errorDisplayField>CN_Bank_Account_Name__c</errorDisplayField>
+        <errorMessage>When Invoice is VAT or Electronic VAT, the Bank Account Name must be entered.
+Others the Bank Account Name can&apos;t be entered.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>CN_Check_Chain</fullName>
@@ -21154,6 +21593,7 @@ NOT(ISBLANK( CN_Converted_From__c ))
   NOT(ISCHANGED(   CN_Need_Sync_Geolocation__c)),
   NOT(ISCHANGED(   CN_Gaode_Response_Status__c)),
   NOT(ISCHANGED(CN_Sent_Reminder_Level__c)),
+  NOT(ISCHANGED( CN_Need_Send_MG_Flag__c )),
   ISPICKVAL(PRIORVALUE( CN_Account_Status__c ) , &quot;Approved&quot;) 
 )</errorConditionFormula>
         <errorMessage>Pls don&apos;t update when the account has been approved.</errorMessage>

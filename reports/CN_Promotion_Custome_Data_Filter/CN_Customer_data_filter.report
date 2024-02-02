@@ -4,6 +4,9 @@
         <field>ACCOUNT_ID</field>
     </columns>
     <columns>
+        <field>Account.CN_Customer_ID__c</field>
+    </columns>
+    <columns>
         <field>CDF1</field>
     </columns>
     <columns>

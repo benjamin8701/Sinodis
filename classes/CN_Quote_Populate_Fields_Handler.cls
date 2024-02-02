@@ -7,6 +7,7 @@
  * Author         : Du Dezheng
  * Create Date    : 2021-08-04
  * Modify History : 
+ * 1.2023-04-10 Qiu chen ExpirationDate auto set as effective Date + 30 Days change to + 3 months
  **************************************************************************************************/
 public without sharing class CN_Quote_Populate_Fields_Handler implements Triggers.Handler{
     Set<Id> CN_RTIds = new Set<Id>();
@@ -74,7 +75,7 @@ public without sharing class CN_Quote_Populate_Fields_Handler implements Trigger
                     Decimal approveStatus = 0;
                     if(qli.Quote.CN_Latest_Approver__c != null) {
                         Decimal startNum = 1024;
-                        for(Integer i = 1; i <= 11; i++) {
+                        for(Integer i = 1; i <= 9; i++) {
                             if(qli.getSObject('Quote').get('CN_Approver_' + i + '__c') != null) {
                                 if(qli.Quote.CN_Latest_Approver__c == qli.getSObject('Quote').get('CN_Approver_' + i + '__c')) {
                                     if(Constants.CN_QUOTE_STATUS_REJECTED.equals(qli.Quote.Status)) {
@@ -99,11 +100,13 @@ public without sharing class CN_Quote_Populate_Fields_Handler implements Trigger
                     }
 
                     Decimal approveResult = Integer.valueoF(approveStatus) & Integer.valueoF(qli.CN_Approval_Status_Required__c);
+                    System.debug('KimiTest:' + qli.CN_Approval_Status_Required__c + '---' + approveResult);
                     if(approveResult == qli.CN_Approval_Status_Required__c) {
                         QuoteLineItem qliUpdate = new QuoteLineItem();
                         qliUpdate.Id =qli.Id;
                         qliUpdate.CN_Is_Approval_Completed__c = true;
                         qliUpdate.CN_Latest_Reject_Approve_DateTime__c = System.now();
+                        System.debug('Kimi:' + qliUpdate);
                         if(String.isBlank(qliUpdate.CN_Approval_Status__c )) {
                             qliUpdate.CN_Approval_Status__c = Constants.CN_QUOTEITEM_APPROVAL_STATUS_APPROVED;
                         }
@@ -136,7 +139,7 @@ public without sharing class CN_Quote_Populate_Fields_Handler implements Trigger
         if(quoList.size() > 0) {
             for(Quote quo: quoList) {
                 if(quo.CN_Effective_Date__c != null) {
-                    quo.ExpirationDate = quo.CN_Effective_Date__c.addDays(30);
+                    quo.ExpirationDate = quo.CN_Effective_Date__c.addMonths(3); //2023-04-10 Qiu chen
                 }
             }
         }

@@ -565,12 +565,20 @@
         <name>publisher_view_details</name>
     </fields>
     <fields>
+        <label>投诉接受日期</label>
+        <name>CN_Accepted_Date__c</name>
+    </fields>
+    <fields>
         <label>销售团队</label>
         <name>CN_Account_Sales_Team__c</name>
     </fields>
     <fields>
-        <label>投诉接受日期</label>
-        <name>CN_Accepted_Date__c</name>
+        <label>退货数量是否一致</label>
+        <name>CN_Actual_Return_Consistent_Status__c</name>
+    </fields>
+    <fields>
+        <label>评价</label>
+        <name>CN_Appraise__c</name>
     </fields>
     <fields>
         <label>基本计量单位</label>
@@ -579,6 +587,10 @@
     <fields>
         <label><!-- Brand --></label>
         <name>CN_Brand__c</name>
+    </fields>
+    <fields>
+        <label>反馈</label>
+        <name>CN_CS_Feedback__c</name>
     </fields>
     <fields>
         <label><!-- Cancel Button --></label>
@@ -597,12 +609,28 @@
         <name>CN_Created_by_Me__c</name>
     </fields>
     <fields>
+        <label>客户索赔金额(CNY)</label>
+        <name>CN_Customer_Claim_Amount_CNY__c</name>
+    </fields>
+    <fields>
         <label>客户代码</label>
         <name>CN_Customer_Code__c</name>
     </fields>
     <fields>
+        <label>客户补偿</label>
+        <name>CN_Customer_Compensation__c</name>
+    </fields>
+    <fields>
         <label><!-- Customer Name --></label>
         <name>CN_Customer_Name__c</name>
+    </fields>
+    <fields>
+        <label>DN日期</label>
+        <name>CN_DN_Date__c</name>
+    </fields>
+    <fields>
+        <label>DN发货单号</label>
+        <name>CN_DN__c</name>
     </fields>
     <fields>
         <label><!-- Duration --></label>
@@ -613,12 +641,52 @@
         <name>CN_During_Days__c</name>
     </fields>
     <fields>
+        <label>EN名称</label>
+        <name>CN_EN_Name__c</name>
+    </fields>
+    <fields>
         <label>终端客户</label>
         <lookupFilter>
             <errorMessage>必须填入直接客户。</errorMessage>
         </lookupFilter>
         <name>CN_End_Customer__c</name>
         <relationshipLabel><!-- Complaints --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Excel File link --></label>
+        <name>CN_Excel_File_link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Excel Generation Time --></label>
+        <name>CN_Excel_Generation_Time__c</name>
+    </fields>
+    <fields>
+        <label>到期日期</label>
+        <name>CN_Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <label>异物问题</label>
+        <name>CN_Foreign_Matter__c</name>
+        <picklistValues>
+            <masterLabel>Insect昆虫</masterLabel>
+            <translation><!-- Insect昆虫 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Metal金属</masterLabel>
+            <translation><!-- Metal金属 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plastic塑料</masterLabel>
+            <translation><!-- Plastic塑料 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Protain杂物</masterLabel>
+            <translation><!-- Protain杂物 --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- If Creator Equals Account Sales --></label>
@@ -633,8 +701,104 @@
         <name>CN_Is_My_Case__c</name>
     </fields>
     <fields>
+        <label><!-- Latest Excel Generate Time --></label>
+        <name>CN_Latest_Excel_Generate_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- MG Case ID --></label>
+        <name>CN_MG_Case_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Need Send MG Flag --></label>
+        <name>CN_Need_Send_MG_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Status records --></label>
+        <name>CN_Old_Status__c</name>
+    </fields>
+    <fields>
+        <label>其他</label>
+        <name>CN_Other__c</name>
+    </fields>
+    <fields>
+        <label>其他问题图片</label>
+        <name>CN_Other_problem_images__c</name>
+    </fields>
+    <fields>
+        <label>包装问题</label>
+        <name>CN_Package__c</name>
+        <picklistValues>
+            <masterLabel>Damaged outer box</masterLabel>
+            <translation><!-- Damaged outer box --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Damaged pre packaging</masterLabel>
+            <translation><!-- Damaged pre packaging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Label</masterLabel>
+            <translation><!-- Label --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>包装问题图片</label>
+        <name>CN_Packaging_issue_image__c</name>
+    </fields>
+    <fields>
         <label><!-- Please Confirm --></label>
         <name>CN_Please_Confirm__c</name>
+    </fields>
+    <fields>
+        <label>产品问题</label>
+        <name>CN_Product_Problem__c</name>
+        <picklistValues>
+            <masterLabel>Deterioration moldy</masterLabel>
+            <translation><!-- Deterioration moldy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Foreign body</masterLabel>
+            <translation><!-- Foreign body --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insufficient net content</masterLabel>
+            <translation><!-- Insufficient net content --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Original box shortage</masterLabel>
+            <translation><!-- Original box shortage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product damage</masterLabel>
+            <translation><!-- Product damage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sensory</masterLabel>
+            <translation><!-- Sensory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Size</masterLabel>
+            <translation><!-- Size --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Usage issues</masterLabel>
+            <translation><!-- Usage issues --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label>产品问题图片</label>
+        <name>CN_Product_issue_image__c</name>
+    </fields>
+    <fields>
+        <label>生产日期</label>
+        <name>CN_Production_Date__c</name>
     </fields>
     <fields>
         <label>QA投诉编号</label>
@@ -659,6 +823,15 @@
     <fields>
         <label>投诉拒绝日期</label>
         <name>CN_Rejected_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relate Sales Order ID --></label>
+        <name>CN_Relate_Sales_Order_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relate Sales Order --></label>
+        <name>CN_Relate_Sales_Order__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
     </fields>
     <fields>
         <label>结案建议</label>
@@ -717,6 +890,14 @@
         <name>CN_SKU_CODE__c</name>
     </fields>
     <fields>
+        <label><!-- SKU Description CN --></label>
+        <name>CN_SKU_Description_CN__c</name>
+    </fields>
+    <fields>
+        <label><!-- SKU Description EN --></label>
+        <name>CN_SKU_Description_EN__c</name>
+    </fields>
+    <fields>
         <label><!-- SKU Name EN --></label>
         <name>CN_SKU_Name_EN__c</name>
     </fields>
@@ -729,6 +910,18 @@
         <name>CN_SKU_Quantity__c</name>
     </fields>
     <fields>
+        <label>SKU 规格</label>
+        <name>CN_SKU_Specifications__c</name>
+        <picklistValues>
+            <masterLabel>L</masterLabel>
+            <translation><!-- L --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ML</masterLabel>
+            <translation><!-- ML --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <label><!-- Sales Office --></label>
         <name>CN_Sales_Office__c</name>
     </fields>
@@ -737,8 +930,29 @@
         <name>CN_Sales_Person__c</name>
     </fields>
     <fields>
+        <label>主题</label>
+        <name>CN_Subject__c</name>
+    </fields>
+    <fields>
         <label><!-- Submit Datetime --></label>
         <name>CN_Submit_Datetime__c</name>
+    </fields>
+    <fields>
+        <label><!-- CN_Submitter --></label>
+        <name>CN_Submitter__c</name>
+        <relationshipLabel><!-- Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label>建议</label>
+        <name>CN_Suggestion__c</name>
+    </fields>
+    <fields>
+        <label>终端客户（MG）</label>
+        <name>CN_WS_Account_Name__c</name>
+    </fields>
+    <fields>
+        <label>终端客户联系电话（MG）</label>
+        <name>CN_WS_Telephone__c</name>
     </fields>
     <layouts>
         <layout>CN Complaint Layout</layout>
@@ -751,6 +965,10 @@
             <section>Description</section>
         </sections>
         <sections>
+            <label><!-- Excel Generation --></label>
+            <section>Excel Generation</section>
+        </sections>
+        <sections>
             <label>产品信息</label>
             <section>Product Information</section>
         </sections>
@@ -759,6 +977,22 @@
             <section>QA-C/S Follow-up</section>
         </sections>
     </layouts>
+    <layouts>
+        <layout>CN online service Layout</layout>
+        <sections>
+            <label>客户信息</label>
+            <section>Account Info</section>
+        </sections>
+        <sections>
+            <label>服务反馈</label>
+            <section>Services FeedBack</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <aspect>Master</aspect>
+        <label>关闭</label>
+        <name>CN_Close_Case</name>
+    </quickActions>
     <quickActions>
         <aspect>Master</aspect>
         <label>取消</label>
@@ -785,17 +1019,37 @@
         <name>CN_Complaint_Resolved</name>
     </quickActions>
     <quickActions>
+        <label><!-- CN_MessagingSession_AC_Case --></label>
+        <name>CN_MessagingSession_AC_Case</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Email --></label>
+        <name>CN_SendEmail</name>
+    </quickActions>
+    <quickActions>
         <aspect>Master</aspect>
         <label>提交投诉</label>
         <name>CN_Submit_Complaint</name>
     </quickActions>
     <recordTypes>
-        <label><!-- CN_Complaint --></label>
+        <label>产品投诉</label>
         <name>CN_Complaint</name>
     </recordTypes>
+    <recordTypes>
+        <label>非产品投诉</label>
+        <name>CN_Non_Product_Complaint</name>
+    </recordTypes>
+    <recordTypes>
+        <label>在线客服</label>
+        <name>CN_Service_Online</name>
+    </recordTypes>
     <validationRules>
-        <errorMessage>请填写产品，问题产品数量及SAP产品批次号。</errorMessage>
+        <errorMessage>请填写产品，问题产品数量，DN及SAP产品批次号。</errorMessage>
         <name>CN_Case_Check_Product_Info</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>请输入您投诉的原因</errorMessage>
+        <name>CN_Case_Other_Mandatory_Check</name>
     </validationRules>
     <validationRules>
         <errorMessage>投诉时间不能晚于今天。</errorMessage>

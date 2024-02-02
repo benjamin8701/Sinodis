@@ -131,6 +131,10 @@
             <translation><!-- IRCA --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Joyhana</masterLabel>
+            <translation><!-- Joyhana --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>LE RUSTIQUE</masterLabel>
             <translation><!-- LE RUSTIQUE --></translation>
         </picklistValues>
@@ -423,16 +427,16 @@
             <translation><!-- Company Events --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Full Solution Approach</masterLabel>
-            <translation><!-- Full Solution Approach --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Live Streaming</masterLabel>
             <translation><!-- Live Streaming --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Market Visit</masterLabel>
             <translation><!-- Market Visit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing Development</masterLabel>
+            <translation><!-- Marketing Development --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Meeting</masterLabel>
@@ -463,6 +467,10 @@
             <translation><!-- Recipes R&amp;D --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Road Show</masterLabel>
+            <translation><!-- Road Show --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>SINODIS Event</masterLabel>
             <translation><!-- SINODIS Event --></translation>
         </picklistValues>
@@ -477,6 +485,10 @@
         <picklistValues>
             <masterLabel>Short Video</masterLabel>
             <translation><!-- Short Video --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taskforce</masterLabel>
+            <translation><!-- Taskforce --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>VIP Class</masterLabel>

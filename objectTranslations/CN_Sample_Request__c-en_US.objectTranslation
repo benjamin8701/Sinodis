@@ -13,14 +13,6 @@
         <name>CN_Account_Id__c</name>
     </fields>
     <fields>
-        <label><!-- Sale Team of Sales Person --></label>
-        <name>CN_Sale_Team_of_Sales_Person__c</name>
-    </fields>
-    <fields>
-        <label><!-- Sales Person Id --></label>
-        <name>CN_Sales_Person_Id__c</name>
-    </fields>
-    <fields>
         <label><!-- Account Name Formula --></label>
         <name>CN_Account_Name_Formula__c</name>
     </fields>
@@ -61,6 +53,14 @@
         <picklistValues>
             <masterLabel>5CCE2204 – CCE Sample</masterLabel>
             <translation><!-- 5CCE2204 – CCE Sample --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5CCE2304 – CCE Sample</masterLabel>
+            <translation><!-- 5CCE2304 – CCE Sample --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5CCE2404 – CCE Sample</masterLabel>
+            <translation><!-- 5CCE2404 – CCE Sample --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>5TMK2104 – TM sample</masterLabel>
@@ -165,8 +165,16 @@
         <name>CN_SP_Records_Count_Delivery_Status_Done__c</name>
     </fields>
     <fields>
+        <label><!-- Sale Team of Sales Person --></label>
+        <name>CN_Sale_Team_of_Sales_Person__c</name>
+    </fields>
+    <fields>
         <label><!-- Sales Office --></label>
         <name>CN_Sales_Office__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Person Id --></label>
+        <name>CN_Sales_Person_Id__c</name>
     </fields>
     <fields>
         <label><!-- Sales Person --></label>
@@ -203,6 +211,10 @@
     <fields>
         <label><!-- Sample Feedback Overdue --></label>
         <name>CN_Sample_Feedback_Overdue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sample Needed Date --></label>
+        <name>CN_Sample_Needed_Date_Email__c</name>
     </fields>
     <fields>
         <label><!-- Sample Needed Date --></label>
@@ -307,7 +319,7 @@
         <name>Test</name>
     </quickActions>
     <recordTypes>
-        <label><!-- Office Repack --></label>
+        <label><!-- Office Test Sample --></label>
         <name>CN_Office_Repack</name>
     </recordTypes>
     <recordTypes>
@@ -340,7 +352,7 @@
         <name>CN_Prevent_Canceled</name>
     </validationRules>
     <validationRules>
-        <errorMessage><!-- It&apos;s not allowed to edit. --></errorMessage>
+        <errorMessage><!-- It&apos;s not allowed to edit.- - 1 --></errorMessage>
         <name>CN_Prevent_Edit_After_Approved_Canceled</name>
     </validationRules>
     <validationRules>

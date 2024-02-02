@@ -5,13 +5,13 @@
         <value>财务备注</value>
     </caseValues>
     <fields>
-        <label>财务备注</label>
+        <label><!-- Comment --></label>
         <name>CN_Comment__c</name>
     </fields>
     <fields>
-        <label>客户</label>
+        <label><!-- Customer Name --></label>
         <name>CN_Customer_Name__c</name>
-        <relationshipLabel>财务备注</relationshipLabel>
+        <relationshipLabel><!-- Comments --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- CN Is Finance --></label>

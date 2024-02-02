@@ -1,0 +1,29 @@
+<template>
+    <lightning-layout class="slds-m-top_x-small" record-id={recordId}>
+        <article class="slds-card lightning-card">
+            <div class="slds-card__header slds-grid slds-theme_shade">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate ">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:relationship" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <a class="slds-card__header-link" >{title}</a>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div style="border-top: 1px solid #cbcbcb;">
+                <lightning-datatable class="related-list"
+                                     onrowaction={handleRowAction}
+                                     columns={columns}
+                                     data={contactList}
+                                     key-field="Id"
+                                     hide-checkbox-column="true"
+                                     resize-column-disabled="false"
+                >
+                </lightning-datatable>
+            </div>
+        </article>
+    </lightning-layout>
+</template>

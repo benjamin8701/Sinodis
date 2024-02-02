@@ -17,14 +17,6 @@
         <startsWith>Consonant</startsWith>
     </fields>
     <fields>
-        <label><!-- Lock --></label>
-        <name>CN_Is_Overdue__c</name>
-    </fields>
-    <fields>
-        <label><!-- Prevent Delete --></label>
-        <name>CN_Prevent_Delete__c</name>
-    </fields>
-    <fields>
         <label><!-- By when --></label>
         <name>CN_By_when__c</name>
         <picklistValues>
@@ -39,6 +31,10 @@
             <masterLabel>Two weeks after</masterLabel>
             <translation><!-- Two weeks after --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Chef Feedback --></label>
+        <name>CN_Chef_Feedback__c</name>
     </fields>
     <fields>
         <label><!-- Chef Request Id --></label>
@@ -83,12 +79,20 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- Lock --></label>
+        <name>CN_Is_Overdue__c</name>
+    </fields>
+    <fields>
         <label><!-- Meeting MInutes --></label>
         <name>CN_Meeting_MInutes__c</name>
     </fields>
     <fields>
         <label><!-- Next Step --></label>
         <name>CN_Next_Step__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notify Chef --></label>
+        <name>CN_Notify_Chef__c</name>
     </fields>
     <fields>
         <label><!-- Objective --></label>
@@ -134,6 +138,10 @@
         <label><!-- Plan to Visit Who --></label>
         <name>CN_Plan_to_Visit_Who__c</name>
         <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Prevent Delete --></label>
+        <name>CN_Prevent_Delete__c</name>
     </fields>
     <fields>
         <label><!-- Sample Request --></label>

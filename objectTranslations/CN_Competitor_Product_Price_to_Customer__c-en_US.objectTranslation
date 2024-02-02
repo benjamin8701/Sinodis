@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Competitor Product Price for Customer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Competitor Product Price for Customer</value>
+    </caseValues>
+    <fields>
+        <label><!-- Customer Category --></label>
+        <name>CN_Account_Customer_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>CN_Account_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery plant --></label>
+        <name>CN_Account_Delivery_Plant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>CN_Account_Name__c</name>
+        <relationshipLabel><!-- Competitor Product Price for Customer --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Delivery plant --></label>
+        <name>CN_Account_Plant__c</name>
+    </fields>
+    <fields>
+        <label><!-- CTN(incl. TAX) --></label>
+        <name>CN_CTN__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>CN_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitor --></label>
+        <name>CN_Competitor__c</name>
+        <relationshipLabel><!-- Competitor Product Price for Customer --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Customer Category --></label>
+        <name>CN_Customer_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Code --></label>
+        <name>CN_Customer_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>CN_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- EA(incl. TAX) --></label>
+        <name>CN_EA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportuntiy --></label>
+        <name>CN_Opportuntiy__c</name>
+        <relationshipLabel><!-- Competitor Product Price for Customer --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Category --></label>
+        <name>CN_Product_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Name --></label>
+        <name>CN_Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>CN_Quote__c</name>
+        <relationshipLabel><!-- Competitor Product Price for Customer --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>CN_Region__c</name>
+        <picklistValues>
+            <masterLabel>East</masterLabel>
+            <translation><!-- East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North</masterLabel>
+            <translation><!-- North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South</masterLabel>
+            <translation><!-- South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West</masterLabel>
+            <translation><!-- West --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Specification --></label>
+        <name>CN_Specification__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- CN Competitor Price to Customer Layout --></label>
+        <name>CN_Competitor_Price_to_Customer_Layout</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Either EA or CTN is required --></errorMessage>
+        <name>CN_CPP_Check_EA_OR_CTN</name>
+    </validationRules>
+</CustomObjectTranslation>

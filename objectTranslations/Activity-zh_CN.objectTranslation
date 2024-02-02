@@ -15,14 +15,6 @@
         <name>start_date_activity</name>
     </fields>
     <fields>
-        <label>记录已锁定</label>
-        <name>CN_Is_Overdue__c</name>
-    </fields>
-    <fields>
-        <label><!-- Prevent Delete --></label>
-        <name>CN_Prevent_Delete__c</name>
-    </fields>
-    <fields>
         <label>计划下次拜访</label>
         <name>CN_By_when__c</name>
         <picklistValues>
@@ -37,6 +29,10 @@
             <masterLabel>Two weeks after</masterLabel>
             <translation><!-- Two weeks after --></translation>
         </picklistValues>
+    </fields>
+    <fields>
+        <label>厨师反馈信息</label>
+        <name>CN_Chef_Feedback__c</name>
     </fields>
     <fields>
         <label><!-- Chef Request Id --></label>
@@ -81,12 +77,20 @@
         </picklistValues>
     </fields>
     <fields>
+        <label>记录已锁定</label>
+        <name>CN_Is_Overdue__c</name>
+    </fields>
+    <fields>
         <label>要点记录</label>
         <name>CN_Meeting_MInutes__c</name>
     </fields>
     <fields>
         <label>后续计划</label>
         <name>CN_Next_Step__c</name>
+    </fields>
+    <fields>
+        <label>邮件通知厨师</label>
+        <name>CN_Notify_Chef__c</name>
     </fields>
     <fields>
         <label>拜访主题(目的)</label>
@@ -132,6 +136,10 @@
         <label>计划下次拜访联系人</label>
         <name>CN_Plan_to_Visit_Who__c</name>
         <relationshipLabel><!-- Activities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Prevent Delete --></label>
+        <name>CN_Prevent_Delete__c</name>
     </fields>
     <fields>
         <label>样品申请</label>

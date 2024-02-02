@@ -383,6 +383,11 @@
                     <label>IRCA</label>
                 </value>
                 <value>
+                    <fullName>Joyhana</fullName>
+                    <default>false</default>
+                    <label>Joyhana</label>
+                </value>
+                <value>
                     <fullName>LE RUSTIQUE</fullName>
                     <default>false</default>
                     <label>LE RUSTIQUE</label>
@@ -978,11 +983,6 @@ DATETIMEVALUE(TEXT(CN_Event_Location_End_Date__c) + &quot; 20:00:00&quot;)
                     <label>SINODIS Event</label>
                 </value>
                 <value>
-                    <fullName>Full Solution Approach</fullName>
-                    <default>false</default>
-                    <label>Full Solution Approach</label>
-                </value>
-                <value>
                     <fullName>OFF</fullName>
                     <default>false</default>
                     <label>OFF</label>
@@ -1031,6 +1031,27 @@ DATETIMEVALUE(TEXT(CN_Event_Location_End_Date__c) + &quot; 20:00:00&quot;)
                     <fullName>Shooting</fullName>
                     <default>false</default>
                     <label>Shooting</label>
+                </value>
+                <value>
+                    <fullName>Marketing Development</fullName>
+                    <default>false</default>
+                    <label>Marketing Development</label>
+                </value>
+                <value>
+                    <fullName>Road Show</fullName>
+                    <default>false</default>
+                    <label>Road Show</label>
+                </value>
+                <value>
+                    <fullName>Taskforce</fullName>
+                    <default>false</default>
+                    <label>Taskforce</label>
+                </value>
+                <value>
+                    <fullName>Full Solution Approach</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Full Solution Approach</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -2685,33 +2706,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         <label>Location-Unconfirmed-Partial-SH R&amp;D</label>
     </listViews>
     <listViews>
-        <fullName>CN_Location_Unconfirmed_Partial_SH_Studio</fullName>
-        <columns>NAME</columns>
-        <columns>CN_Event_Type__c</columns>
-        <columns>CN_Confirmed__c</columns>
-        <columns>CN_Demo_Start_Date__c</columns>
-        <columns>CN_Demo_End_Date__c</columns>
-        <columns>CN_Account__c</columns>
-        <columns>CN_Campaign__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>CN_Confirmed__c</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <filters>
-            <field>CN_Event_Location__c</field>
-            <operation>equals</operation>
-            <value>SH Chef Studio</value>
-        </filters>
-        <filters>
-            <field>CN_Using_The_Entire_Kitchen__c</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <label>Location-Unconfirmed-Partial-SH Studio</label>
-    </listViews>
-    <listViews>
         <fullName>CN_Location_Unconfirmed_Partial_SZ_Studio</fullName>
         <columns>NAME</columns>
         <columns>CN_Confirmed__c</columns>
@@ -3218,6 +3212,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Joyhana</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>LE RUSTIQUE</fullName>
                 <default>false</default>
             </values>
@@ -3562,6 +3560,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Joyhana</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>LE RUSTIQUE</fullName>
                 <default>false</default>
             </values>
@@ -3902,6 +3904,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Joyhana</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>LE RUSTIQUE</fullName>
                 <default>false</default>
             </values>
@@ -4092,6 +4098,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Marketing Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Meeting</fullName>
                 <default>false</default>
             </values>
@@ -4105,6 +4115,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>Paperwork</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Road Show</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4263,6 +4277,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>IRCA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joyhana</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4444,10 +4462,6 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
         <picklistValues>
             <picklist>CN_Event_Type__c</picklist>
             <values>
-                <fullName>Full Solution Approach</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Live Streaming</fullName>
                 <default>false</default>
             </values>
@@ -4456,11 +4470,19 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
                 <default>false</default>
             </values>
             <values>
+                <fullName>Road Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>SINODIS Event</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Short Video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taskforce</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4623,6 +4645,10 @@ $Label.CN_PleaseConfirm_Value_AlreadySubmitted
             </values>
             <values>
                 <fullName>IRCA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Joyhana</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -4890,10 +4916,10 @@ RecordType.DeveloperName = &quot;CN_1on1_Service_Chef_Request&quot;,
 RecordType.DeveloperName = &quot;CN_Marketing_Development_Request&quot;
 ),
 IF(YEAR(CN_Demo_Start_Date__c) = YEAR(TODAY()),
-IF(CN_Today_Period__c = &quot;Early&quot;, MONTH(CN_Demo_Start_Date__c ) &lt; (MONTH(TODAY()) + 1), MONTH(CN_Demo_Start_Date__c ) &lt; (MONTH(TODAY()) + 2)),
-IF(YEAR(CN_Demo_Start_Date__c) = (YEAR(TODAY())+1),
-IF(CN_Today_Period__c = &quot;Early&quot;, MONTH(CN_Demo_Start_Date__c ) &lt; (MONTH(TODAY()) + 1 - 12), MONTH(CN_Demo_Start_Date__c ) &lt; (MONTH(TODAY()) + 2 - 12)),
-IF(YEAR(CN_Demo_Start_Date__c) &gt; (YEAR(TODAY())+1),FALSE,TRUE)))
+	IF(CN_Today_Period__c = &quot;Early&quot;, MONTH(CN_Demo_Start_Date__c ) &lt; (MONTH(TODAY()) + 1), MONTH(CN_Demo_Start_Date__c ) &lt; (MONTH(TODAY()) + 2)),
+	IF(YEAR(CN_Demo_Start_Date__c) = (YEAR(TODAY())+1),
+			IF(CN_Today_Period__c = &quot;Early&quot;, MONTH(CN_Demo_Start_Date__c ) &lt; (MONTH(TODAY()) + 1 - 12), MONTH(CN_Demo_Start_Date__c ) &lt; (MONTH(TODAY()) + 2 - 12)),
+			IF(YEAR(CN_Demo_Start_Date__c) &gt; (YEAR(TODAY())+1),FALSE,TRUE)))
 
 
 )</errorConditionFormula>

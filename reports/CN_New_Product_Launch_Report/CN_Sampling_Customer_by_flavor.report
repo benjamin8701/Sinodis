@@ -14,7 +14,7 @@
         <datatype>number</datatype>
         <developerName>FORMULA2</developerName>
         <downGroupingContext>CN_Sample_Request__c.Sample_Products__r$CN_SKU_English_Description__c</downGroupingContext>
-        <isActive>true</isActive>
+        <isActive>false</isActive>
         <isCrossBlock>false</isCrossBlock>
         <masterLabel>Sampling Customer(KG)</masterLabel>
         <scale>0</scale>
@@ -72,7 +72,7 @@
             <columnToColumn>false</columnToColumn>
             <isUnlocked>false</isUnlocked>
             <operator>equals</operator>
-            <value>7011e000000A5Ez</value>
+            <value>7011y0000003Zol</value>
         </criteriaItems>
         <language>en_US</language>
     </filter>

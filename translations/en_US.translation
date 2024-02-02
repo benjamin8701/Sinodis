@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <customApplications>
+        <description xsi:nil="true"/>
+        <label><!-- Messaging --></label>
+        <name>CN_Messaging_APP</name>
+    </customApplications>
+    <customApplications>
+        <description xsi:nil="true"/>
         <label><!-- Sinodis --></label>
         <name>CN_Savencia_Sinodis</name>
     </customApplications>
@@ -285,6 +291,22 @@
         <name>CN_Campaign_More_10000</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Case_Generation_CFRM_Msg --></label>
+        <name>CN_Case_Generation_CFRM_Msg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Case_Generation_Failed_Msg --></label>
+        <name>CN_Case_Generation_Failed_Msg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Case_Generation_Success_Msg --></label>
+        <name>CN_Case_Generation_Success_Msg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Case_Generation_Wait_5min_Msg --></label>
+        <name>CN_Case_Generation_Wait_5min_Msg</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Chef_Request_Confirm_Info_Message --></label>
         <name>CN_Chef_Request_Confirm_Info_Message</name>
     </customLabels>
@@ -299,6 +321,26 @@
     <customLabels>
         <label><!-- CN_Chefs_Assigned_Prevent_Delete_Error_Message --></label>
         <name>CN_Chefs_Assigned_Prevent_Delete_Error_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Competitor_Product_Delte_Message --></label>
+        <name>CN_Competitor_Product_Delte_Message</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Competitor_Product_Price_Channel_Label --></label>
+        <name>CN_Competitor_Product_Price_Channel_Label</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Competitor_Product_Price_Price_Label --></label>
+        <name>CN_Competitor_Product_Price_Price_Label</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Competitor_Product_Price_Title --></label>
+        <name>CN_Competitor_Product_Price_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Competitor_Product_Update_Message --></label>
+        <name>CN_Competitor_Product_Update_Message</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Complaint_Assign_Queue_Check --></label>
@@ -353,6 +395,10 @@
         <name>CN_Complaint_Closed_Message</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Complaint_Feed_Back --></label>
+        <name>CN_Complaint_Feed_Back</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Complaint_Mannual_Assign_Check --></label>
         <name>CN_Complaint_Mannual_Assign_Check</name>
     </customLabels>
@@ -387,6 +433,26 @@
     <customLabels>
         <label><!-- CN_Complaint_ResolveReason_VR_ErrorMsg --></label>
         <name>CN_Complaint_ResolveReason_VR_ErrorMsg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Complaint_Status_Changed_Notification_Body --></label>
+        <name>CN_Complaint_Status_Changed_Notification_Body</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Complaint_Status_Closed_Notification_Title --></label>
+        <name>CN_Complaint_Status_Closed_Notification_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Complaint_Status_New_Notification_Title --></label>
+        <name>CN_Complaint_Status_New_Notification_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Complaint_Status_Rejected_Notification_Title --></label>
+        <name>CN_Complaint_Status_Rejected_Notification_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Complaint_Status_Resolved_Notification_Title --></label>
+        <name>CN_Complaint_Status_Resolved_Notification_Title</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Complaint_Submit_Message --></label>
@@ -467,6 +533,14 @@
     <customLabels>
         <label><!-- CN_Lead_Has_Change_Request --></label>
         <name>CN_Lead_Has_Change_Request</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Lead_New_Lead_Notification_Body --></label>
+        <name>CN_Lead_New_Lead_Notification_Body</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Lead_New_Lead_Notification_Title --></label>
+        <name>CN_Lead_New_Lead_Notification_Title</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Lead_Not_Sales_Qualified --></label>
@@ -649,6 +723,10 @@
         <name>CN_Quote_AOrDItems_CFRM_Msg</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Quote_AcceptItems_CFRM_Msg --></label>
+        <name>CN_Quote_AcceptItems_CFRM_Msg</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Quote_Apply --></label>
         <name>CN_Quote_Apply</name>
     </customLabels>
@@ -689,12 +767,24 @@
         <name>CN_Quote_CFDA_Msg</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Quote_CFSE_Msg --></label>
+        <name>CN_Quote_CFSE_Msg</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Quote_Confirm_Msg --></label>
         <name>CN_Quote_Confirm_Msg</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Quote_Deal_Success_Msg --></label>
         <name>CN_Quote_Deal_Success_Msg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Quote_DenyItems_CFRM_Msg --></label>
+        <name>CN_Quote_DenyItems_CFRM_Msg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Quote_Effective_Date_Changed_Reminder --></label>
+        <name>CN_Quote_Effective_Date_Changed_Reminder</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Quote_ErrMsg_Check_Promotion_Duration --></label>
@@ -741,6 +831,10 @@
         <name>CN_Quote_Had_Not_Approved</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Quote_Had_Not_Approved_Notice --></label>
+        <name>CN_Quote_Had_Not_Approved_Notice</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Quote_Had_Synced --></label>
         <name>CN_Quote_Had_Synced</name>
     </customLabels>
@@ -785,6 +879,14 @@
         <name>CN_Quote_Not_Have_Items</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Quote_Notice_Fin_And_Send_To_SAP --></label>
+        <name>CN_Quote_Notice_Fin_And_Send_To_SAP</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Quote_Notice_Finance_Title --></label>
+        <name>CN_Quote_Notice_Finance_Title</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Quote_Notify_Email_Msg --></label>
         <name>CN_Quote_Notify_Email_Msg</name>
     </customLabels>
@@ -797,12 +899,20 @@
         <name>CN_Quote_Retrieve_Title</name>
     </customLabels>
     <customLabels>
+        <label><!-- CN_Quote_Send_And_Notify_Success_Msg --></label>
+        <name>CN_Quote_Send_And_Notify_Success_Msg</name>
+    </customLabels>
+    <customLabels>
         <label><!-- CN_Quote_Send_Success_Msg --></label>
         <name>CN_Quote_Send_Success_Msg</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Quote_Send_To_SAP --></label>
         <name>CN_Quote_Send_To_SAP</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Quote_Send_To_SAP_ErrMsg_Expired --></label>
+        <name>CN_Quote_Send_To_SAP_ErrMsg_Expired</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Quote_Send_To_SAP_ErrMsg_Failed --></label>
@@ -815,6 +925,18 @@
     <customLabels>
         <label><!-- CN_Quote_Send_To_SAP_ErrMsg_NoItem --></label>
         <name>CN_Quote_Send_To_SAP_ErrMsg_NoItem</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Quote_Set_CFRM_Msg --></label>
+        <name>CN_Quote_Set_CFRM_Msg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Quote_Set_ExpirDate_Success_Msg --></label>
+        <name>CN_Quote_Set_ExpirDate_Success_Msg</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_Quote_Set_Had_ApprovedOrSubmit --></label>
+        <name>CN_Quote_Set_Had_ApprovedOrSubmit</name>
     </customLabels>
     <customLabels>
         <label><!-- CN_Quote_Split_msg --></label>
@@ -892,6 +1014,26 @@
         <label><!-- CN_ShipTo_Change_Request --></label>
         <name>CN_ShipTo_Change_Request</name>
     </customLabels>
+    <customLabels>
+        <label><!-- CN_ShipTo_Changed_Notification_Body --></label>
+        <name>CN_ShipTo_Changed_Notification_Body</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- CN_ShipTo_Changed_Notification_Title --></label>
+        <name>CN_ShipTo_Changed_Notification_Title</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EM_Container_Base_AgentLeaveAnnouncement_04I1m0000008Oba_5442018 --></label>
+        <name>EM_Container_Base_AgentLeaveAnnouncement_04I1m0000008Oba_5442018</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EM_Container_Base_HeaderAnnouncementTransferRequestSucce_04I1y0000004CRg_5565035 --></label>
+        <name>EM_Container_Base_HeaderAnnouncementTransferRequestSucce_04I1y0000004CRg_5565035</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- EM_Container_Base_ParticipantLeaveText_04I1m0000008Oba_8853220 --></label>
+        <name>EM_Container_Base_ParticipantLeaveText_04I1m0000008Oba_8853220</name>
+    </customLabels>
     <customTabs>
         <label><!-- Mass Change Account --></label>
         <name>CN_Mass_Change_Account_Owner_Tab</name>
@@ -900,6 +1042,10 @@
         <label><!-- Map --></label>
         <name>Map</name>
     </customTabs>
+    <flowDefinitions>
+        <flows/>
+        <fullName>CN_Account_Populate_End_Customer_Code</fullName>
+    </flowDefinitions>
     <flowDefinitions>
         <flows/>
         <fullName>CN_CST</fullName>
@@ -922,15 +1068,38 @@
     </flowDefinitions>
     <flowDefinitions>
         <flows/>
+        <fullName>CN_Event_Prevent_delete_Flow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
         <fullName>CN_Lead_Created</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>CN_Messaging_Flow_Route</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>CN_Notify_Chef_By_Email</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows/>
+        <fullName>CN_Quote_Item_Populate_Price</fullName>
     </flowDefinitions>
     <flowDefinitions>
         <flows/>
         <fullName>CN_SP_Populate_Owner</fullName>
     </flowDefinitions>
     <flowDefinitions>
-        <flows/>
-        <fullName>CN_Event_Prevent_delete_Flow</fullName>
+        <flows>
+            <screens>
+                <fields>
+                    <name>CallCaseExcelGenerationResult</name>
+                </fields>
+                <name>CN_Case_Generation_Callout_Result</name>
+            </screens>
+        </flows>
+        <fullName>Call_Case_Excel_Generation</fullName>
     </flowDefinitions>
     <quickActions>
         <label><!-- New Event --></label>
@@ -1267,6 +1436,23 @@
         <sections>
             <label><!-- Leads --></label>
             <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunity with sample request with sp --></description>
+        <label><!-- Opportunity with sample request with sp --></label>
+        <name>CN_Opportunity_with_sample_request_with_sp</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Sample Products --></label>
+            <name>Sample Products</name>
+        </sections>
+        <sections>
+            <label><!-- Sample Requests --></label>
+            <name>Sample Requests</name>
         </sections>
     </reportTypes>
     <reportTypes>

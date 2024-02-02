@@ -143,6 +143,15 @@
     <enableFeeds>false</enableFeeds>
     <externalSharingModel>ReadWrite</externalSharingModel>
     <fields>
+        <fullName>CN_Apex_Update_DateTime__c</fullName>
+        <description>Use this field to avoid validation rule when update record by apex class.</description>
+        <externalId>false</externalId>
+        <label>Apex Update DateTime</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
         <fullName>CN_Base_Unit_of_Measure__c</fullName>
         <externalId>false</externalId>
         <label>Base Unit of Measure</label>
@@ -176,6 +185,16 @@
                     <fullName>AA</fullName>
                     <default>false</default>
                     <label>AA</label>
+                </value>
+                <value>
+                    <fullName>Adamance</fullName>
+                    <default>false</default>
+                    <label>Adamance</label>
+                </value>
+                <value>
+                    <fullName>Valrhona</fullName>
+                    <default>false</default>
+                    <label>Valrhona</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -222,6 +241,17 @@
         <fullName>CN_Product_Name_EN__c</fullName>
         <externalId>false</externalId>
         <label>Product Name(EN)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CN_Qty_per_Carton_PDF__c</fullName>
+        <description>Mass upload this field and display at Quote PDF</description>
+        <externalId>false</externalId>
+        <label>Qty per Carton PDF</label>
         <length>255</length>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -293,7 +323,7 @@
                 <value>
                     <fullName>Repack</fullName>
                     <default>false</default>
-                    <label>Repack</label>
+                    <label>Test Sample</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -424,7 +454,7 @@
         <externalId>false</externalId>
         <formula>ISPICKVAL(CN_Sample_Type__c  , &quot;Repack&quot;)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Is Repack Sample</label>
+        <label>Is Test Sample</label>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
     </fields>
@@ -472,11 +502,6 @@
             <field>PRODUCT2.ACTIVE</field>
             <operation>equals</operation>
             <value>1</value>
-        </filters>
-        <filters>
-            <field>PRODUCT2.RECORD_TYPE</field>
-            <operation>equals</operation>
-            <value>Product2.CN_Product</value>
         </filters>
         <label>All Active Products</label>
     </listViews>
@@ -528,7 +553,7 @@
             <operation>equals</operation>
             <value>Product2.CN_Product</value>
         </filters>
-        <label>All Repack Products</label>
+        <label>All Test Sample Products</label>
     </listViews>
     <profileSearchLayouts>
         <fields>PRODUCT2.NAME</fields>
@@ -548,6 +573,14 @@
             <picklist>CN_Brand__c</picklist>
             <values>
                 <fullName>AA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Adamance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Valrhona</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -613,6 +646,10 @@
   $Setup.Trigger_Switcher_Setting__c.EnableValidationRule__c,
   NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
   RecordType.DeveloperName = &apos;CN_Product&apos;,
+  NOT(OR(
+   ISCHANGED(CN_Apex_Update_DateTime__c),
+   AND( ISNEW() , NOT( ISNULL(CN_Apex_Update_DateTime__c)))
+  )),
   OR(ISCHANGED( Name ),ISCHANGED( IsActive ))
 )</errorConditionFormula>
         <errorMessage>You have no access to update these info of the product:

@@ -301,13 +301,6 @@
             <sortOrder>6</sortOrder>
         </platformActionListItems>
     </platformActionList>
-    <relatedContent>
-        <relatedContentItems>
-            <layoutItem>
-                <component>runtime_sales_social:socialPanel</component>
-            </layoutItem>
-        </relatedContentItems>
-    </relatedContent>
     <relatedLists>
         <fields>NAME</fields>
         <fields>CN_Promotion_Status__c</fields>
@@ -338,6 +331,7 @@
         <fields>NAME</fields>
         <fields>CN_Contact_Name__c</fields>
         <fields>CN_Delivery_Address_CN__c</fields>
+        <fields>CN_Inactive__c</fields>
         <relatedList>CN_Ship_to_Party__c.CN_Sold_To_Party_Customer__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -536,6 +530,13 @@
         <relatedList>CN_Comment__c.CN_Customer_Name__c</relatedList>
         <sortField>CREATED_DATE</sortField>
         <sortOrder>Desc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>CN_Competitor__c</fields>
+        <fields>CN_EA__c</fields>
+        <fields>CN_Account_Date__c</fields>
+        <relatedList>CN_Competitor_Product_Price_to_Customer__c.CN_Account_Name__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

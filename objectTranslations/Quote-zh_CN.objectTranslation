@@ -146,6 +146,10 @@
         <relationshipLabel><!-- Quotes (GM) --></relationshipLabel>
     </fields>
     <fields>
+        <label>备注(报价单显示)</label>
+        <name>CN_Comment_PDF__c</name>
+    </fields>
+    <fields>
         <label>当前审批人</label>
         <name>CN_Current_Approver__c</name>
         <relationshipLabel><!-- Quotes (Current Approver) --></relationshipLabel>
@@ -169,6 +173,10 @@
     <fields>
         <label>生效期间</label>
         <name>CN_Effective_Duration__c</name>
+    </fields>
+    <fields>
+        <label>备注</label>
+        <name>CN_FinalPDF_Comment__c</name>
     </fields>
     <fields>
         <label>失效日期</label>
@@ -308,6 +316,10 @@
         <label><!-- Synchronized --></label>
         <name>CN_Synchronized__c</name>
     </fields>
+    <fields>
+        <label><!-- Update From Apex DateTime --></label>
+        <name>CN_Update_From_Apex_DateTime__c</name>
+    </fields>
     <layouts>
         <layout>CN Sinodis Quote Layout - Finance MDM</layout>
         <sections>
@@ -397,5 +409,9 @@
     <validationRules>
         <errorMessage>不允许更新已经审批通过的报价。</errorMessage>
         <name>CN_Quote_Prevent_Edit_Approved</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>不允许在客户接受报价前通知财务。</errorMessage>
+        <name>CN_Quote_Prevent_Notify_Finance</name>
     </validationRules>
 </CustomObjectTranslation>

@@ -64,7 +64,7 @@
         <field>CN_Sales_Order__c$CN_Account_Id__c</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
-    <name>Customer Converted - WS</name>
+    <name>Distribution Report - WS</name>
     <params>
         <name>co</name>
         <value>1</value>

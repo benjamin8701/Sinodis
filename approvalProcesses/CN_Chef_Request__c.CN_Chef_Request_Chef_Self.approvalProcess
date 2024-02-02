@@ -62,7 +62,7 @@
         </action>
     </initialSubmissionActions>
     <label>CN_Chef_Request_Chef_Self</label>
-    <processOrder>2</processOrder>
+    <processOrder>4</processOrder>
     <recallActions>
         <action>
             <name>CN_Chef_Request_Set_Status_New</name>

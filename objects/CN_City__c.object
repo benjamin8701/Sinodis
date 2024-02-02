@@ -176,6 +176,16 @@
         <unique>true</unique>
     </fields>
     <fields>
+        <fullName>CN_City_EN_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>City EN Code</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CN_City_EN__c</fullName>
         <externalId>false</externalId>
         <label>City(EN)</label>
@@ -258,6 +268,11 @@
                     <default>false</default>
                     <label>K060-DaLian</label>
                 </value>
+                <value>
+                    <fullName>B100</fullName>
+                    <default>false</default>
+                    <label>B100-Tianjin</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -265,6 +280,7 @@
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
+        <columns>CN_City_Code__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
@@ -279,6 +295,10 @@
         <label>CN City</label>
         <picklistValues>
             <picklist>CN_Sales_Office__c</picklist>
+            <values>
+                <fullName>B100</fullName>
+                <default>false</default>
+            </values>
             <values>
                 <fullName>K010</fullName>
                 <default>false</default>

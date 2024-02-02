@@ -87,6 +87,10 @@
             <translation><!-- Digital Campaign --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>E-Commerce</masterLabel>
+            <translation><!-- E-Commerce --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Expositions</masterLabel>
             <translation><!-- Expositions --></translation>
         </picklistValues>
@@ -95,8 +99,16 @@
             <translation><!-- FHC --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Livestreaming</masterLabel>
+            <translation><!-- Livestreaming --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Marketing Campaign</masterLabel>
             <translation><!-- Marketing Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network</masterLabel>
+            <translation><!-- Network --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Other Trade show</masterLabel>
@@ -111,8 +123,12 @@
             <translation><!-- Public Demo --></translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Social Media Network</masterLabel>
-            <translation><!-- Social Media Network --></translation>
+            <masterLabel>Road Show</masterLabel>
+            <translation><!-- Road Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Sponsorship Event</masterLabel>
@@ -843,6 +859,10 @@
             <masterLabel>P060-SINODIS Dalian-西诺迪斯（大连）</masterLabel>
             <translation><!-- P060-SINODIS Dalian-西诺迪斯（大连） --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>P070-SINODIS Tianjin-西诺迪斯（天津）</masterLabel>
+            <translation><!-- P070-SINODIS Tianjin-西诺迪斯（天津） --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Department of Contact Person --></label>
@@ -977,6 +997,18 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- End Customer Code Number --></label>
+        <name>CN_End_Customer_Code_Number__c</name>
+    </fields>
+    <fields>
+        <label>间供客户代码</label>
+        <name>CN_End_Customer_Code_Text__c</name>
+    </fields>
+    <fields>
+        <label>终端客户代码</label>
+        <name>CN_End_Customer_Code__c</name>
+    </fields>
+    <fields>
         <label><!-- Finance AR --></label>
         <name>CN_Finance_AR__c</name>
         <relationshipLabel><!-- Accounts (Finance AR) --></relationshipLabel>
@@ -1009,6 +1041,10 @@
     <fields>
         <label><!-- Has Ship To Party --></label>
         <name>CN_Has_Ship_To_Party__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>CN_Inactive__c</name>
     </fields>
     <fields>
         <label>国际贸易条件2</label>
@@ -1296,6 +1332,10 @@
         <name>CN_Latest_Order_Create_Date__c</name>
     </fields>
     <fields>
+        <label><!-- Lead MG Contact Id --></label>
+        <name>CN_Lead_MG_Contact_Id__c</name>
+    </fields>
+    <fields>
         <label>等级</label>
         <name>CN_Level__c</name>
         <picklistValues>
@@ -1333,12 +1373,20 @@
         </picklistValues>
     </fields>
     <fields>
+        <label><!-- MG Account ID --></label>
+        <name>CN_MG_Account_ID__c</name>
+    </fields>
+    <fields>
         <label>地图链接</label>
         <name>CN_Map_Link__c</name>
     </fields>
     <fields>
         <label><!-- Nature --></label>
         <name>CN_Nature__c</name>
+    </fields>
+    <fields>
+        <label><!-- Need Send MG Flag --></label>
+        <name>CN_Need_Send_MG_Flag__c</name>
     </fields>
     <fields>
         <label><!-- CN_Need_Sync_Geolocation --></label>
@@ -1962,6 +2010,10 @@
             <masterLabel>026-GuangZhou</masterLabel>
             <translation><!-- 026-GuangZhou --></translation>
         </picklistValues>
+        <picklistValues>
+            <masterLabel>B06-Shanghai Area</masterLabel>
+            <translation><!-- B06-Shanghai Area --></translation>
+        </picklistValues>
     </fields>
     <fields>
         <label>销售组</label>
@@ -1974,6 +2026,10 @@
     <fields>
         <label>销售办公室</label>
         <name>CN_Sales_Office__c</name>
+        <picklistValues>
+            <masterLabel>B100-Tianjin</masterLabel>
+            <translation><!-- B100-Tianjin --></translation>
+        </picklistValues>
         <picklistValues>
             <masterLabel>K010-ShangHai</masterLabel>
             <translation><!-- K010-ShangHai --></translation>
@@ -2291,6 +2347,10 @@
         <picklistValues>
             <masterLabel>Airline</masterLabel>
             <translation><!-- Airline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B2B OEM</masterLabel>
+            <translation><!-- B2B OEM --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>BAPA - LKA</masterLabel>
@@ -2803,6 +2863,11 @@
     <validationRules>
         <errorMessage>不允许更改送达方。</errorMessage>
         <name>CN_Account_Prevent_Change_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- When Invoice is VAT or Electronic VAT, the Bank Account Name must be entered.
+Others the Bank Account Name can&apos;t be entered. --></errorMessage>
+        <name>CN_Check_Bank_Account_Name</name>
     </validationRules>
     <validationRules>
         <errorMessage>请为连锁客户输入 连锁门店数。</errorMessage>

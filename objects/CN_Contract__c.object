@@ -458,9 +458,9 @@
                     <label>Gerard合同</label>
                 </value>
                 <value>
-                    <fullName>商品销售协议</fullName>
+                    <fullName>机器赞助合同</fullName>
                     <default>false</default>
-                    <label>商品销售协议</label>
+                    <label>机器赞助合同</label>
                 </value>
                 <value>
                     <fullName>现结合同- 客户要求</fullName>
@@ -468,9 +468,9 @@
                     <label>现结合同- 客户要求</label>
                 </value>
                 <value>
-                    <fullName>机器赞助合同</fullName>
+                    <fullName>商品销售协议</fullName>
                     <default>false</default>
-                    <label>机器赞助合同</label>
+                    <label>商品销售协议</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1162,6 +1162,16 @@
                     <default>false</default>
                     <label>Gerard</label>
                 </value>
+                <value>
+                    <fullName>QSR</fullName>
+                    <default>false</default>
+                    <label>QSR</label>
+                </value>
+                <value>
+                    <fullName>B2B</fullName>
+                    <default>false</default>
+                    <label>B2B</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
@@ -1633,6 +1643,10 @@
         <picklistValues>
             <picklist>CN_Sales_Channel__c</picklist>
             <values>
+                <fullName>B2B</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>BSI</fullName>
                 <default>false</default>
             </values>
@@ -1646,6 +1660,10 @@
             </values>
             <values>
                 <fullName>KA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>QSR</fullName>
                 <default>false</default>
             </values>
             <values>

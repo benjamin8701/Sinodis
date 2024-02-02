@@ -29,23 +29,6 @@
     </columns>
     <currency>CNY</currency>
     <description>Customer Visits Planned</description>
-    <filter>
-        <criteriaItems>
-            <column>Account.Activities$CreatedDate</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>LAST_90_DAYS</value>
-        </criteriaItems>
-        <criteriaItems>
-            <column>Account.Activities$RecordType</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>Event.CN_Visit</value>
-        </criteriaItems>
-        <language>en_US</language>
-    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>

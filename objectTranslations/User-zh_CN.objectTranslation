@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- PersonalInfo_EPIM --></label>
+        <name>PersonalInfo_EPIM</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Email Verified Need Sync --></label>
+        <name>CN_Email_Verified_Need_Sync__c</name>
+    </fields>
     <fields>
         <label><!-- Is Finance --></label>
         <name>CN_Is_Finance__c</name>
@@ -25,8 +33,16 @@
         <name>CN_Sales_Office__c</name>
     </fields>
     <fields>
+        <label><!-- Sales Team For Report --></label>
+        <name>CN_Sales_Team_For_Report__c</name>
+    </fields>
+    <fields>
         <label><!-- Sales Team --></label>
         <name>CN_Sales_Team__c</name>
+    </fields>
+    <fields>
+        <label><!-- Target_Email --></label>
+        <name>CN_Target_Email__c</name>
     </fields>
     <fields>
         <label><!-- Personnel Number --></label>

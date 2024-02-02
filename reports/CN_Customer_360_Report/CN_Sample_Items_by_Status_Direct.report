@@ -34,16 +34,6 @@
         <field>Account.Sample_RequestS_FeedbackS__r.Sample_Products__r$Name</field>
     </columns>
     <currency>CNY</currency>
-    <filter>
-        <criteriaItems>
-            <column>Account.Sample_RequestS_FeedbackS__r.Sample_Products__r$CreatedDate</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>LAST_90_DAYS</value>
-        </criteriaItems>
-        <language>en_US</language>
-    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>

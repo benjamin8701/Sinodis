@@ -10,10 +10,30 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
+        <fullName>CN_QuoteItem_Populate_Channel_Price_VAT</fullName>
+        <field>CN_Channel_Price_VAT__c</field>
+        <formula>CN_Channel_Price__c * ( 1 + VALUE(LEFT(CN_Tax_Formula__c,LEN(CN_Tax_Formula__c)-1))/100)</formula>
+        <name>CN_QuoteItem_Populate_Channel_Price_VAT</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
         <fullName>CN_QuoteItem_Populate_ExternalId</fullName>
         <field>CN_External_Id__c</field>
-        <formula>Product2Id  &amp; &apos;-&apos; &amp;  QuoteId</formula>
+        <formula>CASESAFEID(Product2Id)   &amp; &apos;-&apos; &amp;  CASESAFEID(QuoteId)</formula>
         <name>CN_QuoteItem_Populate_ExternalId</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CN_QuoteItem_Populate_List_Price_VAT</fullName>
+        <field>CN_List_Price_VAT__c</field>
+        <formula>CN_List_Price__c * ( 1 + VALUE(LEFT(CN_Tax_Formula__c,LEN(CN_Tax_Formula__c)-1))/100)</formula>
+        <name>CN_QuoteItem_Populate_List_Price_VAT</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
         <protected>false</protected>
@@ -22,7 +42,7 @@
     <fieldUpdates>
         <fullName>CN_QuoteItem_Populate_Origin</fullName>
         <field>CN_Origin_PDF__c</field>
-        <formula>Text(Product2.CN_Origin__c)</formula>
+        <formula>CASE(Product2.CN_Origin__c,&apos;AT&apos;,&apos;奥地利&apos;,&apos;AUS&apos;,&apos;澳大利亚&apos;,&apos;BE&apos;,&apos;比利时&apos;,&apos;CN&apos;,&apos;中国&apos;,&apos;EC&apos;,&apos;厄瓜多尔&apos;,&apos;ES&apos;,&apos;西班牙&apos;,&apos;FR&apos;,&apos;法国&apos;,&apos;GB&apos;,&apos;英国&apos;,&apos;GR&apos;,&apos;希腊&apos;,&apos;IN&apos;,&apos;印度&apos;,&apos;IT&apos;,&apos;意大利&apos;,&apos;PH&apos;,&apos;菲律宾&apos;,&apos;PT&apos;,&apos;葡萄牙&apos;,&apos;US&apos;,&apos;美国&apos;,&apos;UY&apos;,&apos;乌拉圭&apos;,&apos;VN&apos;,&apos;越南&apos;,&apos;&apos;)</formula>
         <name>CN_QuoteItem_Populate_Origin</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
@@ -32,7 +52,7 @@
     <fieldUpdates>
         <fullName>CN_QuoteItem_Populate_QTYPerCTN</fullName>
         <field>CN_QTY_PER_CTN_PDF__c</field>
-        <formula>Product2.CN_Qty_per_Carton__c</formula>
+        <formula>Product2.CN_Qty_per_Carton_PDF__c</formula>
         <name>CN_QuoteItem_Populate_QTYPerCTN</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Formula</operation>
@@ -63,6 +83,20 @@
         <fullName>CN_QuoteItem_Populate_Origin</fullName>
         <actions>
             <name>CN_QuoteItem_Populate_Origin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c  )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>CN_QuoteItem_Populate_Price</fullName>
+        <actions>
+            <name>CN_QuoteItem_Populate_Channel_Price_VAT</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>CN_QuoteItem_Populate_List_Price_VAT</name>
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>

@@ -13,6 +13,10 @@
         <name>CN_City_Code__c</name>
     </fields>
     <fields>
+        <label><!-- City EN Code --></label>
+        <name>CN_City_EN_Code__c</name>
+    </fields>
+    <fields>
         <label><!-- City(EN) --></label>
         <name>CN_City_EN__c</name>
     </fields>
@@ -32,6 +36,10 @@
     <fields>
         <label><!-- Sales Office --></label>
         <name>CN_Sales_Office__c</name>
+        <picklistValues>
+            <masterLabel>B100-Tianjin</masterLabel>
+            <translation><!-- B100-Tianjin --></translation>
+        </picklistValues>
         <picklistValues>
             <masterLabel>K010-ShangHai</masterLabel>
             <translation><!-- K010-ShangHai --></translation>

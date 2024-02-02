@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmbeddedServiceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <areGuestUsersAllowed>false</areGuestUsersAllowed>
+    <branding>EmbeddedServiceConfig_BrandingSet_187e9fe00bc</branding>
+    <deploymentFeature>EmbeddedMessaging</deploymentFeature>
+    <deploymentType>Web</deploymentType>
+    <embeddedServiceCustomLabels>
+        <customLabel>EM_Container_Base_AgentLeaveAnnouncement_04I1m0000008Oba_5442018</customLabel>
+        <labelKey>EM_Container_Base_AgentLeaveAnnouncement</labelKey>
+    </embeddedServiceCustomLabels>
+    <embeddedServiceCustomLabels>
+        <customLabel>EM_Container_Base_ParticipantLeaveText_04I1m0000008Oba_8853220</customLabel>
+        <labelKey>EM_Container_Base_ParticipantLeaveText</labelKey>
+    </embeddedServiceCustomLabels>
+    <embeddedServiceCustomLabels>
+        <customLabel>EM_Container_Base_HeaderAnnouncementTransferRequestSucce_04I1y0000004CRg_5565035</customLabel>
+        <labelKey>EM_Container_Base_HeaderAnnouncementTransferRequestSuccess</labelKey>
+    </embeddedServiceCustomLabels>
+    <embeddedServiceMessagingChannel>
+        <isEnabled>true</isEnabled>
+        <messagingChannel>CN_Messaging_WebChat</messagingChannel>
+        <shouldShowDeliveryReceipts>false</shouldShowDeliveryReceipts>
+        <shouldShowReadReceipts>false</shouldShowReadReceipts>
+        <shouldShowTypingIndicators>false</shouldShowTypingIndicators>
+    </embeddedServiceMessagingChannel>
+    <isEnabled>true</isEnabled>
+    <masterLabel>CN_Messaging_Deployment</masterLabel>
+    <shouldHideAuthDialog>false</shouldHideAuthDialog>
+    <site>CN_ESW_Messaging_Deployment1</site>
+</EmbeddedServiceConfig>

@@ -116,36 +116,50 @@
     <enableFeeds>false</enableFeeds>
     <fields>
         <fullName>ActivityDate</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CallDisposition</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CallDurationInSeconds</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CallObject</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CallType</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>CompletedDateTime</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Description</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Email</fullName>
     </fields>
     <fields>
         <fullName>IsRecurrence</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>IsReminderSet</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
@@ -153,20 +167,25 @@
     </fields>
     <fields>
         <fullName>Priority</fullName>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>RecurrenceInterval</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>RecurrenceRegeneratedType</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Status</fullName>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Subject</fullName>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -174,45 +193,19 @@
     </fields>
     <fields>
         <fullName>Type</fullName>
+        <trackHistory>false</trackHistory>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>WhatId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
     <fields>
         <fullName>WhoId</fullName>
+        <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
-    <listViews>
-        <fullName>CompletedTasks</fullName>
-        <columns>SUBJECT</columns>
-        <columns>WHO_NAME</columns>
-        <columns>WHAT_NAME</columns>
-        <columns>DUE_DATE</columns>
-        <columns>STATUS</columns>
-        <columns>PRIORITY</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <columns>LAST_UPDATE</columns>
-        <columns>UPDATEDBY_USER.ALIAS</columns>
-        <filterScope>Mine</filterScope>
-        <filters>
-            <field>IS_CLOSED</field>
-            <operation>equals</operation>
-            <value>1</value>
-        </filters>
-        <filters>
-            <field>IS_RECURRENCE</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <filters>
-            <field>LAST_UPDATE</field>
-            <operation>equals</operation>
-            <value>TODAY,LAST_N_DAYS:30</value>
-        </filters>
-        <label>Completed Tasks</label>
-    </listViews>
     <listViews>
         <fullName>CompletedTasks</fullName>
         <columns>SUBJECT</columns>
@@ -270,20 +263,6 @@
             <value>TODAY,LAST_N_DAYS:30</value>
         </filters>
         <label>Completed Tasks</label>
-    </listViews>
-    <listViews>
-        <fullName>DelegatedTasks</fullName>
-        <columns>SUBJECT</columns>
-        <columns>WHO_NAME</columns>
-        <columns>WHAT_NAME</columns>
-        <columns>DUE_DATE</columns>
-        <columns>STATUS</columns>
-        <columns>PRIORITY</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <columns>LAST_UPDATE</columns>
-        <columns>UPDATEDBY_USER.ALIAS</columns>
-        <filterScope>Delegated</filterScope>
-        <label>Delegated Tasks</label>
     </listViews>
     <listViews>
         <fullName>DelegatedTasks</fullName>
@@ -370,64 +349,6 @@
             <value>LAST_N_DAYS:30</value>
         </filters>
         <label>ENCODED:{!FilterNames.Task_OpenTasks}</label>
-    </listViews>
-    <listViews>
-        <fullName>OpenTasks</fullName>
-        <columns>SUBJECT</columns>
-        <columns>WHO_NAME</columns>
-        <columns>WHAT_NAME</columns>
-        <columns>DUE_DATE</columns>
-        <columns>STATUS</columns>
-        <columns>PRIORITY</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <columns>LAST_UPDATE</columns>
-        <columns>UPDATEDBY_USER.ALIAS</columns>
-        <filterScope>Mine</filterScope>
-        <filters>
-            <field>IS_CLOSED</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <filters>
-            <field>IS_RECURRENCE</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <filters>
-            <field>DUE_DATE</field>
-            <operation>greaterOrEqual</operation>
-            <value>LAST_N_DAYS:30</value>
-        </filters>
-        <label>ENCODED:{!FilterNames.Task_OpenTasks}</label>
-    </listViews>
-    <listViews>
-        <fullName>OverdueTasks</fullName>
-        <columns>SUBJECT</columns>
-        <columns>WHO_NAME</columns>
-        <columns>WHAT_NAME</columns>
-        <columns>DUE_DATE</columns>
-        <columns>STATUS</columns>
-        <columns>PRIORITY</columns>
-        <columns>CORE.USERS.ALIAS</columns>
-        <columns>LAST_UPDATE</columns>
-        <columns>UPDATEDBY_USER.ALIAS</columns>
-        <filterScope>Mine</filterScope>
-        <filters>
-            <field>IS_CLOSED</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <filters>
-            <field>IS_RECURRENCE</field>
-            <operation>equals</operation>
-            <value>0</value>
-        </filters>
-        <filters>
-            <field>DUE_DATE</field>
-            <operation>lessThan</operation>
-            <value>TODAY</value>
-        </filters>
-        <label>ENCODED:{!FilterNames.Task_OverdueTasks}</label>
     </listViews>
     <listViews>
         <fullName>OverdueTasks</fullName>
@@ -639,6 +560,7 @@
         </filters>
         <label>Unscheduled Tasks</label>
     </listViews>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
     <recordTypes>
         <fullName>CN_Task</fullName>
         <active>true</active>
@@ -800,5 +722,5 @@
         </picklistValues>
     </recordTypes>
     <searchLayouts/>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>
