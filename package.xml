@@ -150,6 +150,7 @@
         <members>CN_Contact_Write_To_Lead_Handler_Test</members>
         <members>CN_Contract_Populate_Fields_Handler</members>
         <members>CN_Contract_Populate_Fields_Handler_Test</members>
+        <members>CN_CP_Delete_And_Edit_Handler</members>
         <members>CN_Customer_Status_Trend_Batch</members>
         <members>CN_Customer_Status_Trend_SCH</members>
         <members>CN_Customer_Status_Trend_Test</members>

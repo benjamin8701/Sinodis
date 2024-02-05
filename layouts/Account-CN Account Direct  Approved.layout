@@ -2,7 +2,8 @@
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
     <excludeButtons>ChangeOwnerOne</excludeButtons>
     <excludeButtons>ChangeRecordType</excludeButtons>
-    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
+    <excludeButtons>DataDotComAccountInsights</excludeButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>DisablePartnerPortalAccount</excludeButtons>
     <excludeButtons>Edit</excludeButtons>
@@ -535,7 +536,8 @@
         <fields>NAME</fields>
         <fields>CN_Competitor__c</fields>
         <fields>CN_EA__c</fields>
-        <fields>CN_Account_Date__c</fields>
+        <fields>CN_CTN__c</fields>
+        <fields>CN_Date__c</fields>
         <relatedList>CN_Competitor_Product_Price_to_Customer__c.CN_Account_Name__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>

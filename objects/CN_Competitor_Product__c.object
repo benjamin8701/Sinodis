@@ -413,17 +413,6 @@
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
-    <listViews>
-        <fullName>CN_All_Competitor</fullName>
-        <columns>NAME</columns>
-        <columns>CN_Product_Name__c</columns>
-        <columns>CN_Sub_Category__c</columns>
-        <columns>CN_Sub_Category_Brand__c</columns>
-        <columns>CN_Product_Category__c</columns>
-        <columns>CN_Specification__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All Competitor</label>
-    </listViews>
     <nameField>
         <displayFormat>CP-{0000}</displayFormat>
         <label>Competitor Name</label>
@@ -431,16 +420,6 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Competitor Product</pluralLabel>
-    <profileSearchLayouts>
-        <fields>NAME</fields>
-        <fields>CN_Customer_Category__c</fields>
-        <fields>CN_Product_Name__c</fields>
-        <fields>CN_Sub_Category__c</fields>
-        <fields>CN_Sub_Category_Brand__c</fields>
-        <fields>CN_Specification__c</fields>
-        <fields>CN_Product_Category__c</fields>
-        <profileName>CN Marketing</profileName>
-    </profileSearchLayouts>
     <profileSearchLayouts>
         <fields>NAME</fields>
         <fields>CN_Product_Name__c</fields>
@@ -480,40 +459,12 @@
             </values>
         </picklistValues>
     </recordTypes>
-    <recordTypes>
-        <fullName>competitor_sales</fullName>
-        <active>true</active>
-        <label>competitor-sales</label>
-        <picklistValues>
-            <picklist>CN_Customer_Category__c</picklist>
-            <values>
-                <fullName>BAPA</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>CN_Region__c</picklist>
-            <values>
-                <fullName>East</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>North</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>South</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>West</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
     <searchLayouts>
-        <searchResultsAdditionalFields>CN_Customer_Category__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CN_Product_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CN_Sub_Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CN_Sub_Category_Brand__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CN_Specification__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CN_Product_Category__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
