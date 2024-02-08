@@ -682,6 +682,36 @@
                     <default>false</default>
                     <label>Others</label>
                 </value>
+                <value>
+                    <fullName>Hands on</fullName>
+                    <default>false</default>
+                    <label>Hands on</label>
+                </value>
+                <value>
+                    <fullName>Training</fullName>
+                    <default>false</default>
+                    <label>Training</label>
+                </value>
+                <value>
+                    <fullName>Sinodis Event (Company Event)</fullName>
+                    <default>false</default>
+                    <label>Sinodis Event (Company Event)</label>
+                </value>
+                <value>
+                    <fullName>Marketing Development</fullName>
+                    <default>false</default>
+                    <label>Marketing Development</label>
+                </value>
+                <value>
+                    <fullName>Sampling</fullName>
+                    <default>false</default>
+                    <label>Sampling</label>
+                </value>
+                <value>
+                    <fullName>Workshop</fullName>
+                    <default>false</default>
+                    <label>Workshop</label>
+                </value>
             </valueSetDefinition>
             <valueSettings>
                 <controllingFieldValue>Corporate Event</controllingFieldValue>
@@ -735,6 +765,66 @@
                 <controllingFieldValue>Cross Category Event</controllingFieldValue>
                 <controllingFieldValue>Digital Campaign</controllingFieldValue>
                 <valueName>Others</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Event</controllingFieldValue>
+                <controllingFieldValue>Brand Event</controllingFieldValue>
+                <controllingFieldValue>Co-Branding Event</controllingFieldValue>
+                <controllingFieldValue>Channel Solution</controllingFieldValue>
+                <controllingFieldValue>Cross Category Event</controllingFieldValue>
+                <controllingFieldValue>Digital Campaign</controllingFieldValue>
+                <controllingFieldValue>Road Show</controllingFieldValue>
+                <valueName>Hands on</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Event</controllingFieldValue>
+                <controllingFieldValue>Brand Event</controllingFieldValue>
+                <controllingFieldValue>Co-Branding Event</controllingFieldValue>
+                <controllingFieldValue>Channel Solution</controllingFieldValue>
+                <controllingFieldValue>Cross Category Event</controllingFieldValue>
+                <controllingFieldValue>Digital Campaign</controllingFieldValue>
+                <controllingFieldValue>Road Show</controllingFieldValue>
+                <valueName>Training</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Event</controllingFieldValue>
+                <controllingFieldValue>Brand Event</controllingFieldValue>
+                <controllingFieldValue>Co-Branding Event</controllingFieldValue>
+                <controllingFieldValue>Channel Solution</controllingFieldValue>
+                <controllingFieldValue>Cross Category Event</controllingFieldValue>
+                <controllingFieldValue>Digital Campaign</controllingFieldValue>
+                <controllingFieldValue>Road Show</controllingFieldValue>
+                <valueName>Sinodis Event (Company Event)</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Event</controllingFieldValue>
+                <controllingFieldValue>Brand Event</controllingFieldValue>
+                <controllingFieldValue>Co-Branding Event</controllingFieldValue>
+                <controllingFieldValue>Channel Solution</controllingFieldValue>
+                <controllingFieldValue>Cross Category Event</controllingFieldValue>
+                <controllingFieldValue>Digital Campaign</controllingFieldValue>
+                <controllingFieldValue>Road Show</controllingFieldValue>
+                <valueName>Marketing Development</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Event</controllingFieldValue>
+                <controllingFieldValue>Brand Event</controllingFieldValue>
+                <controllingFieldValue>Co-Branding Event</controllingFieldValue>
+                <controllingFieldValue>Channel Solution</controllingFieldValue>
+                <controllingFieldValue>Cross Category Event</controllingFieldValue>
+                <controllingFieldValue>Digital Campaign</controllingFieldValue>
+                <controllingFieldValue>Road Show</controllingFieldValue>
+                <valueName>Sampling</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Corporate Event</controllingFieldValue>
+                <controllingFieldValue>Brand Event</controllingFieldValue>
+                <controllingFieldValue>Co-Branding Event</controllingFieldValue>
+                <controllingFieldValue>Channel Solution</controllingFieldValue>
+                <controllingFieldValue>Cross Category Event</controllingFieldValue>
+                <controllingFieldValue>Digital Campaign</controllingFieldValue>
+                <controllingFieldValue>Road Show</controllingFieldValue>
+                <valueName>Workshop</valueName>
             </valueSettings>
             <valueSettings>
                 <controllingFieldValue>Brand Event</controllingFieldValue>
@@ -1394,7 +1484,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Hands on</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Livestreaming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Development</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1410,7 +1508,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Sampling</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Short Video</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sinodis Event %28Company Event%29</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1419,6 +1525,10 @@
             </values>
             <values>
                 <fullName>Tasting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1431,6 +1541,10 @@
             </values>
             <values>
                 <fullName>WeChat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1844,7 +1958,15 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Hands on</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Livestreaming</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Development</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1856,11 +1978,23 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Sampling</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Short Video</fullName>
                 <default>false</default>
             </values>
             <values>
+                <fullName>Sinodis Event %28Company Event%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Solution Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1869,6 +2003,10 @@
             </values>
             <values>
                 <fullName>WeChat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
