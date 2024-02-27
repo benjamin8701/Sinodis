@@ -34,6 +34,17 @@
         <template>CN_Email_Folder/CN_Complaint_Assign_Notification</template>
     </alerts>
     <alerts>
+        <fullName>CN_Compliant_Notification_Finance</fullName>
+        <ccEmails>cs.return@savencia.onmicrosoft.com</ccEmails>
+        <description>CN_Compliant_Notification_Finance</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CN_Email_Folder/CN_Complaint_Assign_Notification</template>
+    </alerts>
+    <alerts>
         <fullName>CN_Complaint_Resolve_Notification_CS</fullName>
         <ccEmails>cs-complaint@sinodis.com.cn.inactive</ccEmails>
         <ccEmails>dezheng_test_01@outlook.com</ccEmails>
@@ -85,11 +96,11 @@
         <reevaluateOnChange>false</reevaluateOnChange>
     </fieldUpdates>
     <fieldUpdates>
-        <fullName>CN_Complaint_Assign_To_QA</fullName>
+        <fullName>CN_Complaint_Assign_To_Food_Quality</fullName>
         <field>OwnerId</field>
-        <lookupValue>CN_QA_Queue</lookupValue>
+        <lookupValue>CN_Food_Quality</lookupValue>
         <lookupValueType>Queue</lookupValueType>
-        <name>CN_Complaint_Assign_To_QA</name>
+        <name>CN_Complaint_Assign_To_Food_Quality</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>LookupValue</operation>
         <protected>false</protected>
@@ -196,13 +207,13 @@
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
-        <fullName>CN_Complaint_Assign_To_QA</fullName>
+        <fullName>CN_Complaint_Assign_To_Food_Quality</fullName>
         <actions>
             <name>CN_Complaint_Assign_To_Queue_Alert</name>
             <type>Alert</type>
         </actions>
         <actions>
-            <name>CN_Complaint_Assign_To_QA</name>
+            <name>CN_Complaint_Assign_To_Food_Quality</name>
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
@@ -277,6 +288,16 @@
         </actions>
         <active>true</active>
         <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,    RecordType.DeveloperName = &apos;CN_Complaint&apos;,    ISPICKVAL( Status , &apos;Resolved&apos;),   ISCHANGED( Status )  )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CN_NP_Complaint_Assign_Alert</fullName>
+        <actions>
+            <name>CN_Compliant_Notification_Finance</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,    RecordType.DeveloperName = &apos;CN_Non_Product_Complaint&apos;, Owner:Queue.QueueName=&apos;CN_Finance&apos;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

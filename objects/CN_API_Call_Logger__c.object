@@ -244,6 +244,16 @@
                     <default>false</default>
                     <label>Flow - Call Case Excel Generation</label>
                 </value>
+                <value>
+                    <fullName>CN_Case_NP_Insert_Rest</fullName>
+                    <default>false</default>
+                    <label>CN_Case_NP_Insert_Rest</label>
+                </value>
+                <value>
+                    <fullName>CN_Case_Upsert_To_Mg_Callout</fullName>
+                    <default>false</default>
+                    <label>CN_Case_Upsert_To_Mg_Callout</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>

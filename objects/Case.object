@@ -185,7 +185,7 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Complaint_Page_Layout</content>
+        <content>Case_Record_Page</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -193,7 +193,7 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Complaint_Page_Layout</content>
+        <content>Case_Record_Page</content>
         <formFactor>Small</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -332,7 +332,7 @@
     </fields>
     <fields>
         <fullName>CN_Actual_Return_Consistent_Status__c</fullName>
-        <defaultValue>true</defaultValue>
+        <defaultValue>false</defaultValue>
         <externalId>false</externalId>
         <label>Is the actual return consistent</label>
         <trackFeedHistory>false</trackFeedHistory>
@@ -622,27 +622,27 @@
                 <value>
                     <fullName>Protain</fullName>
                     <default>false</default>
-                    <label>Protain杂物</label>
+                    <label>Protain</label>
                 </value>
                 <value>
                     <fullName>Insect</fullName>
                     <default>false</default>
-                    <label>Insect昆虫</label>
+                    <label>Insect</label>
                 </value>
                 <value>
                     <fullName>Metal</fullName>
                     <default>false</default>
-                    <label>Metal金属</label>
+                    <label>Metal</label>
                 </value>
                 <value>
                     <fullName>Plastic</fullName>
                     <default>false</default>
-                    <label>Plastic塑料</label>
+                    <label>Plastic</label>
                 </value>
                 <value>
                     <fullName>Others</fullName>
                     <default>false</default>
-                    <label>Other</label>
+                    <label>Others(Please mantion the details)</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -766,24 +766,57 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Label</fullName>
+                    <fullName>No label</fullName>
                     <default>false</default>
-                    <label>Label</label>
+                    <label>No label</label>
                 </value>
                 <value>
-                    <fullName>Damaged pre packaging</fullName>
+                    <fullName>Faulty label</fullName>
                     <default>false</default>
-                    <label>Damaged pre packaging</label>
+                    <label>Faulty label</label>
                 </value>
                 <value>
-                    <fullName>Damaged outer box</fullName>
+                    <fullName>Faulty package</fullName>
                     <default>false</default>
-                    <label>Damaged outer box</label>
+                    <label>Faulty package(hole, tear)</label>
+                </value>
+                <value>
+                    <fullName>Deformed carton</fullName>
+                    <default>false</default>
+                    <label>Deformed carton</label>
+                </value>
+                <value>
+                    <fullName>Package leaking</fullName>
+                    <default>false</default>
+                    <label>Package leaking</label>
+                </value>
+                <value>
+                    <fullName>Faulty label attachment</fullName>
+                    <default>false</default>
+                    <label>Faulty label attachment</label>
                 </value>
                 <value>
                     <fullName>Other</fullName>
                     <default>false</default>
-                    <label>Other</label>
+                    <label>Others(Please mantion the details)</label>
+                </value>
+                <value>
+                    <fullName>Damaged outer box</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Damaged outer box</label>
+                </value>
+                <value>
+                    <fullName>Damaged pre packaging</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Damaged pre packaging</label>
+                </value>
+                <value>
+                    <fullName>Label</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Label</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -827,14 +860,34 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>Deterioration moldy</fullName>
+                    <fullName>Quantity missing in original box</fullName>
                     <default>false</default>
-                    <label>Deterioration moldy</label>
+                    <label>Quantity missing in original box</label>
                 </value>
                 <value>
-                    <fullName>Product damage</fullName>
+                    <fullName>Weight issue</fullName>
                     <default>false</default>
-                    <label>Product damage</label>
+                    <label>Weight issue</label>
+                </value>
+                <value>
+                    <fullName>Product texture or size</fullName>
+                    <default>false</default>
+                    <label>Product texture or size</label>
+                </value>
+                <value>
+                    <fullName>Taste, Flavour issues</fullName>
+                    <default>false</default>
+                    <label>Taste, Flavour issues</label>
+                </value>
+                <value>
+                    <fullName>Agglomeration</fullName>
+                    <default>false</default>
+                    <label>Agglomeration</label>
+                </value>
+                <value>
+                    <fullName>Product visual issue</fullName>
+                    <default>false</default>
+                    <label>Product visual issue</label>
                 </value>
                 <value>
                     <fullName>Usage issues</fullName>
@@ -842,34 +895,61 @@
                     <label>Usage issues</label>
                 </value>
                 <value>
-                    <fullName>Foreign body</fullName>
+                    <fullName>Mould</fullName>
                     <default>false</default>
-                    <label>Foreign body</label>
+                    <label>Mould</label>
                 </value>
                 <value>
-                    <fullName>Original box shortage</fullName>
+                    <fullName>Bad</fullName>
                     <default>false</default>
-                    <label>Original box shortage</label>
-                </value>
-                <value>
-                    <fullName>Size</fullName>
-                    <default>false</default>
-                    <label>Size</label>
-                </value>
-                <value>
-                    <fullName>Insufficient net content</fullName>
-                    <default>false</default>
-                    <label>Insufficient net content</label>
+                    <label>Bad</label>
                 </value>
                 <value>
                     <fullName>Other</fullName>
                     <default>false</default>
-                    <label>Other</label>
+                    <label>Others(Please mantion the details)</label>
+                </value>
+                <value>
+                    <fullName>Deterioration moldy</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Deterioration moldy</label>
+                </value>
+                <value>
+                    <fullName>Foreign body</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Foreign body</label>
+                </value>
+                <value>
+                    <fullName>Insufficient net content</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Insufficient net content</label>
+                </value>
+                <value>
+                    <fullName>Original box shortage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Original box shortage</label>
+                </value>
+                <value>
+                    <fullName>Product damage</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Product damage</label>
                 </value>
                 <value>
                     <fullName>Sensory</fullName>
                     <default>false</default>
+                    <isActive>false</isActive>
                     <label>Sensory</label>
+                </value>
+                <value>
+                    <fullName>Size</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Size</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1203,7 +1283,7 @@
     <fields>
         <fullName>CN_Sales_Office__c</fullName>
         <externalId>false</externalId>
-        <formula>CASE(Account.Owner.CN_Sales_Office__c,&apos;B100&apos;,&apos;B100-TianJin&apos;, &apos;K010&apos;, &apos;K010-ShangHai&apos;, &apos;K020&apos;, &apos;K020-BeiJing&apos;,&apos;&apos;,&apos;K030-ShenZhen&apos;,&apos;K040&apos;,&apos;K040-GuangZhou&apos;,&apos;K050&apos;,&apos;K050-ChengDu&apos;,&apos;K060&apos;,&apos;K060-DaLian&apos;,&apos;&apos;)</formula>
+        <formula>CASE(Account.Owner.CN_Sales_Office__c, &apos;K010&apos;, &apos;K010-ShangHai&apos;, &apos;K020&apos;, &apos;K020-BeiJing&apos;,&apos;&apos;,&apos;K030-ShenZhen&apos;,&apos;K040&apos;,&apos;K040-GuangZhou&apos;,&apos;K050&apos;,&apos;K050-ChengDu&apos;,&apos;K060&apos;,&apos;K060-DaLian&apos;,&apos;&apos;)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Sales Office</label>
         <required>false</required>
@@ -1491,6 +1571,17 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
+    <fields>
+        <fullName>describe__c</fullName>
+        <externalId>false</externalId>
+        <label>describe</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
     <listViews>
         <fullName>AllOpenCases</fullName>
         <columns>CASES.CASE_NUMBER</columns>
@@ -1538,6 +1629,19 @@
         <queue>CN_CS_Queue</queue>
     </listViews>
     <listViews>
+        <fullName>CN_Finance</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Queue</filterScope>
+        <label>CN_Finance</label>
+        <queue>CN_Finance</queue>
+    </listViews>
+    <listViews>
         <fullName>CN_Food_Quality</fullName>
         <columns>CASES.CASE_NUMBER</columns>
         <columns>NAME</columns>
@@ -1549,15 +1653,6 @@
         <filterScope>Queue</filterScope>
         <label>CN_Food_Quality</label>
         <queue>CN_Food_Quality</queue>
-    </listViews>
-    <listViews>
-        <fullName>CN_Food_Quality_Case</fullName>
-        <filterScope>Queue</filterScope>
-        <label>CN_Food_Quality</label>
-        <queue>CN_Food_Quality</queue>
-        <sharedTo>
-            <allInternalUsers></allInternalUsers>
-        </sharedTo>
     </listViews>
     <listViews>
         <fullName>CN_Legal</fullName>
@@ -1677,38 +1772,46 @@
         <picklistValues>
             <picklist>CN_Package__c</picklist>
             <values>
-                <fullName>Damaged outer box</fullName>
+                <fullName>Deformed carton</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Damaged pre packaging</fullName>
+                <fullName>Faulty label attachment</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Label</fullName>
+                <fullName>Faulty label</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Faulty package</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No label</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Package leaking</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Product_Problem__c</picklist>
             <values>
-                <fullName>Deterioration moldy</fullName>
+                <fullName>Agglomeration</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Foreign body</fullName>
+                <fullName>Bad</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Insufficient net content</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Original box shortage</fullName>
+                <fullName>Mould</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1716,19 +1819,27 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Product damage</fullName>
+                <fullName>Product texture or size</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Sensory</fullName>
+                <fullName>Product visual issue</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Size</fullName>
+                <fullName>Quantity missing in original box</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taste%2C Flavour issues</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Usage issues</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Weight issue</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1873,18 +1984,6 @@
         <picklistValues>
             <picklist>CN_Package__c</picklist>
             <values>
-                <fullName>Damaged outer box</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Damaged pre packaging</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Label</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Other</fullName>
                 <default>false</default>
             </values>
@@ -1892,35 +1991,7 @@
         <picklistValues>
             <picklist>CN_Product_Problem__c</picklist>
             <values>
-                <fullName>Deterioration moldy</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Foreign body</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Insufficient net content</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Original box shortage</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Product damage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sensory</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Size</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2081,18 +2152,6 @@
         <picklistValues>
             <picklist>CN_Package__c</picklist>
             <values>
-                <fullName>Damaged outer box</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Damaged pre packaging</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Label</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Other</fullName>
                 <default>false</default>
             </values>
@@ -2100,35 +2159,7 @@
         <picklistValues>
             <picklist>CN_Product_Problem__c</picklist>
             <values>
-                <fullName>Deterioration moldy</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Foreign body</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Insufficient net content</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Original box shortage</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Product damage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Sensory</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Size</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2297,6 +2328,21 @@ NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
         <errorMessage>Please enter the reason for your complaint</errorMessage>
     </validationRules>
     <validationRules>
+        <fullName>CN_Case_Other_Mandatory_Check</fullName>
+        <active>true</active>
+        <description>Mandatory check for Other</description>
+        <errorConditionFormula>AND(
+  OR(
+    INCLUDES(CN_Product_Problem__c, &apos;Other&apos;),
+    INCLUDES(CN_Foreign_Matter__c, &apos;Others&apos;),
+    INCLUDES(CN_Package__c, &apos;Other&apos;)
+  ),
+  ISBLANK(CN_Other__c)
+)</errorConditionFormula>
+        <errorDisplayField>CN_Other__c</errorDisplayField>
+        <errorMessage>Please enter the reason for your complaint</errorMessage>
+    </validationRules>
+    <validationRules>
         <fullName>CN_Check_Complaint_Date</fullName>
         <active>true</active>
         <errorConditionFormula>AND(
@@ -2386,7 +2432,7 @@ NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
   )
 )</errorConditionFormula>
         <errorDisplayField>Status</errorDisplayField>
-        <errorMessage>You are not allowed to change the status manually.</errorMessage>
+        <errorMessage>You are not allowed to change the status manually</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>CN_Complaint_Check_Status_Creation</fullName>
@@ -2456,7 +2502,7 @@ NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
   )
 )</errorConditionFormula>
         <errorDisplayField>Status</errorDisplayField>
-        <errorMessage>You are not allowed to change the status manually.</errorMessage>
+        <errorMessage>You are not allowed to change the status manually</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>CN_Complaint_Prevent_Close_Creator</fullName>
@@ -2565,4 +2611,16 @@ NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
 )</errorConditionFormula>
         <errorMessage>You can&apos;t edit the complaint while status is &quot;Closed&quot;.</errorMessage>
     </validationRules>
+    <webLinks>
+        <fullName>Generate_Excel</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Generate Excel</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>None</url>
+    </webLinks>
 </CustomObject>

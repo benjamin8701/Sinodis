@@ -653,39 +653,27 @@
         <relationshipLabel><!-- Complaints --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Excel File link --></label>
-        <name>CN_Excel_File_link__c</name>
-    </fields>
-    <fields>
-        <label><!-- Excel Generation Time --></label>
-        <name>CN_Excel_Generation_Time__c</name>
-    </fields>
-    <fields>
-        <label>到期日期</label>
-        <name>CN_Expiry_Date__c</name>
-    </fields>
-    <fields>
         <label>异物问题</label>
         <name>CN_Foreign_Matter__c</name>
         <picklistValues>
-            <masterLabel>Insect昆虫</masterLabel>
-            <translation><!-- Insect昆虫 --></translation>
+            <masterLabel>Insect</masterLabel>
+            <translation>昆虫</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Metal金属</masterLabel>
-            <translation><!-- Metal金属 --></translation>
+            <masterLabel>Metal</masterLabel>
+            <translation>金属</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
+            <masterLabel>Others(Please mantion the details)</masterLabel>
+            <translation>其他</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Plastic塑料</masterLabel>
-            <translation><!-- Plastic塑料 --></translation>
+            <masterLabel>Plastic</masterLabel>
+            <translation>塑料</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Protain杂物</masterLabel>
-            <translation><!-- Protain杂物 --></translation>
+            <masterLabel>Protain</masterLabel>
+            <translation>杂物</translation>
         </picklistValues>
     </fields>
     <fields>
@@ -701,52 +689,36 @@
         <name>CN_Is_My_Case__c</name>
     </fields>
     <fields>
-        <label><!-- Latest Excel Generate Time --></label>
-        <name>CN_Latest_Excel_Generate_Time__c</name>
-    </fields>
-    <fields>
-        <label><!-- MG Case ID --></label>
-        <name>CN_MG_Case_Id__c</name>
-    </fields>
-    <fields>
-        <label><!-- Need Send MG Flag --></label>
-        <name>CN_Need_Send_MG_Flag__c</name>
-    </fields>
-    <fields>
-        <label><!-- Old Status records --></label>
-        <name>CN_Old_Status__c</name>
-    </fields>
-    <fields>
-        <label>其他</label>
-        <name>CN_Other__c</name>
-    </fields>
-    <fields>
-        <label>其他问题图片</label>
-        <name>CN_Other_problem_images__c</name>
-    </fields>
-    <fields>
         <label>包装问题</label>
         <name>CN_Package__c</name>
         <picklistValues>
-            <masterLabel>Damaged outer box</masterLabel>
-            <translation><!-- Damaged outer box --></translation>
+            <masterLabel>Deformed carton</masterLabel>
+            <translation>外箱变形</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Damaged pre packaging</masterLabel>
-            <translation><!-- Damaged pre packaging --></translation>
+            <masterLabel>Falulty label attachment</masterLabel>
+            <translation>加贴中文标签错误</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Label</masterLabel>
-            <translation><!-- Label --></translation>
+            <masterLabel>Faluty label</masterLabel>
+            <translation>标签错误</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
+            <masterLabel>Faulty package(hole, tear)</masterLabel>
+            <translation>预包装破损（封口不严、有孔等）</translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <label>包装问题图片</label>
-        <name>CN_Packaging_issue_image__c</name>
+        <picklistValues>
+            <masterLabel>No label</masterLabel>
+            <translation>无标签</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others(Please mantion the details)</masterLabel>
+            <translation>其他</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Package leaking</masterLabel>
+            <translation>漏气，非真空</translation>
+        </picklistValues>
     </fields>
     <fields>
         <label><!-- Please Confirm --></label>
@@ -756,49 +728,45 @@
         <label>产品问题</label>
         <name>CN_Product_Problem__c</name>
         <picklistValues>
-            <masterLabel>Deterioration moldy</masterLabel>
-            <translation><!-- Deterioration moldy --></translation>
+            <masterLabel>Agglomeration</masterLabel>
+            <translation>结块</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Foreign body</masterLabel>
-            <translation><!-- Foreign body --></translation>
+            <masterLabel>Bad</masterLabel>
+            <translation>变质、发臭</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Insufficient net content</masterLabel>
-            <translation><!-- Insufficient net content --></translation>
+            <masterLabel>Mould</masterLabel>
+            <translation>发霉</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Original box shortage</masterLabel>
-            <translation><!-- Original box shortage --></translation>
+            <masterLabel>Others(Please mantion the details)</masterLabel>
+            <translation>其他</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Other</masterLabel>
-            <translation><!-- Other --></translation>
+            <masterLabel>Product texture or size</masterLabel>
+            <translation>产品质地或尺寸</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Product damage</masterLabel>
-            <translation><!-- Product damage --></translation>
+            <masterLabel>Product visual issue</masterLabel>
+            <translation>产品感官问题（如出油出水等）</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Sensory</masterLabel>
-            <translation><!-- Sensory --></translation>
+            <masterLabel>Quantity missing in original box</masterLabel>
+            <translation>原箱短少</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Size</masterLabel>
-            <translation><!-- Size --></translation>
+            <masterLabel>Taste, Flavour issues</masterLabel>
+            <translation>口感，口味</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Usage issues</masterLabel>
-            <translation><!-- Usage issues --></translation>
+            <translation>使用问题</translation>
         </picklistValues>
-    </fields>
-    <fields>
-        <label>产品问题图片</label>
-        <name>CN_Product_issue_image__c</name>
-    </fields>
-    <fields>
-        <label>生产日期</label>
-        <name>CN_Production_Date__c</name>
+        <picklistValues>
+            <masterLabel>Weight issue</masterLabel>
+            <translation>净含量</translation>
+        </picklistValues>
     </fields>
     <fields>
         <label>QA投诉编号</label>

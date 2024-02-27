@@ -499,6 +499,21 @@
                     <default>false</default>
                     <label>WEISS</label>
                 </value>
+                <value>
+                    <fullName>RÉMY COINTREAU GASTRONOMIE</fullName>
+                    <default>false</default>
+                    <label>RÉMY COINTREAU GASTRONOMIE</label>
+                </value>
+                <value>
+                    <fullName>LÉON CHAILLOT</fullName>
+                    <default>false</default>
+                    <label>LÉON CHAILLOT</label>
+                </value>
+                <value>
+                    <fullName>CINCO JOTAS</fullName>
+                    <default>false</default>
+                    <label>CINCO JOTAS</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
         <visibleLines>4</visibleLines>
@@ -1410,6 +1425,18 @@
                 <fullName>tbc</fullName>
                 <default>false</default>
             </values>
+            <value>
+                <fullName>RÉMY COINTREAU GASTRONOMIE</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>LÉON CHAILLOT</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>CINCO JOTAS</fullName>
+                <default>false</default>
+            </value>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Channel__c</picklist>
@@ -1884,6 +1911,18 @@
                 <fullName>tbc</fullName>
                 <default>false</default>
             </values>
+            <value>
+                <fullName>RÉMY COINTREAU GASTRONOMIE</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>LÉON CHAILLOT</fullName>
+                <default>false</default>
+            </value>
+            <value>
+                <fullName>CINCO JOTAS</fullName>
+                <default>false</default>
+            </value>
         </picklistValues>
         <picklistValues>
             <picklist>CN_Channel__c</picklist>
