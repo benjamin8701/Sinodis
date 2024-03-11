@@ -102,6 +102,13 @@
         <label><!-- Sub-Category 1 --></label>
         <name>CN_Sub_Category__c</name>
     </fields>
+    <layouts>
+        <layout>CN Competitor Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <recordTypes>
         <label><!-- CN Competitor --></label>
         <name>CN_Competitor</name>

@@ -133,6 +133,14 @@
     <actionOverrides>
         <actionName>View</actionName>
         <formFactor>Large</formFactor>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>CN_Competitor_Product_Price_for_Customer_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -271,9 +279,10 @@
     </fields>
     <fields>
         <fullName>CN_Date__c</fullName>
-        <externalId>false</externalId>
         <formula>DATEVALUE(CreatedDate)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <defaultValue>TODAY()</defaultValue>
+        <externalId>false</externalId>
         <label>Date</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -446,7 +455,7 @@
         </picklistValues>
     </recordTypes>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>Private</sharingModel>
     <validationRules>
         <fullName>CN_CPP_Check_EA_OR_CTN</fullName>
         <active>true</active>

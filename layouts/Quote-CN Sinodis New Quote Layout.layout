@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <excludeButtons>CreateContract</excludeButtons>
     <excludeButtons>CreatePdf</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -13,23 +14,19 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>CN_Customer_Code__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
                 <field>OpportunityId</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>CN_Effective_Date__c</field>
+                <behavior>Readonly</behavior>
+                <field>AccountId</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>CN_Is_Finance_Notified__c</field>
+                <field>CN_Is_All_Accepted__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>CN_Finance_Notify_DateTime__c</field>
+                <field>CN_Is_All_Signed__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -38,59 +35,15 @@
                 <field>Name</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>AccountId</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CN_Sales_Person__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Required</behavior>
-                <field>ExpirationDate</field>
+                <field>CN_Effective_Date__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CN_PDF_Expiration_Date__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CN_Comment_PDF__c</field>
+                <behavior>Readonly</behavior>
+                <field>GrandTotal</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>SAP Creation Information</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CN_Sync_Status__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CN_Sync_Time__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsTopToBottom</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>false</detailHeading>
-        <editHeading>false</editHeading>
-        <label>Sync Error Message</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CN_Sync_Error_Message__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>OneColumn</style>
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -121,6 +74,10 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>Name</fields>
+        <fields>OpportunityId</fields>
+    </miniLayout>
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
@@ -134,21 +91,41 @@
             <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Quote.CN_Quote_Accept_All_Quote_Items</actionName>
+            <actionName>Quote.CN_Quote_Ready_for_Approval</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Quote.CN_Quote_Deny_All_Quote_Items</actionName>
-            <actionType>QuickAction</actionType>
+            <actionName>Submit</actionName>
+            <actionType>StandardButton</actionType>
             <sortOrder>3</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Quote.CN_Quote_Price_Sync</actionName>
+            <actionName>Quote.CN_Apply</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>4</sortOrder>
         </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Quote.CN_AcceptOrDeny_All_Quote_Items</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>5</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>CreatePdf</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Quote.CN_Send_To_SAP</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>7</sortOrder>
+        </platformActionListItems>
     </platformActionList>
+    <quickActionList>
+        <quickActionListItems>
+            <quickActionName>Quote.CN_Notify_Finance</quickActionName>
+        </quickActionListItems>
+    </quickActionList>
     <relatedContent>
         <relatedContentItems>
             <layoutItem>
@@ -170,10 +147,6 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
-        <excludeButtons>AddQuoteLine</excludeButtons>
-        <excludeButtons>MultiAdd</excludeButtons>
-        <excludeButtons>Sort</excludeButtons>
-        <excludeButtons>SortQuoteLines</excludeButtons>
         <fields>QUOTE_LI.PRODUCT2</fields>
         <fields>CN_SKU_Description_CN__c</fields>
         <fields>CN_List_Price_VAT__c</fields>
@@ -187,14 +160,12 @@
     </relatedLists>
     <relatedLists>
         <fields>QUOTE_DOC.NAME</fields>
+        <fields>QUOTE_DOC.DISCOUNT</fields>
+        <fields>QUOTE_DOC.GRANDTOTAL</fields>
         <fields>CreatedBy</fields>
         <relatedList>RelatedQuoteDocumentList</relatedList>
     </relatedLists>
     <relatedLists>
-        <relatedList>RelatedFileList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <excludeButtons>MassChangeOwner</excludeButtons>
         <fields>NAME</fields>
         <fields>CN_Promotion_Name__c</fields>
         <fields>CN_Promotion_Member__c</fields>
@@ -220,7 +191,6 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>CN_Account__c</fields>
         <fields>CN_Competitor_Product_Price_for_Customer__c</fields>
         <relatedList>CN_CPPC_Quote__c.CN_Quote__c</relatedList>
     </relatedLists>
@@ -228,7 +198,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h5h0000091vcD</masterLabel>
+        <masterLabel>00h1y000001WRks</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

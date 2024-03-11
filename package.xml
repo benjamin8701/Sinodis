@@ -151,6 +151,8 @@
         <members>CN_Contract_Populate_Fields_Handler</members>
         <members>CN_Contract_Populate_Fields_Handler_Test</members>
         <members>CN_CP_Delete_And_Edit_Handler</members>
+        <members>CN_CPP_Relation_CPPC_Oppty_Handler</members>
+        <members>CN_CPP_Relation_CPPC_Quote_Handler</members>
         <members>CN_Customer_Status_Trend_Batch</members>
         <members>CN_Customer_Status_Trend_SCH</members>
         <members>CN_Customer_Status_Trend_Test</members>
@@ -188,6 +190,7 @@
         <members>CN_MessagingHelperClass_Test</members>
         <members>CN_MessagingSession_LCC_SalesOrder</members>
         <members>CN_Opportunity_Populate_Fields_Handler</members>
+        <members>CN_Oppty_Relation_Oppty_CPPC_Handler</members>
         <members>CN_OrderTreeUpsert_WS</members>
         <members>CN_OrderTreeUpsert_WS_Test</members>
         <members>CN_OrderTreeUpsert_WS_Test</members>
@@ -230,6 +233,7 @@
         <members>CN_Quote_Populate_Fields_Handler_Test</members>
         <members>CN_Quote_Prevent_Delete_Handler</members>
         <members>CN_Quote_Ready_Validation_Handler</members>
+        <members>CN_Quote_Relation_Quote_CPPC_Handler</members>
         <members>CN_Quote_Send_To_SAP_LC_Ctrl</members>
         <members>CN_Quote_Send_To_SAP_LC_Ctrl_Test</members>
         <members>CN_Quote_Sharing_Handler_Handler</members>
@@ -598,6 +602,7 @@
         <members>CN_Chefs_Assigned__c-Chefs Assigned Layout</members>
         <members>CN_City__c-City Layout</members>
         <members>CN_Comment__c-CN Comment Layout</members>
+        <members>CN_Competitor_Product_Price_to_Customer__c-CN Competitor Price to Customer Layout</members>
         <members>CN_Contract__c-CN Sinodis Contract Layout</members>
         <members>CN_Credit_Term_Application__c-CN Credit Term Application Layout</members>
         <members>CN_Demo_Report_Account__c-Demo Report%28Account%29 Layout</members>
@@ -651,9 +656,10 @@
         <members>Pricebook2-CN Price Book Layout</members>
         <members>PricebookEntry-CN Price Book Entry Layout</members>
         <members>Product2-CN Product Layout</members>
-        <members>Product2-CN Product Layout</members>
+        <members>Quote-CN Sinodis New Quote Layout</members>
         <members>Quote-CN Sinodis Quote Layout</members>
         <members>Quote-CN Sinodis Quote Layout - Finance MDM</members>
+        <members>Quote-Quote Layout</members>
         <members>QuoteLineItem-CN Sinodis Quote Line Item Layout</members>
         <members>QuoteLineItem-CN Sinodis Quote Line Item Layout -  Finance MDM</members>
         <members>Task-CN Sinodis Task Layout</members>

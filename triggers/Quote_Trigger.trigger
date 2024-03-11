@@ -35,6 +35,11 @@ trigger Quote_Trigger on Quote (before insert, after insert, before update, afte
             if(Constants.CN_QUOTE_SHARING_HANDLER_TRIGGER_ON) {
                 triggersObj.bind(Triggers.Evt.AfterUpdate, new CN_Quote_Sharing_Handler_Handler());
             }
+             //Zhang Zhihao added the association between the quotation and the customer's competitive products on 2024/2/23
+             if(Constants.CN_QUOTE_RELATION_QUOTE_CPPC_HANDLER_TRIGGER_ON){
+                triggersObj.bind(Triggers.Evt.AfterInsert,  new CN_Quote_Relation_Quote_CPPC_Handler());
+            }
+            //Zhang Zhihao added the association between the quotation and the customer's competitive products on 2024/2/23
         }
         triggersObj.execute(); 
     }

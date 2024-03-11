@@ -372,6 +372,27 @@
         <value>Are you sure to send this {0} to SAP?</value>
     </labels>
     <labels>
+        <fullName>CN_Competitor_Product_Price_Channel_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Competitor_Product_Price_Channel_Label</shortDescription>
+        <value>Channel</value>
+    </labels>
+    <labels>
+        <fullName>CN_Competitor_Product_Price_Price_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Competitor_Product_Price_Price_Label</shortDescription>
+        <value>Reference price</value>
+    </labels>
+    <labels>
+        <fullName>CN_Competitor_Product_Price_Title</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Competitor_Product_Price_Title</shortDescription>
+        <value>Competitor Product Price</value>
+    </labels>
+    <labels>
         <fullName>CN_CR_AT_LEAST_ONE_FIELD_CHANGE</fullName>
         <language>en_US</language>
         <protected>false</protected>

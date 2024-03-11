@@ -87,7 +87,7 @@
         <name>CN_SKU_Name__c</name>
     </fields>
     <fields>
-        <label>规范</label>
+        <label>规格</label>
         <name>CN_Specification__c</name>
     </fields>
     <fields>
@@ -98,6 +98,13 @@
         <label>子类别 1</label>
         <name>CN_Sub_Category__c</name>
     </fields>
+    <layouts>
+        <layout>CN Competitor Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
     <nameFieldLabel>竞品名称</nameFieldLabel>
     <recordTypes>
         <label><!-- CN Competitor --></label>

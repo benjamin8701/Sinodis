@@ -5191,6 +5191,21 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CN_CPPC_Oppty__c.CN_Account__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_CPPC_Oppty__c.CN_Competitor_Product_Price_for_Customer__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CN_CPPC_Oppty__c.CN_Opportunity__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CN_Credit_Term_Application__c.CN_Account_OwnerId__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -11893,6 +11908,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>CN_Credit_Term_Application__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>CN_CPPC_Oppty__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
