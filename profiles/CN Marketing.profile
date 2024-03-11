@@ -450,6 +450,10 @@
         <apexClass>CN_Chefs_Assigned_Prevent_Delete_Handler</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+	<classAccesses>
+        <apexClass>CN_Competitor_Price_Controller</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <classAccesses>
         <apexClass>CN_Complaint_Canceled_LC_Ctrl</apexClass>
         <enabled>true</enabled>
@@ -4750,17 +4754,17 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CN_Competitor_Product_Price_to_Customer__c.CN_Account_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CN_Competitor_Product_Price_to_Customer__c.CN_Account_Plant__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CN_Competitor_Product_Price_to_Customer__c.CN_CTN__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4770,12 +4774,12 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CN_Competitor_Product_Price_to_Customer__c.CN_Competitor__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CN_Competitor_Product_Price_to_Customer__c.CN_Customer_Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4790,12 +4794,12 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CN_Competitor_Product_Price_to_Customer__c.CN_EA__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CN_Competitor_Product_Price_to_Customer__c.CN_Opportuntiy__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -4815,7 +4819,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
+        <editable>true</editable>
         <field>CN_Competitor_Product_Price_to_Customer__c.CN_Region__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -11205,18 +11209,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
-        <layout>Account-CN Account Direct Read only</layout>
-        <recordType>Account.CN_Approved_Direct</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Account-CN Account Direct Read only</layout>
-        <recordType>Account.CN_Edit_Direct</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Account-CN Account Direct Read only</layout>
-        <recordType>Account.CN_New_Direct</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Account-CN Account Indirect Read only</layout>
         <recordType>Account.CN_Edit_Indirect</recordType>
     </layoutAssignments>
@@ -11398,6 +11390,16 @@
     <layoutAssignments>
         <layout>CN_Comment__c-CN Comment Layout</layout>
         <recordType>CN_Comment__c.CN_Comment</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Competitor_Product__c-CN Competitor Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Competitor_Product_Price_to_Customer__c-CN Competitor Price to Customer Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>CN_Competitor_Product_Price_to_Customer__c-CN Competitor Price to Customer Layout</layout>
+        <recordType>CN_Competitor_Product_Price_to_Customer__c.CN_Competitor_Price_to_Customer_Layout</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CN_Contract__c-CN Sinodis Contract Layout</layout>
@@ -11707,6 +11709,8 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>User-User Layout</layout>
+        <layout>CN_Competitor_Product__c-CN Competitor Layout</layout>
+        <recordType>CN_Competitor_Product__c.CN_Competitor</recordType>
     </layoutAssignments>
     <loginIpRanges>
         <endAddress>255.255.255.255</endAddress>
@@ -12290,6 +12294,16 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
+        <recordType>CN_Competitor_Product_Price_to_Customer__c.CN_Competitor_Price_to_Customer_Layout</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>CN_Competitor_Product__c.CN_Competitor</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
         <recordType>CN_Comment__c.CN_Comment</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -12818,6 +12832,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>SendCustomNotifications</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SendExternalEmailAvailable</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
