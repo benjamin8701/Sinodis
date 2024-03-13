@@ -298,6 +298,28 @@ IF( ISPICKVAL(Status, &apos;Error&apos;), &apos;异常&apos;,
         </sharedTo>
     </listViews>
     <listViews>
+        <fullName>All_Message_Session</fullName>
+        <columns>Owner</columns>
+        <columns>Name</columns>
+        <columns>MessagingChannel</columns>
+        <columns>MessagingEndUser</columns>
+        <columns>Status</columns>
+        <columns>StartTime</columns>
+        <columns>EndTime</columns>
+        <columns>PlatformType</columns>
+        <filterScope>Mine</filterScope>
+        <label>All Message Session</label>
+    </listViews>
+    <listViews>
+        <fullName>CN_Messaging_QU_Default_MessagingSession</fullName>
+        <filterScope>Queue</filterScope>
+        <label>CN_Messaging_QU_Default</label>
+        <queue>CN_Messaging_QU_Default</queue>
+        <sharedTo>
+            <roleAndSubordinates>CN_CS</roleAndSubordinates>
+        </sharedTo>
+    </listViews>
+    <listViews>
         <fullName>Messaging_DefaultQueue_MessagingSession</fullName>
         <columns>Name</columns>
         <columns>EndUserAccount</columns>

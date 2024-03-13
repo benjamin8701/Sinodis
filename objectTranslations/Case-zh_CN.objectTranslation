@@ -653,6 +653,18 @@
         <relationshipLabel><!-- Complaints --></relationshipLabel>
     </fields>
     <fields>
+        <label><!-- Excel File link --></label>
+        <name>CN_Excel_File_link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Excel Generation Time --></label>
+        <name>CN_Excel_Generation_Time__c</name>
+    </fields>
+    <fields>
+        <label>到期日期</label>
+        <name>CN_Expiry_Date__c</name>
+    </fields>
+    <fields>
         <label>异物问题</label>
         <name>CN_Foreign_Matter__c</name>
         <picklistValues>
@@ -685,40 +697,60 @@
         <name>CN_If_Need_Share_To_Creator__c</name>
     </fields>
     <fields>
+        <label><!-- If User In Group --></label>
+        <name>CN_If_User_In_Group__c</name>
+    </fields>
+    <fields>
         <label><!-- Is My Case --></label>
         <name>CN_Is_My_Case__c</name>
+    </fields>
+    <fields>
+        <label><!-- Latest Excel Generate Time --></label>
+        <name>CN_Latest_Excel_Generate_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- MG Case ID --></label>
+        <name>CN_MG_Case_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Need Send MG Flag --></label>
+        <name>CN_Need_Send_MG_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Status records --></label>
+        <name>CN_Old_Status__c</name>
+    </fields>
+    <fields>
+        <label>其他 （描述）</label>
+        <name>CN_Other__c</name>
+    </fields>
+    <fields>
+        <label>其他问题图片</label>
+        <name>CN_Other_problem_images__c</name>
     </fields>
     <fields>
         <label>包装问题</label>
         <name>CN_Package__c</name>
         <picklistValues>
-            <masterLabel>Deformed carton</masterLabel>
-            <translation>外箱变形</translation>
+            <masterLabel>Damaged outer box</masterLabel>
+            <translation>外箱破损</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Falulty label attachment</masterLabel>
-            <translation>加贴中文标签错误</translation>
+            <masterLabel>Damaged pre packaging</masterLabel>
+            <translation>预包装破损(封口不严、有孔、漏气等)</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Faluty label</masterLabel>
-            <translation>标签错误</translation>
+            <masterLabel>Label</masterLabel>
+            <translation>标签</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Faulty package(hole, tear)</masterLabel>
-            <translation>预包装破损（封口不严、有孔等）</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>No label</masterLabel>
-            <translation>无标签</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Others(Please mantion the details)</masterLabel>
+            <masterLabel>Other</masterLabel>
             <translation>其他</translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>Package leaking</masterLabel>
-            <translation>漏气，非真空</translation>
-        </picklistValues>
+    </fields>
+    <fields>
+        <label>包装问题图片</label>
+        <name>CN_Packaging_issue_image__c</name>
     </fields>
     <fields>
         <label><!-- Please Confirm --></label>
@@ -728,45 +760,49 @@
         <label>产品问题</label>
         <name>CN_Product_Problem__c</name>
         <picklistValues>
-            <masterLabel>Agglomeration</masterLabel>
-            <translation>结块</translation>
+            <masterLabel>Deterioration moldy</masterLabel>
+            <translation>变质，发霉</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Bad</masterLabel>
-            <translation>变质、发臭</translation>
+            <masterLabel>Foreign body</masterLabel>
+            <translation>异物</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Mould</masterLabel>
-            <translation>发霉</translation>
+            <masterLabel>Insufficient net content</masterLabel>
+            <translation>净含量不足</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Others(Please mantion the details)</masterLabel>
+            <masterLabel>Original box shortage</masterLabel>
+            <translation>原箱少货</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
             <translation>其他</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Product texture or size</masterLabel>
-            <translation>产品质地或尺寸</translation>
+            <masterLabel>Product damage</masterLabel>
+            <translation>产品破损</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Product visual issue</masterLabel>
-            <translation>产品感官问题（如出油出水等）</translation>
+            <masterLabel>Sensory</masterLabel>
+            <translation>感官(如出油出水、结块，风味等)</translation>
         </picklistValues>
         <picklistValues>
-            <masterLabel>Quantity missing in original box</masterLabel>
-            <translation>原箱短少</translation>
-        </picklistValues>
-        <picklistValues>
-            <masterLabel>Taste, Flavour issues</masterLabel>
-            <translation>口感，口味</translation>
+            <masterLabel>Size</masterLabel>
+            <translation>尺寸</translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Usage issues</masterLabel>
             <translation>使用问题</translation>
         </picklistValues>
-        <picklistValues>
-            <masterLabel>Weight issue</masterLabel>
-            <translation>净含量</translation>
-        </picklistValues>
+    </fields>
+    <fields>
+        <label>产品问题图片</label>
+        <name>CN_Product_issue_image__c</name>
+    </fields>
+    <fields>
+        <label>生产日期</label>
+        <name>CN_Production_Date__c</name>
     </fields>
     <fields>
         <label>QA投诉编号</label>
@@ -850,6 +886,10 @@
         <name>CN_Resolved_Date__c</name>
     </fields>
     <fields>
+        <label><!-- CN Roles In Groups --></label>
+        <name>CN_Roles_In_Groups__c</name>
+    </fields>
+    <fields>
         <label>SAP产品批次号</label>
         <name>CN_SAP_Batch_Number__c</name>
     </fields>
@@ -915,6 +955,10 @@
         <name>CN_Suggestion__c</name>
     </fields>
     <fields>
+        <label><!-- User In Groups --></label>
+        <name>CN_User_In_Groups__c</name>
+    </fields>
+    <fields>
         <label>终端客户（MG）</label>
         <name>CN_WS_Account_Name__c</name>
     </fields>
@@ -954,6 +998,25 @@
         <sections>
             <label>服务反馈</label>
             <section>Services FeedBack</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CN product Complaint Layout</layout>
+        <sections>
+            <label>产品投诉反馈表</label>
+            <section>Customer Complaint Reclamation 产品投诉反馈表</section>
+        </sections>
+        <sections>
+            <label>客户信息</label>
+            <section>Customer Information</section>
+        </sections>
+        <sections>
+            <label>产品信息</label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label>QA-C/S 跟进信息</label>
+            <section>QA-C/S Follow-up</section>
         </sections>
     </layouts>
     <quickActions>
@@ -1020,6 +1083,10 @@
         <name>CN_Case_Other_Mandatory_Check</name>
     </validationRules>
     <validationRules>
+        <errorMessage>请输入您投诉的原因</errorMessage>
+        <name>CN_Case_Product_Package_Check</name>
+    </validationRules>
+    <validationRules>
         <errorMessage>投诉时间不能晚于今天。</errorMessage>
         <name>CN_Check_Complaint_Date</name>
     </validationRules>
@@ -1030,6 +1097,10 @@
     <validationRules>
         <errorMessage>您不能将解决结案原因设置为&quot;Customer Service&quot;。</errorMessage>
         <name>CN_Complaint_Check_Reason_QA</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>您不能将SKU数量设置为0。</errorMessage>
+        <name>CN_Complaint_Check_SKU_Quantity</name>
     </validationRules>
     <validationRules>
         <errorMessage>您不能手动更改状态。</errorMessage>

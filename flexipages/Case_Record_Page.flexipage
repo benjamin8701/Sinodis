@@ -15,16 +15,31 @@
                         <valueListItems>
                             <value>Case.CN_Submit_Complaint</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR 4) AND 2 AND 3</booleanFilter>
+                                <booleanFilter>(1 OR 4) AND (2 OR 5) AND 3</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Status}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>New</rightValue>
                                 </criteria>
                                 <criteria>
-                                    <leftValue>{!Record.CN_Is_My_Case__c}</leftValue>
+                                    <leftValue>{!$User.Profile.Name}</leftValue>
+                                    <operator>CONTAINS</operator>
+                                    <rightValue>CN C/S</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.RecordType.Name}</leftValue>
                                     <operator>EQUAL</operator>
-                                    <rightValue>true</rightValue>
+                                    <rightValue>CN_Complaint</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Status}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Rejected</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!$User.Profile.Name}</leftValue>
+                                    <operator>CONTAINS</operator>
+                                    <rightValue>CN Sales</rightValue>
                                 </criteria>
                                 <criteria>
                                     <leftValue>{!Record.RecordType.Name}</leftValue>
@@ -62,7 +77,7 @@
                         <valueListItems>
                             <value>MassAccept</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR ((2 OR 5) AND 3)  )AND 4</booleanFilter>
+                                <booleanFilter>((1 AND 6) OR ((2 OR 5) AND 3)  )AND 4</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Status}</leftValue>
                                     <operator>EQUAL</operator>
@@ -88,12 +103,17 @@
                                     <operator>EQUAL</operator>
                                     <rightValue>Rejected</rightValue>
                                 </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.CN_If_User_In_Group__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>true</rightValue>
+                                </criteria>
                             </visibilityRule>
                         </valueListItems>
                         <valueListItems>
                             <value>Case.CN_Complaint_Rejected</value>
                             <visibilityRule>
-                                <booleanFilter>(1 AND NOT 2) OR (2 AND 3) AND 4</booleanFilter>
+                                <booleanFilter>(1 AND NOT 2  AND 5) OR (2 AND 3) AND 4</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Status}</leftValue>
                                     <operator>EQUAL</operator>
@@ -113,6 +133,11 @@
                                     <leftValue>{!Record.RecordType.DeveloperName}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>CN_Complaint</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.CN_If_User_In_Group__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>true</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -143,6 +168,17 @@
                                 <criteria>
                                     <leftValue>{!Record.Status}</leftValue>
                                     <operator>EQUAL</operator>
+                                    <rightValue>Assigned</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Case.CN_Complaint_Closed</value>
+                            <visibilityRule>
+                                <booleanFilter>(1 OR 2 )AND 3</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.Status}</leftValue>
+                                    <operator>EQUAL</operator>
                                     <rightValue>Resolved</rightValue>
                                 </criteria>
                                 <criteria>
@@ -156,6 +192,18 @@
                                     <rightValue>CN C/S</rightValue>
                                 </criteria>
                             </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Share</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Case.CN_Close_Case</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Share</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Case.CN_Generate_Excel</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -230,6 +278,22 @@
                 </componentInstanceProperties>
                 <componentName>force:relatedListContainer</componentName>
                 <identifier>force_relatedListContainer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>showLegacyActivityComposer</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentName>runtime_sales_activities:activityPanel</componentName>
+                <identifier>runtime_sales_activities_activityPanel</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>forceChatter:recordFeedContainer</componentName>
+                <identifier>forceChatter_recordFeedContainer</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

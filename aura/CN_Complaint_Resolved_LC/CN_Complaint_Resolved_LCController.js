@@ -1,11 +1,13 @@
 ({
 	doInit : function(component, event, helper) {
+        //System.debug('recordId==>'+recordId);
         let getInitInfoAction = component.get("c.getInitInfo");
         getInitInfoAction.setParams({
             "recordId" : component.get("v.recordId")
         });
         let getInitInfoActionInfoPromise = helper.callServerAction(component, getInitInfoAction);
         getInitInfoActionInfoPromise.then(function(_returnValue){
+            //System.debug('_returnValue===>'+_returnValue);
             var options_Reason = _returnValue["options_Reason"];
             var fieldMap_Reason = [];
             for(var key in options_Reason){
@@ -68,6 +70,15 @@
 				console.log(errorMsg);
 				if(errorMsg != null && errorMsg != undefined && errorMsg != {} && errorMsg != ""){
 					component.set("v.errorMessage", errorMsg);
+                    //add by He Peng errorMsg notify
+                    var toastEvent = $A.get("e.force:showToast");
+                    toastEvent.setParams({
+                        "title": "Error!",
+                        "type":"error",
+                        "mode":"sticky",
+                        "message": errorMsg
+                    });
+                    toastEvent.fire();
 				}else{
 					var toastEvent = $A.get("e.force:showToast");
 					toastEvent.setParams({

@@ -184,6 +184,22 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>Case_Record_Page</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>Case_Record_Page</content>
         <formFactor>Large</formFactor>
@@ -590,7 +606,7 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Time</type>
+        <type>DateTime</type>
     </fields>
     <fields>
         <fullName>CN_Expiry_Date__c</fullName>
@@ -669,6 +685,17 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>CN_If_User_In_Group__c</fullName>
+        <externalId>false</externalId>
+        <formula>CONTAINS( CN_User_In_Groups__c , $User.Id)||
+( $UserRole.Name!=null &amp;&amp;CONTAINS( CN_Roles_In_Groups__c , $UserRole.Name ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>If User In Group</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>CN_Is_My_Case__c</fullName>
         <externalId>false</externalId>
         <formula>OR(
@@ -707,6 +734,7 @@
     </fields>
     <fields>
         <fullName>CN_Need_Send_MG_Flag__c</fullName>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
         <label>Need Send MG Flag</label>
         <precision>4</precision>
@@ -817,6 +845,53 @@
                     <default>false</default>
                     <isActive>false</isActive>
                     <label>Label</label>
+                    <label>Damaged pre packaging</label>
+                </value>
+                <value>
+                    <fullName>Damaged outer box</fullName>
+                    <default>false</default>
+                    <label>Damaged outer box</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Deformed carton</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Deformed carton</label>
+                </value>
+                <value>
+                    <fullName>Faulty label</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Faulty label</label>
+                </value>
+                <value>
+                    <fullName>Faulty label attachment</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Faulty label attachment</label>
+                </value>
+                <value>
+                    <fullName>Faulty package</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Faulty package(hole, tear)</label>
+                </value>
+                <value>
+                    <fullName>No label</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>No label</label>
+                </value>
+                <value>
+                    <fullName>Package leaking</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Package leaking</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -888,6 +963,14 @@
                     <fullName>Product visual issue</fullName>
                     <default>false</default>
                     <label>Product visual issue</label>
+                    <fullName>Deterioration moldy</fullName>
+                    <default>false</default>
+                    <label>Deterioration moldy</label>
+                </value>
+                <value>
+                    <fullName>Product damage</fullName>
+                    <default>false</default>
+                    <label>Product damage</label>
                 </value>
                 <value>
                     <fullName>Usage issues</fullName>
@@ -950,6 +1033,83 @@
                     <default>false</default>
                     <isActive>false</isActive>
                     <label>Size</label>
+                </value>
+                    <fullName>Foreign body</fullName>
+                    <default>false</default>
+                    <label>Foreign body</label>
+                </value>
+                <value>
+                    <fullName>Original box shortage</fullName>
+                    <default>false</default>
+                    <label>Original box shortage</label>
+                </value>
+                <value>
+                    <fullName>Size</fullName>
+                    <default>false</default>
+                    <label>Size</label>
+                </value>
+                <value>
+                    <fullName>Insufficient net content</fullName>
+                    <default>false</default>
+                    <label>Insufficient net content</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Sensory</fullName>
+                    <default>false</default>
+                    <label>Sensory</label>
+                </value>
+                <value>
+                    <fullName>Agglomeration</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Agglomeration</label>
+                </value>
+                <value>
+                    <fullName>Bad</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Bad</label>
+                </value>
+                <value>
+                    <fullName>Mould</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Mould</label>
+                </value>
+                <value>
+                    <fullName>Product texture or size</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Product texture or size</label>
+                </value>
+                <value>
+                    <fullName>Product visual issue</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Product visual issue</label>
+                </value>
+                <value>
+                    <fullName>Quantity missing in original box</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Quantity missing in original box</label>
+                </value>
+                <value>
+                    <fullName>Taste, Flavour issues</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Taste, Flavour issues</label>
+                </value>
+                <value>
+                    <fullName>Weight issue</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Weight issue</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1171,6 +1331,18 @@
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>CN_Roles_In_Groups__c</fullName>
+        <externalId>false</externalId>
+        <label>CN Roles In Groups</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CN_SAP_Batch_Number__c</fullName>
         <externalId>false</externalId>
         <label>SAP Batch Number</label>
@@ -1351,6 +1523,18 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>CN_User_In_Groups__c</fullName>
+        <externalId>false</externalId>
+        <label>User In Groups</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>CN_WS_Account_Name__c</fullName>
@@ -1776,6 +1960,10 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Damaged pre packaging</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Faulty label attachment</fullName>
                 <default>false</default>
             </values>
@@ -1789,6 +1977,11 @@
             </values>
             <values>
                 <fullName>No label</fullName>
+                <fullName>Damaged outer box</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Label</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1812,6 +2005,19 @@
             </values>
             <values>
                 <fullName>Mould</fullName>
+                <fullName>Deterioration moldy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foreign body</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insufficient net content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Original box shortage</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1831,7 +2037,16 @@
                 <default>false</default>
             </values>
             <values>
+                <fullName>Sensory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Size</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Taste%2C Flavour issues</fullName>
+                <fullName>Product damage</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -1929,7 +2144,27 @@
         <picklistValues>
             <picklist>Reason</picklist>
             <values>
+                <fullName>Logistics Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Order Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
                 <fullName>Quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refund Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return Issue</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Issue</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -2101,7 +2336,7 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Service Issues</fullName>
+                <fullName>Service Issue</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -2328,19 +2563,13 @@ NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
         <errorMessage>Please enter the reason for your complaint</errorMessage>
     </validationRules>
     <validationRules>
-        <fullName>CN_Case_Other_Mandatory_Check</fullName>
+        <fullName>CN_Case_Product_Package_Check</fullName>
         <active>true</active>
-        <description>Mandatory check for Other</description>
-        <errorConditionFormula>AND(
-  OR(
-    INCLUDES(CN_Product_Problem__c, &apos;Other&apos;),
-    INCLUDES(CN_Foreign_Matter__c, &apos;Others&apos;),
-    INCLUDES(CN_Package__c, &apos;Other&apos;)
-  ),
-  ISBLANK(CN_Other__c)
-)</errorConditionFormula>
-        <errorDisplayField>CN_Other__c</errorDisplayField>
-        <errorMessage>Please enter the reason for your complaint</errorMessage>
+        <errorConditionFormula>AND($Setup.Trigger_Switcher_Setting__c.EnableValidationRule__c,
+ RecordType.Name =&apos;CN_Complaint&apos;,
+ISBLANK(CN_Package__c),
+ISBLANK( CN_Product_Problem__c ) )</errorConditionFormula>
+        <errorMessage>Please enter the reason for your complaint.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>CN_Check_Complaint_Date</fullName>
@@ -2366,10 +2595,15 @@ NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
   NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
   BEGINS(RecordType.DeveloperName,&quot;CN&quot;),
   $Profile.Name = &quot;CN C/S&quot;,
-  ISPICKVAL(CN_Resolve_Reason__c, &quot;Brand Quality&quot;)
+  OR(
+  ISPICKVAL(CN_Resolve_Reason__c, &quot;Brand Quality&quot;),
+  ISPICKVAL(CN_Resolve_Reason__c, &quot;Customer&quot;)
+  ),
+  ISPICKVAL(Status,&quot;Resolved&quot;)
+
 )</errorConditionFormula>
         <errorDisplayField>CN_Resolve_Reason__c</errorDisplayField>
-        <errorMessage>You can&apos;t set the Resolve Reason as &quot;Brand Quality&quot;.</errorMessage>
+        <errorMessage>You can&apos;t set the Resolve Reason as &quot;Brand Quality&quot; or &quot;Customer&quot;.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>CN_Complaint_Check_Reason_QA</fullName>
@@ -2383,6 +2617,15 @@ NOT(IF($Profile.Name = &quot;System Integration&quot;, TRUE, FALSE)),
 )</errorConditionFormula>
         <errorDisplayField>CN_Resolve_Reason__c</errorDisplayField>
         <errorMessage>You can&apos;t set the Resolve Reason as &quot;Customer Service&quot;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CN_Complaint_Check_SKU_Quantity</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND($Setup.Trigger_Switcher_Setting__c.EnableValidationRule__c,
+RecordType.Name =&apos;CN_Complaint&apos;,
+CN_SKU_Quantity__c = 0
+)</errorConditionFormula>
+        <errorMessage>You can&apos;t set the SKU quantity to 0.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>CN_Complaint_Check_Status_Accepted</fullName>

@@ -166,6 +166,14 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>CN_Expiry_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expiry Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
         <fullName>CN_Production_Date__c</fullName>
         <externalId>false</externalId>
         <label>Production Date</label>
@@ -179,7 +187,7 @@
         <label>Number</label>
         <precision>18</precision>
         <required>false</required>
-        <scale>0</scale>
+        <scale>2</scale>
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
@@ -266,6 +274,15 @@
         </picklistValues>
     </recordTypes>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>CN_Complaint_Product_Check_Number</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+$Setup.Trigger_Switcher_Setting__c.EnableValidationRule__c,
+CN_Return_Good_Number__c  = 0
+)</errorConditionFormula>
+        <errorMessage>You can&apos;t set the Number as 0.</errorMessage>
+    </validationRules>
     <visibility>Public</visibility>
 </CustomObject>

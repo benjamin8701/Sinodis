@@ -46,10 +46,9 @@ public without sharing class CN_Complaint_Recall_LC_Ctrl {
             caseToUpdate.CN_Recall_Button__c = true;
             caseToUpdate.CN_Recall_Date__c = Datetime.now();
             //Add by Zhang Zhihao 2023/1/14  Assign the submitter
-            //Add by He Peng recall to cs queue
+            //Add by He Peng recall to cs queue, new not send
             caseToUpdate.OwnerId = CSQueueId;
-            //caseToUpdate.OwnerId = caseToUpdate.CreatedById;
-            //Add by Zhang Zhihao 2023/1/14  Assign the submitter
+            caseToUpdate.CN_Need_Send_MG_Flag__c = 0;
         }else{
             throw new AuraHandledException(System.Label.CN_Complaint_Can_Not_Recall);
         }

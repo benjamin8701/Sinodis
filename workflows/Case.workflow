@@ -46,12 +46,24 @@
     </alerts>
     <alerts>
         <fullName>CN_Complaint_Resolve_Notification_CS</fullName>
+        <ccEmails>cs-complaint@sinodis.com.cn</ccEmails>
         <ccEmails>cs-complaint@sinodis.com.cn.inactive</ccEmails>
         <ccEmails>dezheng_test_01@outlook.com</ccEmails>
         <description>CN_Complaint_Resolve_Notification_CS</description>
         <protected>false</protected>
         <senderType>CurrentUser</senderType>
         <template>CN_Email_Folder/CN_Complaint_Resolved_Notification_CS</template>
+    </alerts>
+    <alerts>
+        <fullName>CN_Compliant_Notification_Finance</fullName>
+        <ccEmails>cs.return@savencia.onmicrosoft.com</ccEmails>
+        <description>CN_Compliant_Notification_Finance</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>CN_Email_Folder/CN_Complaint_Assign_Notification</template>
     </alerts>
     <alerts>
         <fullName>CN_Compliant_Rejected_Notification</fullName>
@@ -78,6 +90,7 @@
     </alerts>
     <alerts>
         <fullName>CN_Compliant_Resolved_Notification_QA</fullName>
+        <ccEmails>cs.return@savencia.onmicrosoft.com</ccEmails>
         <ccEmails>Sinodis.Salesforce@savencia.onmicrosoft.com</ccEmails>
         <description>CN_Compliant_Resolved_Notification_QA</description>
         <protected>false</protected>
@@ -97,6 +110,17 @@
     </fieldUpdates>
     <fieldUpdates>
         <fullName>CN_Complaint_Assign_To_Food_Quality</fullName>
+        <field>OwnerId</field>
+        <lookupValue>CN_Food_Quality</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>CN_Complaint_Assign_To_Food_Quality</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CN_Complaint_Assign_To_QA</fullName>
         <field>OwnerId</field>
         <lookupValue>CN_Food_Quality</lookupValue>
         <lookupValueType>Queue</lookupValueType>
@@ -217,7 +241,25 @@
             <type>FieldUpdate</type>
         </actions>
         <active>true</active>
-        <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,    RecordType.DeveloperName = &apos;CN_Complaint&apos;,   OR(     ISPICKVAL(PRIORVALUE(Status) ,&apos;New&apos;),     ISPICKVAL(PRIORVALUE(Status) , &apos;Rejected&apos;)   ),   ISPICKVAL( Status, &apos;Assigned&apos;),   NOT(ISPICKVAL(Reason , &apos;Customer Service&apos;)) )</formula>
+        <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,    RecordType.DeveloperName = &apos;CN_Complaint&apos;,  
+ISPICKVAL( Origin ,&apos;E-Commerce&apos;),
+OR(     ISPICKVAL(PRIORVALUE(Status) ,&apos;New&apos;),     ISPICKVAL(PRIORVALUE(Status) , &apos;Rejected&apos;)   ),   ISPICKVAL( Status, &apos;Assigned&apos;),   NOT(ISPICKVAL(Reason , &apos;Service Issues&apos;)) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CN_Complaint_Assign_To_QA</fullName>
+        <actions>
+            <name>CN_Complaint_Assign_To_Queue_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>CN_Complaint_Assign_To_Food_Quality</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,    RecordType.DeveloperName = &apos;CN_Complaint&apos;,  
+NOT(ISPICKVAL( Origin ,&apos;E-Commerce&apos;)),
+OR(     ISPICKVAL(PRIORVALUE(Status) ,&apos;New&apos;),     ISPICKVAL(PRIORVALUE(Status) , &apos;Rejected&apos;)   ),   ISPICKVAL( Status, &apos;Assigned&apos;),   NOT(ISPICKVAL(Reason , &apos;Service Issues&apos;)) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>

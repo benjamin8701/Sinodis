@@ -666,6 +666,13 @@
         <value>You are not allowed to delete the complaint.</value>
     </labels>
     <labels>
+        <fullName>CN_Complaint_Check_Images</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CN_Complaint_Check_Images</shortDescription>
+        <value>You can&apos;t submit the complaint,please Check the number of images describing the problem.</value>
+    </labels>
+    <labels>
         <fullName>CN_Complaint_Check_Reason_CS_Msg</fullName>
         <language>en_US</language>
         <protected>false</protected>

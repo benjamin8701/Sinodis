@@ -36,13 +36,14 @@ public without sharing class CN_Complaint_Submitter_Handler implements Triggers.
         for (Case cases : (List<Case>)Trigger.new) {
             Case oldCase = (Case)Trigger.oldMap.get(cases.Id);
             if(!oldCase.ownerId.equals(cases.ownerId)){
-                if(cases.CN_Submitter__c != null){
-                    makeCaseSharingRecord(cases.id,cases.CN_Submitter__c); 
-                }else {
-                    //non-product
+                    //non-product: cs close case
                     String userId = UserInfo.getUserId();
-                    makeCaseSharingRecord(cases.id,userId); 
-                }
+                    String recordName = [SELECT name FROM RecordType WHERE Id =: cases.RecordTypeId].Name;
+                    if(Constants.CN_RECORD_TYPE_Non_Product.equals(recordName)){
+                        makeCaseSharingEdit(cases.id,userId);
+                    }else{
+                        makeCaseSharingRecord(cases.id,userId); 
+                    }
             }
         }
     }
@@ -52,11 +53,26 @@ public without sharing class CN_Complaint_Submitter_Handler implements Triggers.
     public void makeCaseSharingRecord(Id parentId, Id userId) {
         List<CaseShare> existingShares = [SELECT Id, CaseId, UserOrGroupId FROM CaseShare WHERE CaseId = :parentId AND UserOrGroupId = :userId];
         if (existingShares.isEmpty()) {
-            List<CaseShare> caseList = new List<CaseShare>();
+            List<CaseShare> caseList = [SELECT CaseId,UserOrGroupId,RowCause,CaseAccessLevel FROM CaseShare WHERE CaseId = :parentId];
             CaseShare share = null;
             share = new CaseShare();
             share.CaseId = parentId;
             share.CaseAccessLevel = 'Read';
+            share.RowCause = 'Manual';
+            share.UserOrGroupId = userId;
+            caseList.add(share);
+            Database.SaveResult[] tripShareInsertResult = Database.insert(caseList,false);
+        }
+    }
+
+    public void makeCaseSharingEdit(Id parentId, Id userId) {
+        List<CaseShare> existingShares = [SELECT Id, CaseId, UserOrGroupId FROM CaseShare WHERE CaseId = :parentId AND UserOrGroupId = :userId];
+        if (existingShares.isEmpty()) {
+            List<CaseShare> caseList = new List<CaseShare>();
+            CaseShare share = null;
+            share = new CaseShare();
+            share.CaseId = parentId;
+            share.CaseAccessLevel = 'Edit';
             share.RowCause = 'Manual';
             share.UserOrGroupId = userId;
             caseList.add(share);
