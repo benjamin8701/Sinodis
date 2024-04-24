@@ -15,7 +15,7 @@
                         <valueListItems>
                             <value>Case.CN_Submit_Complaint</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR 4) AND (2 OR 5) AND 3</booleanFilter>
+                                <booleanFilter>(1 OR (6 AND 7))  AND (2 OR (4 AND 5 )) AND 3</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Status}</leftValue>
                                     <operator>EQUAL</operator>
@@ -50,6 +50,16 @@
                                     <leftValue>{!Record.Status}</leftValue>
                                     <operator>EQUAL</operator>
                                     <rightValue>Rejected</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Status}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Rejected</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Origin}</leftValue>
+                                    <operator>NE</operator>
+                                    <rightValue>E-Commerce</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>
@@ -164,7 +174,7 @@
                         <valueListItems>
                             <value>Case.CN_Complaint_Closed</value>
                             <visibilityRule>
-                                <booleanFilter>(1 OR 2 )AND 3</booleanFilter>
+                                <booleanFilter>(1 OR 2 )AND  3 AND 4</booleanFilter>
                                 <criteria>
                                     <leftValue>{!Record.Status}</leftValue>
                                     <operator>EQUAL</operator>
@@ -187,9 +197,40 @@
                                     <rightValue>Rejected</rightValue>
                                 </criteria>
                                 <criteria>
-                                    <leftValue>{!$User.Profile.Name}</leftValue>
-                                    <operator>CONTAINS</operator>
-                                    <rightValue>CN C/S</rightValue>
+                                    <leftValue>{!Record.CN_Created_by_Me__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>true</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Origin}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>E-Commerce</rightValue>
+                                </criteria>
+                            </visibilityRule>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Case.CN_Close_Case</value>
+                            <visibilityRule>
+                                <booleanFilter>(1 OR 2 )AND  3 AND 4</booleanFilter>
+                                <criteria>
+                                    <leftValue>{!Record.Status}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Resolved</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Status}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>Rejected</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.CN_Created_by_Me__c}</leftValue>
+                                    <operator>EQUAL</operator>
+                                    <rightValue>true</rightValue>
+                                </criteria>
+                                <criteria>
+                                    <leftValue>{!Record.Origin}</leftValue>
+                                    <operator>NE</operator>
+                                    <rightValue>E-Commerce</rightValue>
                                 </criteria>
                             </visibilityRule>
                         </valueListItems>

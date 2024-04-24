@@ -613,6 +613,10 @@
         <name>CN_Customer_Claim_Amount_CNY__c</name>
     </fields>
     <fields>
+        <label>客户索赔金额(CNY)</label>
+        <name>CN_Customer_Claim_Amount_CNY__c</name>
+    </fields>
+    <fields>
         <label>客户代码</label>
         <name>CN_Customer_Code__c</name>
     </fields>
@@ -653,7 +657,7 @@
         <relationshipLabel><!-- Complaints --></relationshipLabel>
     </fields>
     <fields>
-        <label><!-- Excel File link --></label>
+        <label><!-- Excel File Link --></label>
         <name>CN_Excel_File_link__c</name>
     </fields>
     <fields>
@@ -873,6 +877,10 @@
             <translation><!-- Customer --></translation>
         </picklistValues>
         <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+        <picklistValues>
             <masterLabel>Supply Chain</masterLabel>
             <translation><!-- Supply Chain --></translation>
         </picklistValues>
@@ -1083,7 +1091,7 @@
         <name>CN_Case_Other_Mandatory_Check</name>
     </validationRules>
     <validationRules>
-        <errorMessage>请输入您投诉的原因</errorMessage>
+        <errorMessage>请输入包装问题/产品问题</errorMessage>
         <name>CN_Case_Product_Package_Check</name>
     </validationRules>
     <validationRules>

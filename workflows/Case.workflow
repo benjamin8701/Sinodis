@@ -242,8 +242,7 @@
         </actions>
         <active>true</active>
         <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,    RecordType.DeveloperName = &apos;CN_Complaint&apos;,  
-ISPICKVAL( Origin ,&apos;E-Commerce&apos;),
-OR(     ISPICKVAL(PRIORVALUE(Status) ,&apos;New&apos;),     ISPICKVAL(PRIORVALUE(Status) , &apos;Rejected&apos;)   ),   ISPICKVAL( Status, &apos;Assigned&apos;),   NOT(ISPICKVAL(Reason , &apos;Service Issues&apos;)) )</formula>
+OR(     ISPICKVAL(PRIORVALUE(Status) ,&apos;New&apos;),     ISPICKVAL(PRIORVALUE(Status) , &apos;Rejected&apos;)   ),   ISPICKVAL( Status, &apos;Assigned&apos;),   NOT(ISPICKVAL(Reason , &apos;Customer Service&apos;)) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -258,8 +257,7 @@ OR(     ISPICKVAL(PRIORVALUE(Status) ,&apos;New&apos;),     ISPICKVAL(PRIORVALUE
         </actions>
         <active>false</active>
         <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,    RecordType.DeveloperName = &apos;CN_Complaint&apos;,  
-NOT(ISPICKVAL( Origin ,&apos;E-Commerce&apos;)),
-OR(     ISPICKVAL(PRIORVALUE(Status) ,&apos;New&apos;),     ISPICKVAL(PRIORVALUE(Status) , &apos;Rejected&apos;)   ),   ISPICKVAL( Status, &apos;Assigned&apos;),   NOT(ISPICKVAL(Reason , &apos;Service Issues&apos;)) )</formula>
+OR(     ISPICKVAL(PRIORVALUE(Status) ,&apos;New&apos;),     ISPICKVAL(PRIORVALUE(Status) , &apos;Rejected&apos;)   ),   ISPICKVAL( Status, &apos;Assigned&apos;),   NOT(ISPICKVAL(Reason , &apos;Customer Service&apos;)) )</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
     <rules>
@@ -339,7 +337,9 @@ OR(     ISPICKVAL(PRIORVALUE(Status) ,&apos;New&apos;),     ISPICKVAL(PRIORVALUE
             <type>Alert</type>
         </actions>
         <active>true</active>
-        <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,    RecordType.DeveloperName = &apos;CN_Non_Product_Complaint&apos;, Owner:Queue.QueueName=&apos;CN_Finance&apos;)</formula>
+        <formula>AND(   $Setup.Trigger_Switcher_Setting__c.EnableFlow__c ,    RecordType.DeveloperName = &apos;CN_Non_Product_Complaint&apos;, 
+ISPICKVAL( Status, &apos;New&apos;),
+Owner:Queue.QueueName=&apos;CN_Finance&apos;)</formula>
         <triggerType>onAllChanges</triggerType>
     </rules>
 </Workflow>

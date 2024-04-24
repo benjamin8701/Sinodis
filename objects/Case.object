@@ -687,8 +687,9 @@
     <fields>
         <fullName>CN_If_User_In_Group__c</fullName>
         <externalId>false</externalId>
-        <formula>CONTAINS( CN_User_In_Groups__c , $User.Id)||
-( $UserRole.Name!=null &amp;&amp;CONTAINS( CN_Roles_In_Groups__c , $UserRole.Name ))</formula>
+        <formula>OR(AND(Owner:Queue.Name= &apos;QA Queue&apos;, $Profile.Name = &apos;CN QA&apos; ),
+AND(Owner:Queue.Name= &apos;CN_Food_Quality&apos;, $Profile.Name = &apos;CN Food Quality&apos;)
+)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>If User In Group</label>
         <trackHistory>false</trackHistory>
@@ -1302,6 +1303,11 @@
                     <label>Customer</label>
                 </value>
                 <value>
+                    <fullName>Others</fullName>
+                    <default>false</default>
+                    <label>Others</label>
+                </value>
+                <value>
                     <fullName>Customer Service</fullName>
                     <default>false</default>
                     <isActive>false</isActive>
@@ -1781,7 +1787,17 @@
         <columns>CASES.CLOSED_DATE</columns>
         <columns>OWNER_NAME</columns>
         <filterScope>Everything</filterScope>
-        <label>All Open Complaints</label>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>equals</operation>
+            <value>New,Rejected,Assigned,Accepted,Resolved</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.CN_Complaint</value>
+        </filters>
+        <label>All Open Product Complaints</label>
     </listViews>
     <listViews>
         <fullName>CN_Canceled_Complaint</fullName>
@@ -1791,13 +1807,35 @@
         <columns>CASES.STATUS</columns>
         <columns>CASES.PRIORITY</columns>
         <columns>CORE.USERS.ALIAS</columns>
-        <filterScope>Mine</filterScope>
+        <filterScope>Everything</filterScope>
         <filters>
             <field>CASES.STATUS</field>
             <operation>equals</operation>
             <value>Canceled</value>
         </filters>
-        <label>Canceled Complaint</label>
+        <label>Canceled Complaints</label>
+    </listViews>
+    <listViews>
+        <fullName>CN_Closed_Complaints</fullName>
+        <columns>CASES.CASE_NUMBER</columns>
+        <columns>NAME</columns>
+        <columns>CASES.SUBJECT</columns>
+        <columns>CASES.STATUS</columns>
+        <columns>CASES.PRIORITY</columns>
+        <columns>CASES.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CASES.STATUS</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </filters>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.CN_Complaint</value>
+        </filters>
+        <label>Closed Complaints</label>
     </listViews>
     <listViews>
         <fullName>CN_Customer_Service</fullName>
@@ -1809,6 +1847,11 @@
         <columns>CASES.CREATED_DATE</columns>
         <columns>CORE.USERS.ALIAS</columns>
         <filterScope>Queue</filterScope>
+        <filters>
+            <field>CASES.RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Case.CN_Complaint</value>
+        </filters>
         <label>CN_Customer_Service</label>
         <queue>CN_CS_Queue</queue>
     </listViews>
@@ -2085,6 +2128,10 @@
             </values>
             <values>
                 <fullName>Customer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
                 <default>false</default>
             </values>
             <values>
