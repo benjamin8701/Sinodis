@@ -433,6 +433,18 @@
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>CN_EC_Complaint_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>EC Complaint ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>CN_Created_by_Me__c</fullName>
         <externalId>false</externalId>
         <formula>CreatedById =  $User.Id || CN_Submitter__c = $User.Id</formula>

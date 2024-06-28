@@ -2344,7 +2344,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <label>冻结状态</label>
+        <label>S6冻结状态</label>
         <name>CN_ShipTo_Inactive__c</name>
     </fields>
     <fields>
@@ -2361,6 +2361,10 @@
         <label>省份</label>
         <name>CN_ShipTo_Province_CN__c</name>
         <relationshipLabel>变更申请</relationshipLabel>
+    </fields>
+    <fields>
+        <label>S3冻结状态</label>
+        <name>CN_ShipTo_S3_Inactive__c</name>
     </fields>
     <fields>
         <label>售达方客户</label>
@@ -3954,7 +3958,7 @@
         </picklistValues>
     </fields>
     <fields>
-        <label>新冻结状态</label>
+        <label>新S6冻结状态</label>
         <name>New_CN_ShipTo_Inactive__c</name>
     </fields>
     <fields>
@@ -3971,6 +3975,10 @@
         <label>新省份</label>
         <name>New_CN_ShipTo_Province_CN__c</name>
         <relationshipLabel>变更申请</relationshipLabel>
+    </fields>
+    <fields>
+        <label>新S3冻结状态</label>
+        <name>New_CN_ShipTo_S3_Inactive__c</name>
     </fields>
     <fields>
         <label>新售达方客户</label>
@@ -4338,6 +4346,10 @@
     <validationRules>
         <errorMessage>请关闭此页面，从客户/联系人/送达方页面点击按钮创建变更申请。</errorMessage>
         <name>CN_Check_Generate_Source</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>不允许同时选择新S3冻结状态与新S6冻结状态</errorMessage>
+        <name>CN_Check_Inactive_Checkbox_Status</name>
     </validationRules>
     <validationRules>
         <errorMessage><!-- Please select the account which had been synced --></errorMessage>

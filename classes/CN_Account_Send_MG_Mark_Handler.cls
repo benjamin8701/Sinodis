@@ -22,9 +22,9 @@ public class CN_Account_Send_MG_Mark_Handler implements Triggers.Handler{
 	private void handleBeforeInsert() {
 		for (Account newAcc : (List<Account>)Trigger.new) {
 			//only handle EC Record
-			if(newAcc.CN_Account_Source__c != Constants.CN_ACCOUNT_SOURCE_ECOMMERCE){
-				continue;
-			}
+//			if(newAcc.CN_Account_Source__c != Constants.CN_ACCOUNT_SOURCE_ECOMMERCE){
+//				continue;
+//			}
 			newAcc.CN_Need_Send_MG_Flag__c = (Integer)newAcc.CN_Need_Send_MG_Flag__c | 1 << 1;
 		}
 	}
@@ -34,9 +34,9 @@ public class CN_Account_Send_MG_Mark_Handler implements Triggers.Handler{
 		
 		for (Account newAcc : (List<Account>)Trigger.new) {
 			
-			if(newAcc.CN_Account_Source__c != Constants.CN_ACCOUNT_SOURCE_ECOMMERCE){
-				continue;
-			}
+//			if(newAcc.CN_Account_Source__c != Constants.CN_ACCOUNT_SOURCE_ECOMMERCE){
+//				continue;
+//			}
 			Account oldAcc = oldMap.get(newAcc.Id);
 			
 			if (newAcc.CN_Inactive__c != oldAcc.CN_Inactive__c) {
@@ -63,6 +63,13 @@ public class CN_Account_Send_MG_Mark_Handler implements Triggers.Handler{
 				continue;
 			}
 			//add by ZhangZhiHao owner changes to push to EC
+
+			//add by ZhangZhiHao owner changes to push to EC 2024/4/14
+			else if (newAcc.CN_Invoicing_Name_Bill_To_Party__c != oldAcc.CN_Invoicing_Name_Bill_To_Party__c) {
+				newAcc.CN_Need_Send_MG_Flag__c = (Integer)newAcc.CN_Need_Send_MG_Flag__c | 1 << 1;
+				continue;
+			}
+			//add by ZhangZhiHao owner changes to push to EC 2024/4/14
 
 		}
 
