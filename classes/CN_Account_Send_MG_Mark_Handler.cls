@@ -21,10 +21,11 @@ public class CN_Account_Send_MG_Mark_Handler implements Triggers.Handler{
 
 	private void handleBeforeInsert() {
 		for (Account newAcc : (List<Account>)Trigger.new) {
-			//only handle EC Record
-//			if(newAcc.CN_Account_Source__c != Constants.CN_ACCOUNT_SOURCE_ECOMMERCE){
-//				continue;
-//			}
+			// Add by Wang bo 2024.7.11 remove Account source = EC
+			// Add by Wang bo 2024.7.16 Rollback
+			if(newAcc.CN_Account_Source__c != Constants.CN_ACCOUNT_SOURCE_ECOMMERCE){
+				continue;
+			}
 			newAcc.CN_Need_Send_MG_Flag__c = (Integer)newAcc.CN_Need_Send_MG_Flag__c | 1 << 1;
 		}
 	}

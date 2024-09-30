@@ -46,12 +46,17 @@ public with sharing class CN_Complaint_Resolved_LC_Ctrl {
             || Constants.CN_PROFILE_NAME_QA.equals(myProflieName) 
             //add by Zhang zhihao Add simple food safety simple party 2023/12/28
             || Constants.CN_PROFILE_NAME_ADMIN.equals(myProflieName) 
-            || Constants.CN_PROFILE_NAME_FOODQUALITY.equals(myProflieName))
+            || Constants.CN_PROFILE_NAME_FOODQUALITY.equals(myProflieName)
+            )
             && resolveReason != null && Constants.CN_COMPLAINT_SOURCE_ECOMMERCE.equals(caseToUpdate.Origin)) 
         {
             caseToUpdate.Status = Constants.CN_CA_STATUS_RESOLVED;
             //Add by Zhang Zhihao 2023/1/14  Return to the submitter
-            caseToUpdate.OwnerId = caseToUpdate.CN_Submitter__c;
+            if(caseToUpdate.CN_Submitter__c!=null){
+                caseToUpdate.OwnerId = caseToUpdate.CN_Submitter__c;
+            }else{
+                caseToUpdate.OwnerId = caseToUpdate.CreatedById;
+            }
              //Add by Zhang Zhihao 2023/1/14  Return to the submitter
             caseToUpdate.CN_Resolved_Button__c = true;
             caseToUpdate.CN_Resolve_Description__c = resolveDescription;
@@ -60,14 +65,20 @@ public with sharing class CN_Complaint_Resolved_LC_Ctrl {
             
         }//Add by He Peng Offline resolved => closed
         else if(Constants.CN_CA_STATUS_ACCEPTED.equals(caseToUpdate.Status) 
-            && (!Constants.CN_COMPLAINT_SOURCE_ECOMMERCE.equals(caseToUpdate.Origin)) 
+            && ((!Constants.CN_COMPLAINT_SOURCE_ECOMMERCE.equals(caseToUpdate.Origin)) 
+            || Constants.CN_PROFILE_NAME_SALES.equals(myProflieName))
             && (resolveReason != null )){
-            caseToUpdate.Status = Constants.CN_CA_STATUS_CLOSED;
-            caseToUpdate.OwnerId = caseToUpdate.CN_Submitter__c;
+            caseToUpdate.Status = Constants.CN_CA_STATUS_RESOLVED;
+            if(caseToUpdate.CN_Submitter__c!=null){
+                caseToUpdate.OwnerId = caseToUpdate.CN_Submitter__c;
+            }else{
+                caseToUpdate.OwnerId = caseToUpdate.CreatedById;
+            }
             caseToUpdate.CN_Resolved_Button__c = true;
             caseToUpdate.CN_Resolve_Description__c = resolveDescription;
             caseToUpdate.CN_Resolve_Reason__c = resolveReason;
             caseToUpdate.CN_Resolve_Comments__c = resolveComments;
+            caseToUpdate.CN_Closed_Button__c = true;
         }else if(caseToUpdate.CN_Resolve_Reason__c == null){
             throw new AuraHandledException(System.Label.CN_Complaint_ResolveReason_Null);
         }else{

@@ -49,7 +49,9 @@ public class CN_Account_Send_MG_Mark_Batch implements Database.Batchable<SObject
 		FROM Account
 		WHERE ( CN_Need_Send_MG_Flag__c != 0 and CN_Need_Send_MG_Flag__c != null )
 		AND (CN_Customer_Code__c != null OR CN_Inactive__c = true)
-//		AND CN_Account_Source__c = :Constants.CN_ACCOUNT_SOURCE_ECOMMERCE
+		// Add by Wang bo 2024.7.11 remove Account source = EC
+		// Add by Wang bo 2024.7.16 Rollback
+		AND CN_Account_Source__c = :Constants.CN_ACCOUNT_SOURCE_ECOMMERCE
 		ORDER BY LastModifiedDate DESC ];
 
 		return accountList;
