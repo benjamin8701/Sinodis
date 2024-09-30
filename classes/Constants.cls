@@ -257,8 +257,9 @@ public without sharing class Constants {
 	public static Boolean CN_LEAD_OWNER_CHANGED_CUSTOM_NOTIFICATION_TRIGGER_ON = true;
 	public static Boolean CN_LEAD_MKT_ASSIGNED_HANDLER_TRIGGER_ON = true;
 	public static Boolean CN_LEAD_STATUS_SEND_MG_HANDLER_TRIGGER_ON = true;
-
-	
+	//add by ZhangZhiHao 2024-3-19
+	public static Boolean CN_LEAD_INVITATION_OWNER_NOTIFY_TRIGGER_ON = true;
+	//add by ZhangZhiHao 2024-3-19
 	public static final String CN_LEAD_RT_API_NAME = 'CN_Lead';
 
 	public static final String CN_LEAD_STATUS_CLOSED_CONVERTED = 'Closed - Converted';
@@ -472,7 +473,8 @@ public without sharing class Constants {
 	public static Boolean CN_CA_CREATOR_TO_OWNER_HANDLER_TRIGGER_ON = true;
 	public static Boolean CN_CA_PREVENT_DELETE_TRIGGER_ON = true;
 	public static Boolean CN_CA_SHARE_HANDLER_TRIGGER_ON = true;
-	
+	//add by Wang Bo 2024/7/5
+	public static Boolean CN_CA_STATUS_CHANGE_UPDATE_PREVIOUS_STATUS_TRIGGER_ON = true;
 	//add by Zhang Zhihao 2024 1/14
 	public static Boolean CN_CA_SUBMITTER_TRIGGER_ON =true;
 	public static Boolean CN_CA_STATUS_CHANGE_NOTIFICATION_TRIGGER_ON = true;
@@ -516,7 +518,7 @@ public without sharing class Constants {
 	// add by leo 2023.09.13
 
 	// add by ZhangZhihao 2024.2.29
-	public static final String CN_PROFILE_NAME_SALES_STRING_LIST = 'CN CCE Sales MDM,CN Sales,CN Sales Lead';
+	public static final String CN_PROFILE_NAME_SALES_STRING_LIST = 'CN CCE Sales MDM,CN Sales,CN Sales Lead,CN Sales Manager';
 	// add by ZhangZhihao 2024.2.29
 
 	// add by zhang zhihao 2023.12.28
@@ -616,7 +618,7 @@ public without sharing class Constants {
 	// add by Zhang Zhihao 2024/2/21 User Trigger
 	public static Boolean CN_CPP_Relation_CPPC_Oppty_Handler_TRIGGER_ON = true;
 	public static Boolean CN_CPP_Relation_CPPC_Quote_Handler_TRIGGER_ON = true;
-	public static String CN_MARKETING_OUT_CHANNEL = 'List Price';
+	public static String CN_MARKETING_OUT_CHANNEL = 'Standard Price Book';
 	// add by Zhang Zhihao 2024/2/21 User Trigger
 
 	// add by Zhang Zhihao 2024/1/17 Competitor_Product_Price_for_Customer Trigger
@@ -631,6 +633,7 @@ public without sharing class Constants {
 	// add by Zhang Zhihao 2024/1/24 User Trigger
 	public static Boolean USER_TRIGGER_ON = true;
 	public static Boolean CN_USER_FIELD_EDIT_EMAIL_HANDLER_TRIGGER_ON = true;
+	public static String CN_SALES_PROFILE_Names = 'CN CCE Sales MDM,CN Sales,CN Sales Lead,CN Sales Manager,CN Sales MDM';
 	// add by Zhang Zhihao 2024/1/24 User Trigger
 
 	
