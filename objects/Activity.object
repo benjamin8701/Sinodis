@@ -283,6 +283,11 @@
                     <label>New product launch recommend</label>
                 </value>
                 <value>
+                    <fullName>Adamance Visit</fullName>
+                    <default>false</default>
+                    <label>Adamance Visit</label>
+                </value>
+                <value>
                     <fullName>Regular Product recommend</fullName>
                     <default>false</default>
                     <label>Regular Product recommend</label>
