@@ -29,7 +29,7 @@ global class CN_Contact_Registered_Insert_Rest {
 		'firstName'     => 'FirstName',
 		'lastName'      => 'LastName',
 		'email'         => 'Email',
-		'mobile'		=> 'MobilePhone',
+//		'mobile'		=> 'MobilePhone',
 		'mgContactID'   => 'CN_MG_Contact_ID__c',
 		'mgAccountID'   => 'AccountId',
 		'contactOwner'  => 'OwnerId',

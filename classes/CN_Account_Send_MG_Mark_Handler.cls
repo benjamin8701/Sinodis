@@ -34,10 +34,11 @@ public class CN_Account_Send_MG_Mark_Handler implements Triggers.Handler{
 		Map<Id, Account> oldMap = (Map<Id, Account>)Trigger.oldMap;
 		
 		for (Account newAcc : (List<Account>)Trigger.new) {
-			
-//			if(newAcc.CN_Account_Source__c != Constants.CN_ACCOUNT_SOURCE_ECOMMERCE){
-//				continue;
-//			}
+			// Add by Wang bo 2024.7.11 remove Account source = EC
+			// Add by Wang bo 2024.7.16 Rollback
+			if(newAcc.CN_Account_Source__c != Constants.CN_ACCOUNT_SOURCE_ECOMMERCE){
+				continue;
+			}
 			Account oldAcc = oldMap.get(newAcc.Id);
 			
 			if (newAcc.CN_Inactive__c != oldAcc.CN_Inactive__c) {

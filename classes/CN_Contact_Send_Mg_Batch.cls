@@ -24,7 +24,9 @@ public class CN_Contact_Send_Mg_Batch implements Database.Batchable<SObject>, Da
 						CN_Lead_MG_Account_ID__c,Account.CN_Customer_Code__c,CN_MG_Contact_ID__c
 				FROM Contact
 				where CN_Need_Send_MG__c = true
-//				AND Account.CN_Account_Source__c = :Constants.CN_ACCOUNT_SOURCE_ECOMMERCE
+				// Add by Wang bo 2024.7.11 remove Account source = EC
+				// Add by Wang bo 2024.7.16 Rollback
+				AND Account.CN_Account_Source__c = :Constants.CN_ACCOUNT_SOURCE_ECOMMERCE
 				AND Account.CN_Customer_Code__c != null
 				AND CN_UP_Code__c != null
 				AND CN_Has_CR_Need_Sync__c = false
